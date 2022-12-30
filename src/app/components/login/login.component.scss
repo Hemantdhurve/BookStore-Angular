@@ -1,0 +1,179 @@
+.logbox{
+    display: flex;    
+    background: #00000029;
+    height: 100vh;
+    width: 100vw;
+}
+.both{
+display: flex;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    width: 50vw;
+    height: 58vh;
+    top: 20vh;
+    left: 25vw;
+    background: #F5F5F5 ;
+    border-radius: 21px;
+    
+}
+.imgbox{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+}
+
+.shop-img{
+    position: relative;
+    box-sizing: border-box;
+    height: 70%;
+    width: 80%;
+    top:4vh;
+    left: 3vw;
+}
+.text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: 8vh;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+//login Box css
+.reg-container{
+    position: relative;
+    bottom: 3vh;
+    width: 28vw;
+    height: 64vh;
+    box-sizing: border-box;
+    background: #FFFFFF ;
+    box-shadow: 0px 5px 15px #13131329;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    align-items: center;
+    left: 3.5vw;
+    height: 100%;
+    width: 75%;
+}
+.twoBtn{
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: 500px;
+    width: 100%;
+    height: 10%;
+    top: 10px;
+
+}
+.Btns{
+    display: flex;
+    position: relative;
+    font-size: 25px;
+    font-weight: 550;
+    width: 43%;
+    background-color: transparent;
+    border-color: transparent;
+    color: #0A0102;
+}
+
+.txtbox{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: transparent;
+    border-color: transparent;
+    width: 100%;
+    height: 20%;
+    top: 15px;
+
+} 
+.txtfield{
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+
+}
+
+.forgotbtn{
+    display: flex;
+    position: relative;
+    top:8px;
+    width: 100%;
+    justify-content: flex-end;
+    background-color: transparent;
+    border-color: transparent;
+
+}
+.fgtbtn{
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 1px;
+
+}
+
+.loginBox{
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: center;
+    font-size: 500px;
+    width: 100%;
+    top: 16px;
+}
+.login{
+    border: none;
+    font-size: 18px;
+}
+.btns{
+    display: flex;
+    position: relative;
+    top:9vh;
+    width: 100%;
+    height: 9%;
+    justify-content: space-between;
+    border: transparent;
+}
+.orTxt{
+    display: flex;
+    position: relative;
+    top: 40px;
+    justify-content: center;
+    color:#343434;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.fbBtn{
+    padding: 2px 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-right: 5px;
+    background-color: #4266B2;
+    border: transparent;
+    color: white;
+
+}
+.btn-google{
+    padding: 2px 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-left: 5px;
+    background-color: #E4E4E4;
+    border: transparent;
+
+}

@@ -1,0 +1,118 @@
+.logbox{
+    display: flex;    
+    background: #878787;
+    height: 100vh;
+    width: 100vw;
+}
+.both{
+display: flex;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    width: 50vw;
+    height: 58vh;
+    top: 20vh;
+    left: 25vw;
+    background: #F5F5F5 ;
+    border-radius: 21px;
+    
+}
+.imgbox{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+}
+
+.shop-img{
+    position: relative;
+    box-sizing: border-box;
+    height: 70%;
+    width: 80%;
+    top:4vh;
+    left: 3vw;
+}
+.text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    top: 8vh;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+//login Box css
+.reg-container{
+    position: relative;
+    bottom: 3vh;
+    width: 28vw;
+    height: 64vh;
+    box-sizing: border-box;
+    background: #FFFFFF ;
+    box-shadow: 0px 5px 15px #13131329;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    align-items: center;
+    left: 3.5vw;
+    height: 100%;
+    width: 75%;
+    border: 1px solid black;
+}
+.twoBtn{
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: 500px;
+    width: 100%;
+    height: 10%;
+    top: 10px;
+
+}
+.Btns{
+    display: flex;
+    position: relative;
+    font-size: 25px;
+    font-weight: 550;
+    width: 43%;
+    background-color: transparent;
+    border-color: transparent;
+    color: #0A0102;
+}
+.txtbox{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: transparent;
+    border-color: transparent;
+    width: 100%;
+    height: 20%;
+    top: 15px;
+
+} 
+.loginBox{
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: center;
+    font-size: 500px;
+    width: 100%;
+    height: 10%;
+    top: 16px;
+}
+.signup{
+    border: none;
+    font-size: 18px;
+    color: #F5F5F5;
+}
