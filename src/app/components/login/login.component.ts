@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from '../Services/userService/user.service';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +9,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  loginForm! : FormGroup;
+  loginForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder,public router:Router) { }
+  constructor(private formBuilder: FormBuilder, public router: Router, private user: UserService) { }
   navigate() {
     this.router.navigate(['/register']);
-}
+  }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      emailId: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
 
     })
@@ -26,14 +27,20 @@ export class LoginComponent implements OnInit {
 
   get f() { return this.loginForm.controls; }
 
-    onSubmit() {
-        this.submitted = true;
+  onSubmit() {
+    this.submitted = true;
 
-        if (this.loginForm.invalid) {
-          return;
-          
-        }        
+    if (this.loginForm.valid) {
+      let payload = {
+        emailId: this.loginForm.value.emailId,
+        password: this.loginForm.value.password
+      }
+      //.subscribe method is used to get the response from backend
+      this.user.login(payload).subscribe((response: any) => {
+        console.log(response)
+      })
+    }
   }
-  
+
 }
 
