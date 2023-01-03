@@ -1,0 +1,124 @@
+.headBox {
+    display: flex;
+    flex-Direction: column;
+    position:relative;
+    height: 9vh;
+    width: 100vw;
+    background-Color: #A03037 !important;
+}
+.outHeadBox {
+    display: flex;
+    flex-Direction: row;
+    position: relative;
+    height: 100%;
+    width: 70%;
+    left:15vw;
+    justify-Content:space-between;
+
+}
+.inHeadBox {
+    display: flex;
+    flex-Direction:row;
+    position: relative;
+    top: 15%;
+    height: 70%;
+    width: 70%;
+
+}
+.bookimg {
+    display: flex;
+    position: relative;
+    justify-Content: space-between;
+    width: 20%;
+    align-Items: center;
+    height: 100%;
+
+}
+.booktxt {
+    position: relative;
+    left: 5px;
+    color: white;
+    font-Size: 20px;
+}
+.field {
+    display: flex;
+    width: 100% !important;
+}
+.innerfield{
+    border:none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+.searchicon{
+    display: flex;
+    position: relative;
+    align-content: center;
+    justify-content:center;
+    align-items: center;
+    width: 9%;
+    left: 2px;
+}
+.search {
+    display:flex;
+    flex-Direction:row;
+    position:relative;
+    left:50px;
+    width:70%;
+    justify-content:center;
+    background-Color:#FCFCFC;
+    border-Radius:5px;
+}
+
+.icons {
+    display: flex;
+    flex-Direction: row;
+    align-Items: center;
+
+}
+.Iconlogo {
+    display: flex;
+    flex-Direction: column;
+    justify-Content: space-between;
+    align-Items: center;
+    color:#FCFCFC;
+    width:50%;
+    border-Left: 1px solid #8F2B28;
+}
+// .iconBtn{
+//     background-color: #A03037;
+//     height: 26px;
+//     border: none;
+//     color:#FCFCFC;
+//     border: 1px solid black;
+
+// }
+::ng-deep .mat-mdc-unelevated-button .mat-mdc-button-touch-target{
+    position: absolute;
+    top:5px !important;
+    height: 70px !important;
+    left: 0;
+    right: 0;
+    background-color: #A03037;
+}
+.icontxt{
+    display:flex;
+    justify-Content:center;
+    width:80px;
+    position:relative;
+}
+.footer{
+    display: flex;
+    position: relative;
+    top: 84.8vh;
+    width: 100vw;
+    background-color: #2E1D1E;
+}
+.innerFooter{
+    display: flex;
+    position: relative;
+    align-items: center;
+    left: 15vw;
+    height: 45px;
+    color: #FCFCFC;
+}

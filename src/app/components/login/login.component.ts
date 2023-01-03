@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
         emailId: this.loginForm.value.emailId,
         password: this.loginForm.value.password
       }
-      //.subscribe method is used to get the response from backend
+      //.subscribe method is used to get the response from backend (observable)
       this.user.login(payload).subscribe((response: any) => {
         console.log(response)
       })
