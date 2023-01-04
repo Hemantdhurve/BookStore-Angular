@@ -1,43 +1,45 @@
 <div>
-    <div class="head">  
-      <div class="bookHead">
-        <span class="txtbook">Books</span>
-        <span class="booksCount">(128 items)</span>
-      </div>
-      <select class="dropselect">
-        <option value="Sort by relevance">Sort by relevance</option>
-        <option value="Price: Low to High">Price: Low to High</option>
-        <option value="Price: High to Low">Price: High to Low</option>
-        <option value="Newest Arrivals">Newest Arrivals</option>
-      </select>
-    </div>
-  
-    <div class="bookBox">
-        <div class="imageBox" >
-            <div class="inimageBox">
-                <img class="image" src="https://public-v2links.adobecc.com/d096df37-ca37-4026-553f-8cfa6bec09ec/component?params=component_id%3Ac88f9f7e-6862-4c05-8e32-d7772252b9b7&params=version%3A0&token=1672802202_da39a3ee_393d2bfbed2effc026d421f4279fa5e0dea6f62a&api_key=CometServer1">
-            </div>
-        </div>            
-        <div class="dataBox" >
-            <div class="booktextBox">
-                <div class="titletxt">
-                    <span >Book Name</span>
-                </div>
-                <div class="authortxt">
-                    <span>by Author Name</span>
-                </div>
-                <div class="ratingBox">
-                    <div class="starBox">
-                        <span>5</span>
-                        <img src="/assets/star.jpg" class="starimg">
-                    </div>
-                    <span class="ratingCount">(20)</span>
-                </div>
-                <div class="priceBox">
-                    <span class="discountPrice">Rs. 1000</span>
-                    <span class="originalPrice">Rs. 2000</span>
-                </div>
-            </div>  
+    <div class="head">
+        <div class="bookHead">
+            <span class="txtbook">Books</span>
+            <span class="booksCount">(7 items)</span>
         </div>
+        <select class="dropselect">
+            <option value="Sort by relevance">Sort by relevance</option>
+            <option value="Price: Low to High">Price: Low to High</option>
+            <option value="Price: High to Low">Price: High to Low</option>
+            <option value="Newest Arrivals">Newest Arrivals</option>
+        </select>
+    </div>
+
+    <div class="display">
+        <mat-card class="bookBox" *ngFor="let book of bookArray">
+            <div class="imageBox">
+                <div class="inimageBox">
+                    <img class="image" src="/assets/dont.png">
+                </div>
+            </div>
+            <div class="dataBox">
+                <div class="booktextBox">
+                    <div class="titletxt">
+                        <span>{{book.bookTitle}}</span>
+                    </div>
+                    <div class="authortxt">
+                        <span>by {{book.author}}</span>
+                    </div>
+                    <div class="ratingBox">
+                        <div class="starBox">
+                            <span>{{book.rating}}</span>
+                            <img src="/assets/star.jpg" class="starimg">
+                        </div>
+                        <span class="ratingCount">({{book.ratedCount}})</span>
+                    </div>
+                    <div class="priceBox">
+                        <span class="discountPrice">Rs. {{book.discountedPrice}}</span>
+                        <span class="originalPrice">Rs. {{book.actualPrice}}</span>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
     </div>
 </div>

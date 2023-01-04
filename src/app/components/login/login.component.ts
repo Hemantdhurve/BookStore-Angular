@@ -35,9 +35,12 @@ export class LoginComponent implements OnInit {
         emailId: this.loginForm.value.emailId,
         password: this.loginForm.value.password
       }
-      //.subscribe method is used to get the response from backend (observable)
+      //.subscribe method is used to get the response from backend (observable) like promises
       this.user.login(payload).subscribe((response: any) => {
         console.log(response)
+        localStorage.setItem('token',response.data)
+      }, (error) => {
+        console.log(error);
       })
     }
   }

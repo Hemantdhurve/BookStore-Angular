@@ -1,17 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BookServiceService } from '../Services/bookService/book-service.service';
 
 @Component({
   selector: 'app-getallbooks',
   templateUrl: './getallbooks.component.html',
   styleUrls: ['./getallbooks.component.scss']
 })
-export class GetallbooksComponent {
+export class GetallbooksComponent implements OnInit {
 
-  // constructor(private formBuilder: FormBuilder) { }
+  bookArray: any;
 
-  // ngOnInit() {
-  //   this.getallbooks();
-  // }
-    
+  constructor(private book: BookServiceService) { }
+
+  ngOnInit() {
+    this.getallbooks();
   }
+
+  getallbooks() {
+    this.book.getallbooks().subscribe((response: any) => {
+      console.log(response)
+      this.bookArray = response.response;
+      console.log("Array of Book: ", this.bookArray);
+    })
+  }
+}
 

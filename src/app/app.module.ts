@@ -12,6 +12,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {MatCardModule} from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { GetallbooksComponent } from './components/getallbooks/getallbooks.component';
 
 
 @NgModule({
@@ -20,6 +23,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LoginComponent,
     RegistrationComponent,
     DashboardComponent,
+    GetallbooksComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +34,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     MatButtonModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatCardModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

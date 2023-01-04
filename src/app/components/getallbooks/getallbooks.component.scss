@@ -10,7 +10,7 @@
 
 .bookHead {
     display: flex;
-    width: 14%;
+    width: 12%;
     justify-content: space-between;
     align-items: center;
 
@@ -22,7 +22,7 @@
 }
 
 .booksCount {
-    font-size: 12px;
+    font-size: 14px;
     color: #9D9D9D;
 
 }
@@ -36,14 +36,27 @@
 
 /////book details css
 
-
+.display{
+    display: flex;
+    position: relative;
+    width:75vw;
+    left: 15vw;
+    flex-wrap: wrap;
+    border:1px solid black;
+  }
+  
+  mat-card{
+    padding: 0px !important;
+  }
 .bookBox {
     display: flex;
     flex-direction: column;
     position: relative;
-    left: 15vw;
-    top: 5vh;
+    // left: 15vw;
+    // top: 5vh;
     height: 44vh;
+    margin-right: 30px;
+    margin-bottom: 30px;
     width: 16vw;
     border: 1px solid #E2E2E2;
 
@@ -104,7 +117,7 @@
     left: 2px;
     align-items: center;
     width: 40%;
-    height: 20%;
+    height: 20%;    
     justify-content: space-between;
 }
 .starBox{
@@ -116,7 +129,6 @@
     justify-content: space-evenly;
     align-items: center;
     color: white;
-
 }
 .starimg{
     width: 12px;
@@ -124,29 +136,32 @@
     position: relative;
     bottom: 1px;
 }
+.ratingCount {
+    color: #878787;
+    font-size: 12px;
+}
 .priceBox{
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 58%;
     position: relative;
     top:1vh;
     justify-content: space-between;
     align-items: center;
 }
 
-.ratingCount {
-    color: #878787;
-    font-size: 12px;
-}
-
 .discountPrice {
-    font-size: 14px;
+    position: relative;
+    top:3px;
+    font-size: 15px;
     font-weight: 600;
     color: #0A0102;
 }
 
 .originalPrice {
-    font-size: 10px;
+    position: relative;
+    top:3px;
+    font-size: 11px;
     font-weight: 600;
     text-decoration: line-through;
     color: #878787;
