@@ -15,6 +15,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { GetallbooksComponent } from './components/getallbooks/getallbooks.component';
+import { QuickViewComponent } from './components/quick-view/quick-view.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { GetallbooksComponent } from './components/getallbooks/getallbooks.compo
     LoginComponent,
     RegistrationComponent,
     DashboardComponent,
-    GetallbooksComponent
+    GetallbooksComponent,
+    QuickViewComponent
   ],
   imports: [
     BrowserModule,

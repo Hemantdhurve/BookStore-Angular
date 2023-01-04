@@ -9,6 +9,7 @@ import { BookServiceService } from '../Services/bookService/book-service.service
 export class GetallbooksComponent implements OnInit {
 
   bookArray: any;
+  noofBooks:any;
 
   constructor(private book: BookServiceService) { }
 
@@ -20,7 +21,9 @@ export class GetallbooksComponent implements OnInit {
     this.book.getallbooks().subscribe((response: any) => {
       console.log(response)
       this.bookArray = response.response;
+      this.noofBooks=response.response.length;
       console.log("Array of Book: ", this.bookArray);
+      console.log("Total Books Count: ", this.noofBooks);
     })
   }
 }

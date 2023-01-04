@@ -22,4 +22,14 @@ export class BookServiceService {
 
     return this.httpservice.GetService('/Book/RetriveAll',true,header)
   }
+
+  // getBookById(bookId:any){
+  //   let header={
+  //     headers: new HttpHeaders({
+  //       'Content-Type' : 'application/json',
+  //       'Authorization':'Bearer '+this.token
+  //     })
+  //   }
+  //   return this.httpservice.GetService('/Book/RetriveById?bookId=' +bookId,true,header)
+  // }
 }
