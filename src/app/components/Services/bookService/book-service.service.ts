@@ -7,6 +7,7 @@ import { HttpService } from '../httpService/http.service';
 })
 export class BookServiceService {
   token:any;
+  bookId:any;
 
   constructor(private httpservice:HttpService) { 
     this.token=localStorage.getItem('token')
@@ -19,17 +20,15 @@ export class BookServiceService {
         'Authorization':'Bearer '+this.token
       })
     }
-
     return this.httpservice.GetService('/Book/RetriveAll',true,header)
   }
-
-  // getBookById(bookId:any){
-  //   let header={
-  //     headers: new HttpHeaders({
-  //       'Content-Type' : 'application/json',
-  //       'Authorization':'Bearer '+this.token
-  //     })
-  //   }
-  //   return this.httpservice.GetService('/Book/RetriveById?bookId=' +bookId,true,header)
-  // }
+getbookById(bookId:any){
+  let headeroption={
+    headers: new HttpHeaders({
+      'Content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+    })
+  }
+  return this.httpservice.GetService('/Book/RetriveById?bookId= '+bookId,true,headeroption)
+}
 }

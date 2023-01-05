@@ -12,10 +12,9 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,
   children:[
     {path:'getallbooks',component:GetallbooksComponent},
+    {path:'quickview/:bookId',component:QuickViewComponent}
   ]
 },
-{path:'quickview',component:QuickViewComponent}
-
   
 ];
 

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { BookServiceService } from '../Services/bookService/book-service.service';
 
 @Component({
   selector: 'app-quick-view',
@@ -6,17 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quick-view.component.scss']
 })
 export class QuickViewComponent implements OnInit {
-  // bookId:any;
 
-  constructor() { }
+  bookId=localStorage.getItem('BookId');
+  book:any;
+
+  constructor(private bookservice:BookServiceService) { }
 
   ngOnInit() {
-    // this.getBookById(this.bookId);
+    this.getbookById(this.bookId)
+
   }
-  // getBookById(bookId:any){
-  //   this.book.getBookById(bookId).subscribe((response: any) => {
-  //     console.log("Got All Books", response.response);
-  //     this.book = response.response;
-  //   });
-  // }
+
+   getbookById(bookId:any){
+    console.log(this.bookId)
+    this.bookservice.getbookById(bookId).subscribe((response: any) => {
+      console.log(response);
+      //data present in response.response
+      this.book=response.response;
+      console.log(this.book)
+    });
+  }
+  
 }

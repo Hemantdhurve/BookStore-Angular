@@ -143,18 +143,22 @@ display: flex;
     font-size: 13px;
     font-weight: 500;
     top:2px;
+
 }
 .txtfield{
     display: flex;
     flex-direction: column;
     height: 46px;
+
 }
 ::ng-deep .mat-mdc-text-field-wrapper {
-    height: 46px !important;    
+    height: 40px !important;  
+
 }
 
 ::ng-deep .mat-mdc-form-field-infix {
     min-height: 50px;
+
 }
 ::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
     padding-top: 10px;

@@ -4,18 +4,18 @@
             <div class="txtBook">
                 Home /
             </div>
-            <div class="subtxt">Book (Id)</div>
+            <div class="subtxt">Book ({{bookId}})</div>
         </div>
     </div>
     <div class="fullDatabox">
         <div class="onlyImagesbox">
             <div class="box1">
-                <img class="imgs" src="/assets/dont.png" />
+                <img class="imgs" src="/assets/react.png" />
                 <img class="imgs" src="/assets/dont.png" />
             </div>
             <div class="box2">
                 <div class="bigImg">
-                    <img class="mainImg" src="/assets/dont.png" />
+                    <img class="mainImg" src="/assets/react.png" />
                 </div>
                 <div class="add2Tag">
                     <button mat-flat-button class="btnbag">Add to Bag</button>
@@ -30,31 +30,31 @@
             <div class="dataBox">
                 <div class="booktextBox">
                     <div class="titletxt">
-                        Book Title
+                        {{book.bookTitle}}
                     </div>
                     <div class="authortxt">
-                        by Author
+                        {{book.author}}
                     </div>
                     <div class="ratingBox">
                         <div class="star">
-                            <span>5</span>
+                            <span>{{book.rating}}</span>
                             <img src="/assets/star.jpg" class="starimg">
                         </div>
-                        <span >(20)</span>
+                        <span >({{book.ratedCount}})</span>
                     </div>
                     <div class="priceBox">
-                        <span >Rs.1000 </span>
-                        <span class="actPrice">Rs.2000</span>
+                        <span >Rs.{{book.discountedPrice}} </span>
+                        <span class="actPrice">Rs.{{book.actualPrice}}</span>
                     </div>
                 </div>
             </div>
             <div class="detailBox">
                 <div class="dtltxt">• Book Details</div>
                 <div class="para">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque unde reiciendis veritatis praesentium
+                    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque unde reiciendis veritatis praesentium
                     nemo vel alias repudiandae repellat accusantium, enim id temporibus vitae illo accusamus eos
-                    dignissimos fuga rerum odit.
-
+                    dignissimos fuga rerum odit. -->
+                    {{book.description}}
                 </div>
             </div>
             <div class="custRate">
@@ -66,8 +66,7 @@
                             <img class="star5in" src="/assets/starRate.png">
                             <img class="star5in" src="/assets/starRate.png">
                             <img class="star5in" src="/assets/starRate.png">
-                            <img class="star5in" src="/assets/starRate.png">
-                           
+                            <img class="star5in" src="/assets/starRate.png">                           
                         </span>
                         <div class="txtBox">
                             <textarea class="txtarea" placeholder='Write your review...'></textarea>

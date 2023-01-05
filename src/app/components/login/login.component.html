@@ -12,9 +12,10 @@
                     <button mat-flat-button class="twoBtn1">LOGIN</button>
                     <button mat-flat-button class="twoBtn2" (click)="navigate()">SIGNUP</button>                    
                 </div>
+                
                 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="formbox">                    
                     <div class="txtbox">
-                        <label class="txtboxlbl" >Email Id</label>
+                        <label class="txtboxlbl" >Email Id</label> 
                         <mat-form-field appearance="outline" class="txtfield" >
                             <input matInput placeholder="" formControlName="emailId" />
                             <mat-error>Email required</mat-error>
@@ -31,7 +32,7 @@
                         <button mat-flat-button type="button" class="fgtbtn" >Forgot Password?</button> 
                     </div>
                     <div class="loginBox">
-                        <button mat-raised-button type="submit" class="login" >Login</button>
+                        <button mat-raised-button type="submit" class="login" (click)=onSubmit()>Login</button>
                     </div>    
             </form>            
                 <div class="orTxt">

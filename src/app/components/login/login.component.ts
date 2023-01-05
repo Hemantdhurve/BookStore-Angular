@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
       this.user.login(payload).subscribe((response: any) => {
         console.log(response)
         localStorage.setItem('token',response.data)
+        this.router.navigate(['dashboard/getallbooks']);
       }, (error) => {
         console.log(error);
       })
