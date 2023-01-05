@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BookServiceService } from '../Services/bookService/book-service.service';
+import { FeedbackServiceService } from '../Services/feedbackService/feedback-service.service';
 
 @Component({
   selector: 'app-quick-view',
@@ -10,12 +11,12 @@ export class QuickViewComponent implements OnInit {
 
   bookId=localStorage.getItem('BookId');
   book:any;
-
-  constructor(private bookservice:BookServiceService) { }
+  feedbackArray:any;
+  constructor(private bookservice:BookServiceService,private feedback:FeedbackServiceService) { }
 
   ngOnInit() {
     this.getbookById(this.bookId)
-
+    this.getAllFeedbacks(this.bookId)
   }
 
    getbookById(bookId:any){
@@ -27,5 +28,12 @@ export class QuickViewComponent implements OnInit {
       console.log(this.book)
     });
   }
-  
+
+   getAllFeedbacks(bookId: any){
+    this.feedback.getAllFeedbacks(bookId).subscribe((response: any) => {
+      console.log(response);
+      this.feedbackArray = response.data;
+      console.log(this.feedbackArray)
+    });
+  }
 }

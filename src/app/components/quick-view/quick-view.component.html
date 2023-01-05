@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviewbox">
+            <div class="reviewbox" *ngFor="let feed of feedbackArray">
                 <div class="tagName">
                     <span class="roundtxt">HD</span>
                     <div class="nametxt">Hemant Dhurve </div>
@@ -90,7 +90,8 @@
                     <img  class="whiteStar" src="/assets/starRate.png">
                 </div>
                 <div class="reviewTxt">
-                    <span>Good product. Even though the translation could have been better.</span>
+                    <!-- <span>Good product. Even though the translation could have been better.</span> -->
+                    <span>{{feed.comment}}</span>
                 </div>                
             </div>
         </div>
