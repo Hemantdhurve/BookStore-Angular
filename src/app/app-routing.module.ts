@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetallbooksComponent } from './components/getallbooks/getallbooks.component';
 import { LoginComponent } from './components/login/login.component';
+import { MycartComponent } from './components/mycart/mycart.component';
 import { QuickViewComponent } from './components/quick-view/quick-view.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,
   children:[
     {path:'getallbooks',component:GetallbooksComponent},
-    {path:'quickview/:bookId',component:QuickViewComponent}
+    {path:'quickview/:bookId',component:QuickViewComponent},
+    {path:'mycart/:bookId',component:MycartComponent}
   ]
 },
   

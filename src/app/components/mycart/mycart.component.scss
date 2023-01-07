@@ -1,0 +1,535 @@
+.topBox {
+    display: flex;
+    position: relative;
+    left: 15.3vw;
+    width: 69.5vw;
+    top: 3vh;
+    align-Items: center;
+}
+
+.topinBox {
+    display: flex;
+    position: relative;
+    align-Items: center;
+    width: 13%;
+    color: #9D9D9D;
+
+}
+
+.txtBook {
+    font-Size: 13px;
+    font-Weight: 500;
+
+}
+
+.subtxt {
+    position: relative;
+    left: 5px;
+    font-Size: 12px;
+    font-Weight: 500;
+    color: black;
+
+}
+
+
+//
+
+.cartBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #E4E4E4;
+    width: 55.5vw;
+    left: 15vw;
+    top: 8vh;
+    height: 38vh;
+    align-items: center;
+}
+
+.cartTxt {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.location {
+    height: 5vh;
+    width: 19vw;
+    outline: none;
+    font-size: 17px;
+}
+
+.mainData {
+    display: flex;
+    width: 90%;
+    height: 80%;
+
+}
+
+.imgBox {
+    display: flex;
+    position: relative;
+    top: 10px;
+    height: 60%;
+    width: 15%;
+}
+
+.immg {
+    height: 80%;
+    width: 80%;
+}
+
+.dataBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10px;
+    width: 85%;
+    height: 95%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 50px;
+    width: 90%;
+    left: 2vw;
+
+}
+
+.bookttl {
+    position: relative;
+    top: 2px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.authttl {
+    position: relative;
+    top: 5px;
+    font-size: 15px;
+    font-weight: 450;
+    color: #9D9D9D;
+}
+
+.price {
+    display: flex;
+    position: relative;
+    top: 15px;
+    width: 29%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.discprice {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.actprice {
+    font-size: 14px;
+    font-weight: 500;
+    color: #878787;
+    text-decoration-line: line-through;
+}
+
+.incdecBox {
+    display: flex;
+    position: relative;
+    align-items: center;
+    top: 30px;
+    width: 50%;
+    height: 20%;
+    // border: 1px solid black;
+    left: 2vw;
+
+}
+
+.innerincdecBox {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.incdec1 {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    justify-content: space-between;
+}
+
+.signs {
+    border: 1px solid rgb(204, 201, 201);
+    border-radius: 50%;
+    font-size: 20px;
+    height: 30px;
+  line-height: 30px;  
+  width: 30px;  
+  text-align: center;
+  cursor: pointer;
+}
+
+// .num{
+//     width: 40%;
+//     height: 95%;
+//     border: 1px solid #DBDBDB
+// };
+.placeBtn {
+    display: flex;
+    position: relative;
+    top: 25px;
+    justify-content: flex-end;
+
+}
+
+.inPlacebtn {
+    background-color: #3371B5;
+    color: #f5f5f5;
+    border-radius: 0px;
+    width: 180px;
+}
+
+.incdecsign {
+    width: 25px;
+    height: 25px;
+    line-height: 20px;
+    border-radius: 50%;
+}
+
+.cartQty {
+    padding: 5px 20px 5px 20px;
+    margin: 0px 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    border-color: rgba(0, 0, 0, .12);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.mat-icon-button {
+    width: 25px;
+    height: 25px;
+    line-height: 20px;
+    border-radius: 50%;
+
+}
+
+.removebtn {
+    position: relative;
+    left: 10px;
+}
+
+//Address Box Part
+
+.addressBox {
+    display: flex;
+    position: relative;
+    border: 1px solid #E4E4E4;
+    width: 49.5vw;
+    left: 15vw;
+    top: 10vh;
+    height: 8vh;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333232;
+    padding: 0px 3vw;
+}
+
+// .innerAddbox{
+//     display: flex;
+//     height:45%;
+//     width:90%;
+//     font-size:16px;
+//     font-weight:500;
+//     align-items:center;
+//     color:#333232;
+// }
+
+
+.customerBox {
+    display: flex;
+    position: relative;
+    left: 15vw;
+    width: 55.5vw;
+    top: 12vh;
+    height: 80vh;
+    border: 1px solid #DCDCDC;
+    justify-content: space-between;
+
+}
+
+.innerCustleft {
+    width: 65%;
+    position: relative;
+    left: 3vw;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.custtxt {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333232;
+}
+
+.twoTxtfields {
+    position: relative;
+    left: 1vw;
+    height: 20%;
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.twoTxtfields1 {
+    width: 48%;
+}
+
+.txtlabel {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.fullnameTxt {
+    height: 50px;
+}
+
+.addTxt {
+    display: flex;
+    position: relative;
+    height: 8%;
+    top: 1vh;
+    font-size: 14px;
+    font-weight: 450;
+    align-items: center;
+    left: 1vw;
+    color: #0A0102;
+    width: 97%;
+}
+
+.txtarea {
+    display: flex;
+    position: relative;
+    height: 18%;
+    top: 1vh;
+}
+
+.area {
+    position: relative;
+    left: 1vw;
+    width: 96%;
+    resize: none;
+    border: 1px solid #DCDCDC;
+    outline: none;
+}
+
+.nexttwoTxtfields {
+    position: relative;
+    left: 1vw;
+    height: 20%;
+    top: 15px;
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.radioBtn {
+    display: flex;
+    flex-direction: column;
+}
+
+.typeBox {
+    display: flex;
+    position: relative;
+    width: 97%;
+    font-size: 16px;
+    color: #0A0102;
+    font-weight: 500;
+    align-items: center;
+    left: 1vw;
+
+}
+
+.inradio3 {
+    position: relative;
+    display: flex;
+    left: 1vw;
+    justify-content: space-between;
+    width: 70%;
+    color: #0A0102;
+}
+
+.innerCustright {
+    width: 23.5%;
+    right: 3vw;
+    position: relative;
+    justify-content: space-between;
+}
+
+.addressBtn {
+    display: flex;
+    position: relative;
+    top: 10px;
+
+}
+
+.addbtninner {
+    color: #A03037;
+    height: 45px;
+    border: 2px solid #A03037;
+}
+
+.continueBtn {
+    display: flex;
+    position: relative;
+    top: 78%;
+    justify-content: flex-end;
+}
+
+.inContbtn {
+    background-color: #3371B5;
+    color: #f5f5f5;
+    height: 42px;
+}
+
+
+//order
+.orderBox {
+    display: flex;
+    position: relative;
+    border: 1px solid #E4E4E4;
+    width: 49.5vw;
+    left: 15vw;
+    top: 12vh;
+    height: 8vh;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #333232;
+    padding: 0px 3vw;
+}
+
+//order2
+.orderBox2 {
+    position: relative;
+    width: 55.5vw;
+    left: 15vw;
+    top: 14vh;
+    height: 35vh;
+    border: 1px solid lightgray;
+}
+
+.orderTxt {
+    display: flex;
+    position: relative;
+    left: 3vw;
+    width: 90%;
+    height: 25%;
+    align-items: center;
+    color: #333232;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.orderData {
+    position: relative;
+    left: 3vw;
+    display: flex;
+    width: 90%;
+    height: 75%;
+}
+
+.orderimgBox {
+    display: flex;
+    position: relative;
+    top: 10px;
+    height: 60%;
+    width: 15%;
+}
+
+.immgorder {
+    height: 90%;
+    width: 80%;
+}
+
+.orderdataBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10px;
+    width: 85%;
+    height: 95%;
+}
+
+.titleorder {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 50px;
+    width: 90%;
+    left: 2vw;
+}
+
+.bookttlorder {
+    position: relative;
+    top: 2px;
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.authttlorder {
+    position: relative;
+    top: 5px;
+    font-size: 13px;
+    font-weight: 450;
+    color: #9D9D9D;
+}
+
+.priceorder {
+    display: flex;
+    position: relative;
+    top: 15px;
+    width: 27%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discpriceorder {
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.actpriceorder {
+    font-size: 12px;
+    font-weight: 500;
+    color: #878787;
+    text-decoration-line: line-through;
+}
+
+.checkBtn {
+    display: flex;
+    position: relative;
+    top: 8vh;
+    justify-content: flex-end;
+}
+
+.incheckbtn {
+    background-color: #3371B5;
+    color: #f5f5f5;
+    border-radius: 0px;
+    width: 180px;
+}

@@ -16,7 +16,8 @@ import {MatCardModule} from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { GetallbooksComponent } from './components/getallbooks/getallbooks.component';
 import { QuickViewComponent } from './components/quick-view/quick-view.component';
-
+import { MycartComponent } from './components/mycart/mycart.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,10 @@ import { QuickViewComponent } from './components/quick-view/quick-view.component
     RegistrationComponent,
     DashboardComponent,
     GetallbooksComponent,
-    QuickViewComponent
+    QuickViewComponent,
+    MycartComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,7 +40,8 @@ import { QuickViewComponent } from './components/quick-view/quick-view.component
     ReactiveFormsModule,
     HttpClientModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,161 @@
+<div>
+    <div class="topBox">
+        <div class="topinBox">
+            <div class="txtBook">
+                Home /
+            </div>
+            <div class="subtxt">My Cart</div>
+        </div>
+    </div>
+
+    <div>
+        <div class="cartBox">
+            <div class="cartTxt">
+                <div>
+                    <span>My Cart (01)</span>
+                </div>
+                <div>
+                    <select class="location">
+                        <option> Use Current Location</option>
+                        <option>Bhandara</option>
+                        <option>Nagpur</option>
+                        <option>Pune</option>
+                        <option>Mumbai</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mainData" >
+                <div class="imgBox">
+                    <img class="immg" src='/assets/dont.png'>
+                </div>
+                <div class="dataBox">
+                    <div>
+                        <div class="title">
+                            <span class="bookttl">Book Title</span>
+                            <span class="authttl">by Author</span>
+                            <div class="price">
+                                <span class="discprice">Rs 2000</span>
+                                <span class="actprice">Rs 3000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="incdecBox">
+                        <!-- <div class="innerincdecBox">
+                            <button mat-stroked-button class="signs">-</button>
+                            <span class="cartQty">1</span>
+                            <button mat-stroked-button class="signs">+</button>
+                            <button mat-button class="removebtn"> Remove</button>
+                        </div> -->
+                        <div class="innerincdecBox">
+                            <!-- <button mat-stroked-button class="signs">-</button> -->
+                            <div class="signs">-</div>
+                            <span class="cartQty">1</span>
+                            <div class="signs">+</div>
+                            <!-- <button mat-stroked-button class="signs">+</button> -->
+                            <button mat-button class="removebtn"> Remove</button>
+                        </div>
+                    </div>
+                    <div class="placeBtn">
+                        <button mat-flat-button class="inPlacebtn">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="addressBox">
+            <div class="innerAddBox">
+                Address Details
+            </div>
+        </div>
+
+        <!-- /Address2 -->
+        <form class="customerBox">
+            <div class="innerCustleft">
+                <div class="custtxt">Customer Details</div>
+                <div class="twoTxtfields">
+                    <div class="twoTxtfields1">
+                        <label class="txtlabel">Full Name</label>
+                        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
+                            <input matInput placeholder="" formControlName="fullName" >
+                        </mat-form-field>
+                    </div>
+                    <div class="twoTxtfields1">
+                        <label class="txtlabel">Mobile Number</label>
+                        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                            <input matInput placeholder="" formControlName="mobileNumber">
+                        </mat-form-field>
+                    </div>
+                </div>
+               
+                  <div class="addTxt">Address</div>
+                  <div class="txtarea">
+                    <textarea class="area"></textarea>
+                  </div>
+                  <div class="nexttwoTxtfields">
+                    <div class="twoTxtfields1">
+                        <label class="txtlabel">City/Town</label>
+                        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                            <input matInput placeholder="" formControlName="city">
+                        </mat-form-field>
+                    </div>
+                    <div class="twoTxtfields1">
+                        <label class="txtlabel">State</label>
+                        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                            <input matInput placeholder="" formControlName="state">
+                        </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="radioBtn">
+                    <label class="typeBox">Type :</label>
+                    <mat-radio-group formControlName="type" class="inradio3">
+                      <mat-radio-button value="Home">Home</mat-radio-button>
+                      <mat-radio-button value="Office">Office</mat-radio-button>
+                      <mat-radio-button value="Other">Other</mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+            </div>
+            <div class="innerCustright">
+                <div class="addressBtn">
+                    <button class="addbtninner" mat-button style=" width: 100%;border-radius: 0px;">Add New Address</button>
+                </div>
+                <div class="continueBtn">
+                    <button mat-flat-button class="inContbtn" style="width: 100%; border-radius: 0px;">Continue</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="orderBox">
+            <div class="innerAddBox">
+                Order Summary
+            </div>
+        </div>
+
+        <!-- order 2 -->
+        <div class="orderBox2" fxLayout="column" fxLayoutAlign="center start">
+            <div class="orderTxt">
+                <div>
+                    <span>Order Summary</span>
+                </div>
+            </div>
+            <div class="orderData">
+                <div class="orderimgBox">
+                    <img class="immgorder" src='/assets/dont.png'>
+                </div>
+                <div class="orderdataBox">
+                    <div>
+                        <div class="titleorder">
+                            <span class="bookttlorder">Book Title</span>
+                            <span class="authttlorder">by Author</span>
+                            <div class="priceorder">
+                                <span class="discpriceorder">Rs 2000</span>
+                                <span class="actpriceorder">Rs 3000</span>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="checkBtn">
+                        <button mat-flat-button class="incheckbtn">Checkout</button>
+                    </div>
+                </div>
+          </div>
+    </div>
+</div>

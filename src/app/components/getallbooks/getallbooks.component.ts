@@ -15,7 +15,6 @@ export class GetallbooksComponent implements OnInit {
 
   constructor(private book: BookServiceService,private router:Router) { }
   
-  
   ngOnInit() {
     this.getallbooks();
   }
