@@ -33,5 +33,15 @@ export class CartserviceService {
     }
     return this.httpservice.GetService('/Cart/RetriveCart', true, header);
   }
-  
+
+  updateCartQty(cartId:any,bookQuantity:any){
+    let header={
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpservice.PutService('/Cart/UpdateQTY?cartId='+cartId+'&bookQuantity='+bookQuantity,cartId,true,header)
+  }
+
 }

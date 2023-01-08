@@ -48,9 +48,9 @@
                         </div> -->
                         <div class="innerincdecBox">
                             <!-- <button mat-stroked-button class="signs">-</button> -->
-                            <div class="signs" (click)="decrement()" >-</div>
-                            <span class="cartQty">{{counter}}</span>
-                            <div class="signs" (click)="increment()" >+</div>
+                            <div class="signs" (click)="decrement(cart.cartId,cart.bookQuantity)" >-</div>
+                            <span class="cartQty">{{cart.bookQuantity}}</span>
+                            <div class="signs" (click)="increment(cart.cartId,cart.bookQuantity)" >+</div>
                             <!-- <button mat-stroked-button class="signs">+</button> -->
                             <button mat-button class="removebtn"> Remove</button>
                         </div>

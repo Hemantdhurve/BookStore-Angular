@@ -35,12 +35,26 @@ export class MycartComponent implements OnInit {
     });
   }
 
-  increment() {
-    this.counter++;
+  increment(cartId:any,bookQuantity:any) {
+    // this.counter++;
+    console.log('Cart ID:',cartId,'BookQuantity:', bookQuantity)
+    this.cart.updateCartQty(cartId,(bookQuantity+1)).subscribe((response:any)=>{
+      console.log("Quantity updated",response); 
+      console.log('Cart ID:',cartId,'BookQuantity:', response.data)
+      this.getCartDetails();
+    
+    })
   }
 
-  decrement(){
-    this.counter--;
+  decrement(cartId:any,bookQuantity:any){
+    // this.counter++;
+    console.log('Cart ID:',cartId,'BookQuantity:', bookQuantity)
+    this.cart.updateCartQty(cartId,(bookQuantity-1)).subscribe((response:any)=>{
+    console.log("Quantity updated",response); 
+    console.log('Cart ID:',cartId,'BookQuantity:', response.data)
+      this.getCartDetails();
+    })
   }
+
   
 }
