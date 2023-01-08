@@ -13,9 +13,8 @@ export class MycartComponent implements OnInit {
   // carts:any;
   cartArray: any=[];
   token: any;
-  userId: any;
   counter=0;
-
+  noofCart:any;
   //last file 
   //lang support by browser, typescript and 
 
@@ -31,7 +30,9 @@ export class MycartComponent implements OnInit {
     this.cart.getCartDetails().subscribe((response: any) => {
       console.log("Retrived All Cart Items", response.data);
       this.cartArray = response.data;
+      this.noofCart=response.data.length;
       console.log('Cart Array: ', this.cartArray);
+      console.log("Total number of Cart:",this.noofCart);
     });
   }
 
@@ -56,5 +57,13 @@ export class MycartComponent implements OnInit {
     })
   }
 
-  
+    removeFromCart(cartId: any) {
+    console.log(cartId)
+    this.cart.deleteFromCart(cartId).subscribe((response: any) => {      
+      console.log("Removed from cart",response);
+      //i have called getcartdetails() to get all cart array
+      this.getCartDetails();
+    })
+  }
+
 }

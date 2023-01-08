@@ -14,7 +14,7 @@ export class QuickViewComponent implements OnInit {
   bookId = localStorage.getItem('BookId');
   book: any;
   feedbackArray: any;
-  cartlist:any;
+  cartlist: any;
 
   constructor(private bookservice: BookServiceService, private feedback: FeedbackServiceService, private router: Router, private cart: CartserviceService) { }
 
@@ -43,18 +43,17 @@ export class QuickViewComponent implements OnInit {
 
   //1.Add to cart API 
   addToCart() {
-    this.router.navigate(["/dashboard/mycart/"+this.bookId])
+    this.router.navigate(["/dashboard/mycart/" + this.bookId])
     let data = {
       bookId: this.book.bookId,
       bookInCart: 1
     }
     this.cart.addToCart(data).subscribe((response: any) => {
       console.log(response);
-      this.cartlist=response.data;
+      this.cartlist = response.data;
       console.log(this.cartlist);
-    });   
-    
+    });
+
   }
 
- 
 }
