@@ -22,21 +22,22 @@
             <div class="dataBox">
                 <div class="booktextBox">
                     <div class="titletxt">
-                        <span>{{book.bookTitle}}</span>
+                        <!-- use "?"" to apply the null check until the response arrives. -->
+                        <span>{{book?.bookTitle}}</span>
                     </div>
                     <div class="authortxt">
-                        <span>by {{book.author}}</span>
+                        <span>by {{book?.author}}</span>
                     </div>
                     <div class="ratingBox">
                         <div class="starBox">
-                            <span>{{book.rating}}</span>
+                            <span>{{book?.rating}}</span>
                             <img src="/assets/star.jpg" class="starimg">
                         </div>
-                        <span class="ratingCount">({{book.ratedCount}})</span>
+                        <span class="ratingCount">({{book?.ratedCount}})</span>
                     </div>
                     <div class="priceBox">
-                        <span class="discountPrice">Rs. {{book.discountedPrice}}</span>
-                        <span class="originalPrice">Rs. {{book.actualPrice}}</span>
+                        <span class="discountPrice">Rs. {{book?.discountedPrice}}</span>
+                        <span class="originalPrice">Rs. {{book?.actualPrice}}</span>
                     </div>
                 </div>
             </div>

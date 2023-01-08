@@ -52,12 +52,9 @@ export class QuickViewComponent implements OnInit {
       console.log(response);
       this.cartlist=response.data;
       console.log(this.cartlist);
-    });
-    
+    });   
     
   }
 
-  // addToCart(){
-
-  // }
+ 
 }

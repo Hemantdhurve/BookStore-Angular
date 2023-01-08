@@ -30,21 +30,21 @@
             <div class="dataBox">
                 <div class="booktextBox">
                     <div class="titletxt">
-                        {{book.bookTitle}}
+                        {{book?.bookTitle}}
                     </div>
                     <div class="authortxt">
-                        {{book.author}}
+                        {{book?.author}}
                     </div>
                     <div class="ratingBox">
                         <div class="star">
-                            <span>{{book.rating}}</span>
+                            <span>{{book?.rating}}</span>
                             <img src="/assets/star.jpg" class="starimg">
                         </div>
-                        <span >({{book.ratedCount}})</span>
+                        <span >({{book?.ratedCount}})</span>
                     </div>
                     <div class="priceBox">
-                        <span >Rs.{{book.discountedPrice}} </span>
-                        <span class="actPrice">Rs.{{book.actualPrice}}</span>
+                        <span >Rs.{{book?.discountedPrice}} </span>
+                        <span class="actPrice">Rs.{{book?.actualPrice}}</span>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque unde reiciendis veritatis praesentium
                     nemo vel alias repudiandae repellat accusantium, enim id temporibus vitae illo accusamus eos
                     dignissimos fuga rerum odit. -->
-                    {{book.description}}
+                    {{book?.description}}
                 </div>
             </div>
             <div class="custRate">
@@ -91,7 +91,7 @@
                 </div>
                 <div class="reviewTxt">
                     <!-- <span>Good product. Even though the translation could have been better.</span> -->
-                    <span>{{feed.comment}}</span>
+                    <span>{{feed?.comment}}</span>
                 </div>                
             </div>
         </div>

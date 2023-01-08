@@ -24,14 +24,14 @@
                     </select>
                 </div>
             </div>
-            <div class="mainData" >
+            <div class="mainData" *ngFor="let cart of cartArray">
                 <div class="imgBox">
                     <img class="immg" src='/assets/dont.png'>
                 </div>
                 <div class="dataBox">
                     <div>
                         <div class="title">
-                            <span class="bookttl">Book Title</span>
+                            <span class="bookttl">book Title</span>
                             <span class="authttl">by Author</span>
                             <div class="price">
                                 <span class="discprice">Rs 2000</span>
@@ -48,9 +48,9 @@
                         </div> -->
                         <div class="innerincdecBox">
                             <!-- <button mat-stroked-button class="signs">-</button> -->
-                            <div class="signs">-</div>
-                            <span class="cartQty">1</span>
-                            <div class="signs">+</div>
+                            <div class="signs" (click)="decrement()" >-</div>
+                            <span class="cartQty">{{counter}}</span>
+                            <div class="signs" (click)="increment()" >+</div>
                             <!-- <button mat-stroked-button class="signs">+</button> -->
                             <button mat-button class="removebtn"> Remove</button>
                         </div>

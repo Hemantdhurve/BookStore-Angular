@@ -22,4 +22,16 @@ export class CartserviceService {
     }
     return this.httpservice.PostService('/Cart/AddCart',reqdata,true,header)
   }
+
+  //1.Get Cart Details
+  getCartDetails() {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.httpservice.GetService('/Cart/RetriveCart', true, header);
+  }
+  
 }

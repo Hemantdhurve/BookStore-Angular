@@ -19,10 +19,10 @@ export class HttpService {
   GetService(url: string,token:boolean=false,httpOptions:any){
     return this.httpclient.get(this.baseurl+url,token && httpOptions)
   }
-  delete(){
-
+  DeleteService(url: string, token: boolean, httpHeadersOptions: any) {
+    return this.httpclient.delete(this.baseurl+url,token && httpHeadersOptions)
   }
-  put(){
-     
+  PutService(url: string, reqdata: any,token:boolean=false,httpOptions:any){
+     return this.httpclient.put(this.baseurl+url,reqdata,token && httpOptions)
   }
 }

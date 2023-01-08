@@ -9,21 +9,38 @@ import { HttpService } from '../Services/httpService/http.service';
   styleUrls: ['./mycart.component.scss']
 })
 export class MycartComponent implements OnInit {
-  bookId=localStorage.getItem('BookId');
-  book:any;
-  cartArray:any;
-  token:any;
+  bookId = localStorage.getItem('BookId');
+  // carts:any;
+  cartArray: any=[];
+  token: any;
+  userId: any;
+  counter=0;
 
   //last file 
   //lang support by browser, typescript and 
 
-  constructor(private cart:CartserviceService,private httpservice:HttpService){
+  constructor(private cart: CartserviceService, private httpservice: HttpService) {
     // this.token = localStorage.getItem('token');
   }
 
   ngOnInit(): void {
-
+    this.getCartDetails();
+  }
+  // Get Cart Items
+  getCartDetails() {
+    this.cart.getCartDetails().subscribe((response: any) => {
+      console.log("Retrived All Cart Items", response.data);
+      this.cartArray = response.data;
+      console.log('Cart Array: ', this.cartArray);
+    });
   }
 
+  increment() {
+    this.counter++;
+  }
+
+  decrement(){
+    this.counter--;
+  }
   
 }

@@ -40,9 +40,10 @@
     position: relative;
     border: 1px solid #E4E4E4;
     width: 55.5vw;
+    box-sizing: border-box;
     left: 15vw;
+    // height: 38vh;
     top: 8vh;
-    height: 38vh;
     align-items: center;
 }
 
@@ -66,7 +67,7 @@
 .mainData {
     display: flex;
     width: 90%;
-    height: 80%;
+    height: 30vh !important;
 
 }
 
@@ -89,7 +90,7 @@
     position: relative;
     top: 10px;
     width: 85%;
-    height: 95%;
+    height: 95% !important;
 }
 
 .title {
@@ -146,7 +147,6 @@
     top: 30px;
     width: 50%;
     height: 20%;
-    // border: 1px solid black;
     left: 2vw;
 
 }
@@ -159,33 +159,22 @@
     position: relative;
 }
 
-.incdec1 {
-    display: flex;
-    align-items: center;
-    width: 45%;
-    justify-content: space-between;
-}
 
 .signs {
     border: 1px solid rgb(204, 201, 201);
     border-radius: 50%;
     font-size: 20px;
     height: 30px;
-  line-height: 30px;  
-  width: 30px;  
-  text-align: center;
-  cursor: pointer;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
 }
 
-// .num{
-//     width: 40%;
-//     height: 95%;
-//     border: 1px solid #DBDBDB
-// };
 .placeBtn {
     display: flex;
     position: relative;
-    top: 25px;
+    top: 30px;
     justify-content: flex-end;
 
 }
@@ -197,12 +186,6 @@
     width: 180px;
 }
 
-.incdecsign {
-    width: 25px;
-    height: 25px;
-    line-height: 20px;
-    border-radius: 50%;
-}
 
 .cartQty {
     padding: 5px 20px 5px 20px;
@@ -347,6 +330,7 @@
     justify-content: space-between;
 
 }
+
 .radioBtn {
     display: flex;
     flex-direction: column;
