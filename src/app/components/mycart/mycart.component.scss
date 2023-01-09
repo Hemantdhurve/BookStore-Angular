@@ -52,7 +52,7 @@
     width: 90%;
     justify-content: space-between;
     align-items: center;
-    height: 8vh;
+    height: 9vh;
     font-size: 23px;
     font-weight: 700;
 }
@@ -67,7 +67,7 @@
 .mainData {
     display: flex;
     width: 90%;
-    height: 30vh !important;
+    height: 27vh !important;
 
 }
 
@@ -80,8 +80,8 @@
 }
 
 .immg {
-    height: 80%;
-    width: 80%;
+    height: 85%;
+    width: 75%;
 }
 
 .dataBox {
@@ -90,7 +90,7 @@
     position: relative;
     top: 10px;
     width: 85%;
-    height: 95% !important;
+    height: 75% !important;
 }
 
 .title {
@@ -121,7 +121,7 @@
 .price {
     display: flex;
     position: relative;
-    top: 15px;
+    top: 3vh;
     width: 29%;
     align-items: center;
     justify-content: space-between;
@@ -144,11 +144,10 @@
     display: flex;
     position: relative;
     align-items: center;
-    top: 30px;
+    top: 7vh;
     width: 50%;
     height: 20%;
     left: 2vw;
-
 }
 
 .innerincdecBox {
@@ -171,10 +170,25 @@
     cursor: pointer;
 }
 
+.cartQty {
+    padding: 5px 20px 5px 20px;
+    margin: 0px 5px;
+    border: 1px solid;
+    border-radius: 3px;
+    border-color: rgba(0, 0, 0, .12);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.removebtn {
+    position: relative;
+    left: 2vw;
+}
 .placeBtn {
     display: flex;
     position: relative;
-    top: 30px;
+    width: 90%;
+    bottom: 4vh;
     justify-content: flex-end;
 
 }
@@ -187,15 +201,6 @@
 }
 
 
-.cartQty {
-    padding: 5px 20px 5px 20px;
-    margin: 0px 5px;
-    border: 1px solid;
-    border-radius: 3px;
-    border-color: rgba(0, 0, 0, .12);
-    font-size: 15px;
-    font-weight: 500;
-}
 
 .mat-icon-button {
     width: 25px;
@@ -205,10 +210,6 @@
 
 }
 
-.removebtn {
-    position: relative;
-    left: 10px;
-}
 
 //Address Box Part
 

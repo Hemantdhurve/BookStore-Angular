@@ -29,23 +29,15 @@
                     <img class="immg" src='/assets/dont.png'>
                 </div>
                 <div class="dataBox">
-                    <div>
-                        <div class="title">
-                            <span class="bookttl">book Title</span>
-                            <span class="authttl">by Author</span>
-                            <div class="price">
-                                <span class="discprice">Rs 2000</span>
-                                <span class="actprice">Rs 3000</span>
-                            </div>
+                    <div class="title">
+                        <span class="bookttl">book Title</span>
+                        <span class="authttl">by Author</span>
+                        <div class="price">
+                            <span class="discprice">Rs 2000</span>
+                            <span class="actprice">Rs 3000</span>
                         </div>
                     </div>
                     <div class="incdecBox">
-                        <!-- <div class="innerincdecBox">
-                            <button mat-stroked-button class="signs">-</button>
-                            <span class="cartQty">1</span>
-                            <button mat-stroked-button class="signs">+</button>
-                            <button mat-button class="removebtn"> Remove</button>
-                        </div> -->
                         <div class="innerincdecBox">
                             <!-- <button mat-stroked-button class="signs">-</button> -->
                             <div class="signs" (click)="decrement(cart.cartId,cart.bookQuantity)" >-</div>
@@ -54,11 +46,11 @@
                             <!-- <button mat-stroked-button class="signs">+</button> -->
                             <button mat-button class="removebtn" (click)="removeFromCart(cart.cartId)" > Remove</button>
                         </div>
-                    </div>
-                    <div class="placeBtn">
-                        <button mat-flat-button class="inPlacebtn">Place Order</button>
-                    </div>
-                </div>
+                    </div>                    
+                </div>                
+            </div>
+            <div class="placeBtn">
+                <button mat-flat-button class="inPlacebtn">Place Order</button>
             </div>
         </div>
 
