@@ -8,6 +8,7 @@ import { HttpService } from '../httpService/http.service';
 export class WishlistserviceService {
 
   token:any;
+  wishlistId:any;
 
   constructor(private httpservice:HttpService) { 
     this.token=localStorage.getItem('token')
@@ -31,5 +32,16 @@ export class WishlistserviceService {
       })
     }
     return this.httpservice.GetService('/Wishlist/RetriveAll',true,header)
+  }
+
+  deleteFromWishlist(wishlistId:any){
+    console.log(wishlistId)
+    let header={
+      headers:({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpservice.DeleteService('/Wishlist/Delete?wishlistId='+wishlistId,true,header)
   }
 }

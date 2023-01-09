@@ -10,6 +10,7 @@ export class MywishlistComponent implements OnInit {
 
 wishArray:any=[];
 noofWishlist:any;
+wishlistId:any;
 
   constructor(private wish:WishlistserviceService){}
 
@@ -24,6 +25,14 @@ noofWishlist:any;
       console.log("Array of Wishlist:",this.wishArray);
       console.log("Total number of wishlist:",this.noofWishlist)
       
+    })
+  }
+
+  deleteWishlist(wishlistId:any){
+    this.wish.deleteFromWishlist(wishlistId).subscribe((response)=>{
+      console.log(response);
+      console.log("Removed wishlist Id:",wishlistId)
+      this.getAllWishlist();
     })
   }
 }

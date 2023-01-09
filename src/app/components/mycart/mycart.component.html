@@ -27,14 +27,15 @@
             <div class="mainData" *ngFor="let cart of cartArray">
                 <div class="imgBox">
                     <img class="immg" src='/assets/dont.png'>
+                    <!-- <img class="immg" [src]="cart.image"> -->
                 </div>
                 <div class="dataBox">
                     <div class="title">
-                        <span class="bookttl">book Title</span>
-                        <span class="authttl">by Author</span>
+                        <span class="bookttl">{{cart.bookTitle}}</span>
+                        <span class="authttl">by {{cart.author}}</span>
                         <div class="price">
-                            <span class="discprice">Rs 2000</span>
-                            <span class="actprice">Rs 3000</span>
+                            <span class="discprice">Rs {{cart.discountedPrice}}</span>
+                            <span class="actprice">Rs {{cart.actualPrice}}</span>
                         </div>
                     </div>
                     <div class="incdecBox">
