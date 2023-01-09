@@ -52,7 +52,7 @@
     width: 90%;
     justify-content: space-between;
     align-items: center;
-    height: 20%;
+    height: 8vh;
     font-size: 23px;
     font-weight: 700;
 }
@@ -270,8 +270,9 @@
 
 .twoTxtfields {
     position: relative;
+    top: 14px;
     left: 1vw;
-    height: 20%;
+    height: 15vh;
     width: 97%;
     display: flex;
     justify-content: space-between;
@@ -294,7 +295,7 @@
 .addTxt {
     display: flex;
     position: relative;
-    height: 8%;
+    height: 6vh;
     top: 1vh;
     font-size: 14px;
     font-weight: 450;
@@ -307,8 +308,9 @@
 .txtarea {
     display: flex;
     position: relative;
-    height: 18%;
+    height: 15vh;
     top: 1vh;
+
 }
 
 .area {
@@ -323,7 +325,7 @@
 .nexttwoTxtfields {
     position: relative;
     left: 1vw;
-    height: 20%;
+    height: 16vh;
     top: 15px;
     width: 97%;
     display: flex;

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { BookServiceService } from '../Services/bookService/book-service.service';
 import { CartserviceService } from '../Services/cartService/cartservice.service';
 import { FeedbackServiceService } from '../Services/feedbackService/feedback-service.service';
+import { WishlistserviceService } from '../Services/wishlistService/wishlistservice.service';
 
 @Component({
   selector: 'app-quick-view',
@@ -16,7 +17,7 @@ export class QuickViewComponent implements OnInit {
   feedbackArray: any;
   cartlist: any;
 
-  constructor(private bookservice: BookServiceService, private feedback: FeedbackServiceService, private router: Router, private cart: CartserviceService) { }
+  constructor(private bookservice: BookServiceService, private feedback: FeedbackServiceService, private router: Router, private cart: CartserviceService,private wishlist:WishlistserviceService) { }
 
   ngOnInit() {
     this.getbookById(this.bookId)
@@ -56,4 +57,14 @@ export class QuickViewComponent implements OnInit {
 
   }
 
+  addToWishlist(){
+    this.router.navigate(["/dashboard/mywishlist"])
+    let data = {
+      bookId: this.book.bookId,
+    }
+    this.wishlist.addToWishlist(data,this.bookId).subscribe((response: any) => {
+      console.log("Added to wishlist", response);
+      console.log('Added bookId to Wishlist :',this.bookId)
+    });
+  }
 }
