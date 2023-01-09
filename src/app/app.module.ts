@@ -29,7 +29,7 @@ import { MywishlistComponent } from './components/mywishlist/mywishlist.componen
     GetallbooksComponent,
     QuickViewComponent,
     MycartComponent,
-    MywishlistComponent
+    MywishlistComponent,
   ],
   
   imports: [

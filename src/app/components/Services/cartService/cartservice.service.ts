@@ -46,6 +46,7 @@ export class CartserviceService {
 
 
   deleteFromCart(cartId: any) {
+    console.log(cartId)
     let header = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',

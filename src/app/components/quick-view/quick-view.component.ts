@@ -45,6 +45,7 @@ export class QuickViewComponent implements OnInit {
   //1.Add to cart API 
   addToCart() {
     this.router.navigate(["/dashboard/mycart/" + this.bookId])
+    console.log(this.book)
     let data = {
       bookId: this.book.bookId,
       bookInCart: 1

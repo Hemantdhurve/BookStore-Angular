@@ -9,9 +9,9 @@
     </div>
 
     <div class="wishBox">
-        <span class="wishTxt">My Wishlist(01)</span>
+        <span class="wishTxt">My Wishlist({{noofWishlist}})</span>
     </div>  
-    <div class="Box" >
+    <div class="Box" *ngFor="let wish of wishArray">
         <div class="innerBox">
             <div class="imgBox1">
                 <div class="iimmgg">
@@ -19,11 +19,11 @@
                 </div>
                 <div class="detail">
                     <div class="title">
-                        <span class="bookttl">Book Title</span>
-                        <span class="subtitle">by Author</span>
+                        <span class="bookttl">{{wish.bookTitle}}</span>
+                        <span class="subtitle">by {{wish.author}}</span>
                         <div class="price">
-                            <span>Rs. 2000</span>
-                            <span class="actprice" >Rs. 3000</span>
+                            <span>Rs. {{wish.discountedPrice}}</span>
+                            <span class="actprice" >Rs. {{wish.actualPrice}}</span>
                         </div>
                     </div>
                 </div>

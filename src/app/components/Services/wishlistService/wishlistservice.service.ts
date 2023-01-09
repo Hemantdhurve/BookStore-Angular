@@ -22,4 +22,14 @@ export class WishlistserviceService {
     }
     return this.httpservice.PostService('/Wishlist/Add?bookId='+bookId,data,true,header)
   }
+
+  getAllWishlist(){
+    let header={
+      headers:new HttpHeaders ({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpservice.GetService('/Wishlist/RetriveAll',true,header)
+  }
 }

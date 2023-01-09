@@ -19,7 +19,7 @@ const routes: Routes = [
     {path:'mywishlist',component:MywishlistComponent}
   ]
 },
-  
+
 ];
 
 @NgModule({
