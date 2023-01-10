@@ -1,5 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { AddressserviceService } from '../Services/addressservice/addressservice.service';
 import { CartserviceService } from '../Services/cartService/cartservice.service';
 import { HttpService } from '../Services/httpService/http.service';
 
@@ -15,14 +17,33 @@ export class MycartComponent implements OnInit {
   token: any;
   counter=0;
   noofCart:any;
+
+  // fullName:any;
+  // mobileNumber:any;
+  // address:any;
+  // city:any;
+  // state:any;
+  // type:any;
+  // addressForm!:FormGroup
+  // formBuilder: any;
+
+
   //last file 
   //lang support by browser, typescript and 
 
-  constructor(private cart: CartserviceService, private httpservice: HttpService) {
+  constructor(private cart: CartserviceService, private httpservice: HttpService,private addressservice:AddressserviceService) {
     // this.token = localStorage.getItem('token');
   }
 
   ngOnInit(): void {
+    // this.addressForm=this.formBuilder.group({
+    //   fullName: '',
+    //   mobileNumber: '',
+    //   address:'',
+    //   city:'',
+    //   state:'',
+
+    // })
     this.getCartDetails();
   }
   // Get Cart Items
@@ -66,4 +87,18 @@ export class MycartComponent implements OnInit {
     })
   }
 
+  //AddressAPI
+  // addAddress(){
+  //   let data={
+  //   fullName:this.fullName,
+  //   mobileNumber:this.mobileNumber,
+  //   address:this.address,
+  //   city:this.city,
+  //   state:this.state,
+  //   type:this.type
+  //   }
+  //   this.addressservice.addAddress(data).subscribe((response)=>{
+  //     console.log(response)
+  //   })
+  // }
 }

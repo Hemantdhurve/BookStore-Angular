@@ -69,7 +69,7 @@ export class QuickViewComponent implements OnInit {
       console.log(this.cartlist);
       //smackbar is like a pop that displayed at the bottom of the screen
       //which takes 2 parameters message: string and action: string
-      this._snackbar.open("Book Added to the Cart","Add")
+      this._snackbar.open("Book Added to the Cart","Add",{duration:3000})
     });
 
   }
@@ -82,7 +82,7 @@ export class QuickViewComponent implements OnInit {
     this.wishlist.addToWishlist(data,this.bookId).subscribe((response: any) => {
       console.log("Added to wishlist", response);
       console.log('Added bookId to Wishlist :',this.bookId)
-      this._snackbar.open("Book Added to the Wishlist","Add")
+      this._snackbar.open("Book Added to the Wishlist","Add",{duration:3000})
     });
   }
 }

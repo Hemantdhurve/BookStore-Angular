@@ -23,6 +23,8 @@ import { MyorderComponent } from './components/myorder/myorder.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatBadgeModule} from '@angular/material/badge';
 import {FormsModule} from '@angular/forms';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,10 @@ import {FormsModule} from '@angular/forms';
     MatRadioModule,
     MatSnackBarModule,
     MatBadgeModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule,
+    MatToolbarModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

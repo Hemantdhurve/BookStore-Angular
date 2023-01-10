@@ -6,6 +6,7 @@
     width: 100vw;
     background-Color: #A03037 !important;
 }
+
 .outHeadBox {
     display: flex;
     flex-Direction: row;
@@ -87,28 +88,16 @@
     color:#FCFCFC;
     width:50%;
     border-Left: 1px solid #8F2B28;
+    border-Right: 1px solid #8F2B28;
 }
-// .iconBtn{
-//     background-color: #A03037;
-//     height: 26px;
-//     border: none;
-//     color:#FCFCFC;
-//     border: 1px solid black;
-
-// }
-// ::ng-deep .mat-mdc-unelevated-button .mat-mdc-button-touch-target{
-//     position: absolute;
-//     top:5px !important;
-//     height: 70px !important;
-//     left: 0;
-//     right: 0;
-//     background-color: #A03037;
-// }
 .icontxt{
     display:flex;
-    justify-Content:center;
-    width:80px;
     position:relative;
+    justify-Content:center;
+    align-items: center;
+    width:80px;
+    font-size: 14px;
+    height: 16px;
 }
 .footer{
     display: flex;
@@ -131,8 +120,63 @@
     position: relative;
     font-size: 12px !important;
     color: #FCFCFC;
-    border:1px solid black;
+    border:1px solid #FCFCFC;
     width: 15px !important;
     height: 16px !important;
     right: 12px !important;
+}
+
+
+///profile pop-up CSS
+ 
+.toolBarHead{
+    background-Color: #A03037 !important;
+}
+.smallIcon{
+    display: flex;
+    flex-direction: row;
+    color: #878787;
+    margin: 10px 10px;
+    align-items: center !important;
+    background-color: transparent;
+    border: transparent;
+}
+
+.menuBox{
+    position: relative;
+    width: 35vh;
+    height: 32vh;
+}
+.innerMenuBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 28vh;
+    left:1vw;
+    height: 30vh;
+}
+.hellotxt{
+    position: relative;
+    left: 1vw;
+}
+.popbtns{
+    height: 6vh;
+    display: flex;    
+    position: relative;
+    top: 2vh;
+}
+.smallIcon img{
+    position: relative;
+    left: 3px;
+}
+.powtxt{
+    position: relative;
+    left: 15px;
+
+}
+.logoutBtn{
+    padding: 0px 36px;
+    margin: 10px 10px;
+    border: 1px solid #A03037 !important;
+    color: #A03037;
 }
