@@ -125,3 +125,14 @@
     height: 45px;
     color: #FCFCFC;
 }
+
+::ng-deep .mat-badge-content {
+    background: #A03037 !important;
+    position: relative;
+    font-size: 12px !important;
+    color: #FCFCFC;
+    border:1px solid black;
+    width: 15px !important;
+    height: 16px !important;
+    right: 12px !important;
+}

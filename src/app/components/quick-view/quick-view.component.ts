@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { BookServiceService } from '../Services/bookService/book-service.service';
 import { CartserviceService } from '../Services/cartService/cartservice.service';
@@ -18,7 +19,7 @@ export class QuickViewComponent implements OnInit {
   cartlist: any;
   comment:any;
 
-  constructor(private bookservice: BookServiceService, private feedback: FeedbackServiceService, private router: Router, private cart: CartserviceService,private wishlist:WishlistserviceService) { }
+  constructor(private bookservice: BookServiceService, private feedback: FeedbackServiceService, private router: Router, private cart: CartserviceService,private wishlist:WishlistserviceService,private _snackbar:MatSnackBar) { }
 
   ngOnInit() {
     this.getbookById(this.bookId)
@@ -56,7 +57,7 @@ export class QuickViewComponent implements OnInit {
 
   //1.Add to cart API 
   addToCart() {
-    this.router.navigate(["/dashboard/mycart/" + this.bookId])
+    // this.router.navigate(["/dashboard/mycart/" + this.bookId])
     console.log(this.book)
     let data = {
       bookId: this.book.bookId,
@@ -66,18 +67,22 @@ export class QuickViewComponent implements OnInit {
       console.log(response);
       this.cartlist = response.data;
       console.log(this.cartlist);
+      //smackbar is like a pop that displayed at the bottom of the screen
+      //which takes 2 parameters message: string and action: string
+      this._snackbar.open("Book Added to the Cart","Add")
     });
 
   }
 
   addToWishlist(){
-    this.router.navigate(["/dashboard/mywishlist"])
+    // this.router.navigate(["/dashboard/mywishlist"])
     let data = {
       bookId: this.book.bookId,
     }
     this.wishlist.addToWishlist(data,this.bookId).subscribe((response: any) => {
       console.log("Added to wishlist", response);
       console.log('Added bookId to Wishlist :',this.bookId)
+      this._snackbar.open("Book Added to the Wishlist","Add")
     });
   }
 }

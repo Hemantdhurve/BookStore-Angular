@@ -69,7 +69,7 @@
                             <img class="star5in" src="/assets/starRate.png">                           
                         </span>
                         <div class="txtBox">
-                            <textarea type="text" class="txtarea" placeholder='Write your review...'></textarea>
+                            <textarea type="text" class="txtarea" placeholder='Write your review...' [(ngModel)]="comment"></textarea>
                         </div>
                         <div class="submit">
                             <button mat-flat-button class="subbtn" (click)="addFeedback()">Submit</button>

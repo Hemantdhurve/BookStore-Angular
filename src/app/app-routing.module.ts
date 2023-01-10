@@ -16,7 +16,7 @@ const routes: Routes = [
   children:[
     {path:'getallbooks',component:GetallbooksComponent},
     {path:'quickview/:bookId',component:QuickViewComponent},
-    {path:'mycart/:bookId',component:MycartComponent},
+    {path:'mycart',component:MycartComponent},
     {path:'mywishlist',component:MywishlistComponent},
     {path:'myorder',component:MyorderComponent},
   ]

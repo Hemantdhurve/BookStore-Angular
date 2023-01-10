@@ -20,6 +20,9 @@ import { MycartComponent } from './components/mycart/mycart.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
 import { MyorderComponent } from './components/myorder/myorder.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatBadgeModule} from '@angular/material/badge';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { MyorderComponent } from './components/myorder/myorder.component';
     HttpClientModule,
     MatCardModule,
     MatIconModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSnackBarModule,
+    MatBadgeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
