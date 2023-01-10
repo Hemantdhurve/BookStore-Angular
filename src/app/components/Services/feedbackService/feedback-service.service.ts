@@ -22,4 +22,15 @@ export class FeedbackServiceService {
   }
     return this.httpservice.GetService('/Feedback/Retrive?bookId='+bookId,true,headeroptions)
   }
+
+  addFeedback(data:any){
+    console.log(data)
+    let header={
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpservice.PostService('/Feedback/Add',data,true,header)
+  }
 }

@@ -19,6 +19,7 @@ import { QuickViewComponent } from './components/quick-view/quick-view.component
 import { MycartComponent } from './components/mycart/mycart.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
+import { MyorderComponent } from './components/myorder/myorder.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MywishlistComponent } from './components/mywishlist/mywishlist.componen
     QuickViewComponent,
     MycartComponent,
     MywishlistComponent,
+    MyorderComponent,
   ],
   
   imports: [

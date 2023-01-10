@@ -16,6 +16,7 @@ export class QuickViewComponent implements OnInit {
   book: any;
   feedbackArray: any;
   cartlist: any;
+  comment:any;
 
   constructor(private bookservice: BookServiceService, private feedback: FeedbackServiceService, private router: Router, private cart: CartserviceService,private wishlist:WishlistserviceService) { }
 
@@ -40,6 +41,17 @@ export class QuickViewComponent implements OnInit {
       this.feedbackArray = response.data;
       console.log(this.feedbackArray)
     });
+  }
+
+  addFeedback(){
+    let data={
+      comment:this.comment,
+      bookId:this.book.bookId
+    }
+    this.feedback.addFeedback(data).subscribe((response:any)=>{
+      console.log(response);
+      this.getAllFeedbacks(this.bookId);
+    })
   }
 
   //1.Add to cart API 
