@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { WishlistserviceService } from '../Services/wishlistService/wishlistservice.service';
 
 @Component({
@@ -12,7 +13,7 @@ wishArray:any=[];
 noofWishlist:any;
 wishlistId:any;
 
-  constructor(private wish:WishlistserviceService){}
+  constructor(private wish:WishlistserviceService,private _snackbar:MatSnackBar){}
 
   ngOnInit(): void {
     this.getAllWishlist();
@@ -33,6 +34,7 @@ wishlistId:any;
       console.log(response);
       console.log("Removed wishlist Id:",wishlistId)
       this.getAllWishlist();
+      this._snackbar.open("Item Removed Successfully", "Close", { duration: 3000 })
     })
   }
 }

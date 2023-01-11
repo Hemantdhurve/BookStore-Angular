@@ -52,6 +52,8 @@ export class QuickViewComponent implements OnInit {
     this.feedback.addFeedback(data).subscribe((response:any)=>{
       console.log(response);
       this.getAllFeedbacks(this.bookId);
+      this._snackbar.open("Feedback Added Successful", "Close", { duration: 3000 })
+
     })
   }
 
@@ -68,7 +70,7 @@ export class QuickViewComponent implements OnInit {
       this.cartlist = response.data;
       console.log(this.cartlist);
       //smackbar is like a pop that displayed at the bottom of the screen
-      //which takes 2 parameters message: string and action: string
+      //which takes 2 parameters message: string and action: string and to dismiss after some time use duration(optional)
       this._snackbar.open("Book Added to the Cart","Add",{duration:3000})
     });
 

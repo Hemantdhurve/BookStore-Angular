@@ -1,6 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { AddressserviceService } from '../Services/addressservice/addressservice.service';
 import { CartserviceService } from '../Services/cartService/cartservice.service';
 import { HttpService } from '../Services/httpService/http.service';
@@ -18,6 +19,12 @@ export class MycartComponent implements OnInit {
   counter=0;
   noofCart:any;
 
+  hideButton = true;
+  hideShowAddress=true;
+  hideContinue=true;
+  hideShowOrder=true;
+
+  
   // fullName:any;
   // mobileNumber:any;
   // address:any;
@@ -31,7 +38,7 @@ export class MycartComponent implements OnInit {
   //last file 
   //lang support by browser, typescript and 
 
-  constructor(private cart: CartserviceService, private httpservice: HttpService,private addressservice:AddressserviceService) {
+  constructor(private cart: CartserviceService, private httpservice: HttpService,private addressservice:AddressserviceService,private _snackbar:MatSnackBar) {
     // this.token = localStorage.getItem('token');
   }
 
@@ -84,9 +91,20 @@ export class MycartComponent implements OnInit {
       console.log("Removed from cart",response);
       //i have called getcartdetails() to get all cart array
       this.getCartDetails();
+      this._snackbar.open("Item Removed From Cart", "Close", { duration: 3000 })
+      
     })
   }
 
+  openAddress() {
+    this.hideButton = false,
+    this.hideShowAddress=false
+  }
+
+  openContinue(){
+    this.hideContinue=false,
+    this.hideShowOrder=false
+  }
   //AddressAPI
   // addAddress(){
   //   let data={

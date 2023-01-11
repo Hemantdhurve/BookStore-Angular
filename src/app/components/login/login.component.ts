@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { UserService } from '../Services/userService/user.service';
 
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, public router: Router, private user: UserService) { }
+  constructor(private formBuilder: FormBuilder, public router: Router, private user: UserService, private _snackbar: MatSnackBar) { }
   navigate() {
     this.router.navigate(['/register']);
   }
@@ -36,10 +37,12 @@ export class LoginComponent implements OnInit {
         password: this.loginForm.value.password
       }
       //.subscribe method is used to get the response from backend (observable) like promises
-      this.user.login(payload).subscribe((response: any) => {
+        this.user.login(payload).subscribe((response: any) => {
         console.log(response)
-        localStorage.setItem('token',response.data)
+        localStorage.setItem('token', response.data)
         this.router.navigate(['dashboard/getallbooks']);
+        this._snackbar.open("Login Successful", "Close", { duration: 3000 })
+
       }, (error) => {
         console.log(error);
       })

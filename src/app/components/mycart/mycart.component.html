@@ -51,18 +51,19 @@
                 </div>                
             </div>
             <div class="placeBtn">
-                <button mat-flat-button class="inPlacebtn">Place Order</button>
+                <!-- ngIf takes boolean value so  -->
+                <button mat-flat-button class="inPlacebtn" (click)="openAddress()" *ngIf="hideButton">Place Order</button>
             </div>
         </div>
 
-        <div class="addressBox">
+        <div class="addressBox" *ngIf="hideShowAddress">
             <div class="innerAddBox">
                 Address Details
             </div>
         </div>
 
         <!-- /Address2 -->
-        <form class="customerBox">
+        <form class="customerBox" *ngIf="!hideShowAddress">
             <div class="innerCustleft">
                 <div class="custtxt">Customer Details</div>
                 <div class="twoTxtfields">
@@ -112,43 +113,43 @@
                     <button class="addbtninner" mat-button style=" width: 100%;border-radius: 0px;">Add New Address</button>
                 </div>
                 <div class="continueBtn">
-                    <button mat-flat-button class="inContbtn" style="width: 100%; border-radius: 0px;">Continue</button>
+                    <button mat-flat-button class="inContbtn" style="width: 100%; border-radius: 0px;" *ngIf="hideContinue" (click)="openContinue()">Continue</button>
                 </div>
             </div>
         </form>
 
-        <div class="orderBox">
+        <div class="orderBox" *ngIf="hideContinue">
             <div class="innerAddBox">
                 Order Summary
             </div>
         </div>
 
         <!-- order 2 -->
-        <div class="orderBox2" fxLayout="column" fxLayoutAlign="center start">
+        <div class="orderBox2" fxLayout="column" fxLayoutAlign="center start" *ngIf="!hideShowOrder">
             <div class="orderTxt">
                 <div>
                     <span>Order Summary</span>
                 </div>
             </div>
-            <div class="orderData">
+            <div class="orderData" *ngFor="let cart of cartArray">
                 <div class="orderimgBox">
                     <img class="immgorder" src='/assets/dont.png'>
                 </div>
                 <div class="orderdataBox">
                     <div>
                         <div class="titleorder">
-                            <span class="bookttlorder">Book Title</span>
-                            <span class="authttlorder">by Author</span>
+                            <span class="bookttlorder">{{cart?.bookTitle }}</span>
+                            <span class="authttlorder">by {{cart?.author}}</span>
                             <div class="priceorder">
-                                <span class="discpriceorder">Rs 2000</span>
-                                <span class="actpriceorder">Rs 3000</span>
+                                <span class="discpriceorder">Rs. {{cart?.discountedPrice}}</span>
+                                <span class="actpriceorder">Rs. {{cart?.actualPrice}}</span>
                             </div>
                         </div>
-                    </div>                    
-                    <div class="checkBtn">
-                        <button mat-flat-button class="incheckbtn">Checkout</button>
-                    </div>
-                </div>
-          </div>
+                    </div>                   
+                </div>               
+            </div>
+             <div class="checkBtn">
+                <button mat-flat-button class="incheckbtn">Checkout</button>
+            </div>
     </div>
 </div>

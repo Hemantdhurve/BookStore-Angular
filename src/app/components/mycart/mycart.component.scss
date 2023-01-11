@@ -401,7 +401,7 @@
     border: 1px solid #E4E4E4;
     width: 49.5vw;
     left: 15vw;
-    top: 12vh;
+    top: 14vh;
     height: 8vh;
     align-items: center;
     font-size: 20px;
@@ -415,8 +415,8 @@
     position: relative;
     width: 55.5vw;
     left: 15vw;
-    top: 14vh;
-    height: 35vh;
+    top: 16vh;
+    // height: 38vh;
     border: 1px solid lightgray;
 }
 
@@ -425,7 +425,7 @@
     position: relative;
     left: 3vw;
     width: 90%;
-    height: 25%;
+    height: 10vh;
     align-items: center;
     color: #333232;
     font-size: 20px;
@@ -437,20 +437,20 @@
     left: 3vw;
     display: flex;
     width: 90%;
-    height: 75%;
+    height: 20vh;
 }
 
 .orderimgBox {
     display: flex;
     position: relative;
     top: 10px;
-    height: 60%;
+    height: 16vh;
     width: 15%;
 }
 
 .immgorder {
-    height: 90%;
     width: 80%;
+
 }
 
 .orderdataBox {
@@ -459,45 +459,51 @@
     position: relative;
     top: 10px;
     width: 85%;
-    height: 95%;
+    height: 16vh;
 }
 
 .titleorder {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 50px;
+    height: 16vh;
     width: 90%;
     left: 2vw;
+
 }
 
 .bookttlorder {
+    display: flex;
+    align-items: center;
     position: relative;
-    top: 2px;
-    font-size: 18px;
+    height: 5vh;
+    font-size: 20px;
     font-weight: 550;
+
 }
 
 .authttlorder {
+    display: flex;
+    align-items: center;
     position: relative;
-    top: 5px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 450;
+    height: 5vh;
     color: #9D9D9D;
 }
 
 .priceorder {
     display: flex;
     position: relative;
-    top: 15px;
     width: 27%;
+    height: 6vh;
     align-items: center;
     justify-content: space-between;
 }
 
 .discpriceorder {
     font-size: 20px;
-    font-weight: 550;
+    font-weight: 600;
 }
 
 .actpriceorder {
@@ -509,8 +515,12 @@
 
 .checkBtn {
     display: flex;
+    width: 90%;
+    justify-content: center;
     position: relative;
-    top: 8vh;
+    left: 3vw;
+    top: 1vh;
+    height: 10vh;
     justify-content: flex-end;
 }
 
