@@ -4,7 +4,8 @@
             <span class="txtbook">Books</span>
             <span class="booksCount">({{noofBooks}} items)</span>
         </div>
-        <select class="dropselect">
+        <select class="dropselect" (change)="sortBookByPrice($event.target)">
+            <option selected value="undefined" disabled>Choose Category</option>
             <option value="Sort by relevance">Sort by relevance</option>
             <option value="Price: Low to High">Price: Low to High</option>
             <option value="Price: High to Low">Price: High to Low</option>
@@ -16,7 +17,7 @@
         <mat-card class="bookBox" *ngFor="let book of bookArray" (click)="quickVeiwPage(book)">
             <div class="imageBox">
                 <div class="inimageBox">
-                    <img class="image" src="/assets/dont.png">
+                    <img class="image" src="/assets/dont.png" >
                 </div>
             </div>
             <div class="dataBox">
@@ -35,9 +36,20 @@
                         </div>
                         <span class="ratingCount">({{book?.ratedCount}})</span>
                     </div>
-                    <div class="priceBox">
-                        <span class="discountPrice">Rs. {{book?.discountedPrice}}</span>
-                        <span class="originalPrice">Rs. {{book?.actualPrice}}</span>
+                    <div class="aaaa">
+                        <div class="priceBox">
+                            <span class="discountPrice">Rs. {{book?.discountedPrice}}</span>
+                            <span class="originalPrice">Rs. {{book?.actualPrice}}</span>                            
+                        </div>
+                        <div class="wishCartBtn">
+                            <div class="smallIcon">
+                                <img class="bothImg" src="/assets/cart.png" >
+                            </div>
+                            <div class="smallIcon">
+                                <img class="bothImg" src="/assets/coloredHeart.png">
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>

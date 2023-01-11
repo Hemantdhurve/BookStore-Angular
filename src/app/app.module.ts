@@ -25,6 +25,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {FormsModule} from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatBadgeModule,
     FormsModule,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
+    NgxPaginationModule
 
   ],
   providers: [],
