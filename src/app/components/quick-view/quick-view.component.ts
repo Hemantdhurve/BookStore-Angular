@@ -18,6 +18,7 @@ export class QuickViewComponent implements OnInit {
   feedbackArray: any;
   cartlist: any;
   comment:any;
+  userId:any;
 
   constructor(private bookservice: BookServiceService, private feedback: FeedbackServiceService, private router: Router, private cart: CartserviceService,private wishlist:WishlistserviceService,private _snackbar:MatSnackBar) { }
 
@@ -53,7 +54,6 @@ export class QuickViewComponent implements OnInit {
       console.log(response);
       this.getAllFeedbacks(this.bookId);
       this._snackbar.open("Feedback Added Successful", "Close", { duration: 3000 })
-
     })
   }
 

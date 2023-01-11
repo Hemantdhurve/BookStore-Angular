@@ -45,6 +45,7 @@ export class RegistrationComponent implements OnInit {
         console.log(response)
         this.router.navigate(['login'])
         this._snackbar.open("Registration Successful", "Close", { duration: 3000 })
+        
 
       }, (error) => {
         console.log(error);

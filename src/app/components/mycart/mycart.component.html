@@ -63,60 +63,63 @@
         </div>
 
         <!-- /Address2 -->
-        <form class="customerBox" *ngIf="!hideShowAddress">
-            <div class="innerCustleft">
+        <div class="customerBox" *ngIf="!hideShowAddress">
+            <div class="innerCustleft" *ngFor="let addObj of addressArray">
                 <div class="custtxt">Customer Details</div>
-                <div class="twoTxtfields">
+                <div >
+                <div class="twoTxtfields" >
                     <div class="twoTxtfields1">
                         <label class="txtlabel">Full Name</label>
                         <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
-                            <input matInput placeholder="" >
+                            <input matInput placeholder="" [(ngModel)]="addObj.fullName">
+                            <!-- <input matInput placeholder="" [(ngModel)]="addObj.fullName"> -->
                         </mat-form-field>
                     </div>
                     <div class="twoTxtfields1">
                         <label class="txtlabel">Mobile Number</label>
                         <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
-                            <input matInput placeholder="" >
+                            <input matInput placeholder="" [(ngModel)]="addObj.mobileNumber">
                         </mat-form-field>
                     </div>
                 </div>
                
                   <div class="addTxt">Address</div>
                   <div class="txtarea">
-                    <textarea class="area" ></textarea>
+                    <textarea class="area" [(ngModel)]="addObj.address"></textarea>
                   </div>
                   <div class="nexttwoTxtfields">
                     <div class="twoTxtfields1">
                         <label class="txtlabel">City/Town</label>
                         <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
-                            <input matInput placeholder="" >
+                            <input matInput placeholder="" [(ngModel)]="addObj.city">
                         </mat-form-field>
                     </div>
                     <div class="twoTxtfields1">
                         <label class="txtlabel">State</label>
                         <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
-                            <input matInput placeholder="" >
+                            <input matInput placeholder="" [(ngModel)]="addObj.state">
                         </mat-form-field>
                     </div>
                   </div>
                   <div class="radioBtn">
                     <label class="typeBox">Type :</label>
                     <mat-radio-group class="inradio3">
-                      <mat-radio-button value="Home">Home</mat-radio-button>
-                      <mat-radio-button value="Office">Office</mat-radio-button>
-                      <mat-radio-button value="Other">Other</mat-radio-button>
+                      <mat-radio-button value="Home" >Home</mat-radio-button>
+                      <mat-radio-button value="Office" >Office</mat-radio-button>
+                      <mat-radio-button value="Other" >Other</mat-radio-button>
                     </mat-radio-group>
                   </div>
+                </div>
             </div>
             <div class="innerCustright">
                 <div class="addressBtn">
-                    <button class="addbtninner" mat-button style=" width: 100%;border-radius: 0px;">Add New Address</button>
+                    <button class="addbtninner" mat-button style=" width: 100%;border-radius: 0px;" >Add New Address</button>
                 </div>
                 <div class="continueBtn">
                     <button mat-flat-button class="inContbtn" style="width: 100%; border-radius: 0px;" *ngIf="hideContinue" (click)="openContinue()">Continue</button>
                 </div>
             </div>
-        </form>
+        </div>
 
         <div class="orderBox" *ngIf="hideContinue">
             <div class="innerAddBox">
