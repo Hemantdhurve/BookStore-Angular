@@ -26,6 +26,8 @@ import {FormsModule} from '@angular/forms';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
+import { FilterpipePipe } from './searchPipe/filterpipe.pipe';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MycartComponent,
     MywishlistComponent,
     MyorderComponent,
+    OrderplacedComponent,
+    FilterpipePipe,
   ],
   
   imports: [

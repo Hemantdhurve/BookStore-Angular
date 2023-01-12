@@ -2,6 +2,7 @@ import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { AddressserviceService } from '../Services/addressservice/addressservice.service';
 import { CartserviceService } from '../Services/cartService/cartservice.service';
 import { HttpService } from '../Services/httpService/http.service';
@@ -33,12 +34,13 @@ export class MycartComponent implements OnInit {
   type: any;
   userId:any;
   addressId:any;
+  noofAddress:any;
 
 
   //last file 
   //lang support by browser, typescript and 
 
-  constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService, private _snackbar: MatSnackBar) {
+  constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService, private _snackbar: MatSnackBar,private router:Router) {
     
   }
 
@@ -46,7 +48,7 @@ export class MycartComponent implements OnInit {
     this.bookId = localStorage.getItem('bookId');
     this.getCartDetails();
     this.getAddresses();
-    this.userId=localStorage.getItem('UserId');
+    // this.userId=localStorage.getItem('UserId');
   }
   // Get Cart Items
   getCartDetails() {
@@ -105,6 +107,11 @@ export class MycartComponent implements OnInit {
       this.hideContinue = false,
       this.hideShowOrder = false      
   }
+
+  orderConfirmed(){
+    this.router.navigate(['/dashboard/orderplaced'])
+  }
+
   //AddressAPI
 
   addAddress(){
@@ -114,18 +121,19 @@ export class MycartComponent implements OnInit {
       state: this.state,
       type: Number(this.type)
     }
+
     this.addressservice.addAddress(data).subscribe((response:any) => {
-      console.log("Address Added Successfully",response)
-      
+      console.log("Address Added Successfully",response)      
     })
   }
 
   getAddresses(){
     this.addressservice.getAddresses().subscribe((response:any)=>{
-      console.log("Retrived all the Addresses",response)
+      console.log("Retrived all the Addresses",response);
       this.addressArray=response.data;
-      console.log(this.addressArray);
+      this.noofAddress=response.data.length;
+      console.log('Array of the Address: ',this.addressArray);
+      console.log('Total number of Addresses :',this.noofAddress);
     })
-  }
- 
+  } 
 }

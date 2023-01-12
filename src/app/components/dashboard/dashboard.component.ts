@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataserviceService } from '../Services/dataService/dataservice.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +9,10 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
 
-  constructor(private router: Router) { }
+  value: any;
+  search: any;
+
+  constructor(private router: Router, private dataservice: DataserviceService) { }
 
   navToMycart() {
     this.router.navigate(["/dashboard/mycart"])
@@ -25,4 +29,13 @@ export class DashboardComponent {
   navOrderPage() {
     this.router.navigate(['/dashboard/myorder'])
   }
+
+  searchBook(event: any) {
+    let searchResult = {
+      type: 'search',
+      dataResult: [event.target.value]
+    }
+    return this.dataservice.changeMessage(searchResult)
+  }
+
 }

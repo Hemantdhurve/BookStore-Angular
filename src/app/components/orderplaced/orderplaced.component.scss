@@ -1,0 +1,57 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .image{
+    position: relative;
+    top:2vh;
+    width: 32vw;
+    height: 45vh;
+  }
+  
+  .hurrayTxt{
+    position: relative;
+    width: 28vw;
+    height: 9vh;
+    top:1vh;
+    text-align: center;
+    font-size: 19px;
+    letter-spacing: 0px;
+    color: #333232;
+  }
+  
+  .mainData{
+    position: relative;
+    top:6vh;
+    width: 57vw;
+    height: 22vh;
+    color: #333232;
+    border-collapse: collapse;
+  }
+  
+  tr {
+    border: 2px solid #dddddd;
+  }
+  
+  th {
+    min-width: 15vw;
+    height: 6vh;
+  }
+  
+  td {
+    border: 2px solid #dddddd;
+    text-align: left;
+    position: relative;
+    left:1vw;
+    align-items: center;
+  }
+  .shopBtn{
+    position: relative;
+    top: 7vh;
+    width: 15vw;
+    color: #FFFFFF;
+    background-color: #3371B5;
+    border-radius: 0px;
+  }
