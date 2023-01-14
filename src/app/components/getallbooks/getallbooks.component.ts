@@ -17,6 +17,7 @@ export class GetallbooksComponent implements OnInit {
   searchBook:any;
   message:any;
   subscription:any;
+  p=1;
 
   constructor(private book: BookServiceService,private router:Router,private dataservice:DataserviceService) { }
   
@@ -40,6 +41,10 @@ export class GetallbooksComponent implements OnInit {
       this.noofBooks=response.response.length;
       console.log("Array of Book: ", this.bookArray);
       console.log("Total Books Count: ", this.noofBooks);
+
+
+
+
     })
   }
 

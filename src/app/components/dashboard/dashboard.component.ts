@@ -9,8 +9,9 @@ import { DataserviceService } from '../Services/dataService/dataservice.service'
 })
 export class DashboardComponent {
 
-  value: any;
+  badgeValue=0;
   search: any;
+
 
   constructor(private router: Router, private dataservice: DataserviceService) { }
 
@@ -29,7 +30,11 @@ export class DashboardComponent {
   navOrderPage() {
     this.router.navigate(['/dashboard/myorder'])
   }
+  navGetallBooksPage(){
+    this.router.navigate(['/dashboard/getallbooks'])
+  }
 
+  //step 3.
   searchBook(event: any) {
     let searchResult = {
       type: 'search',
@@ -38,4 +43,14 @@ export class DashboardComponent {
     return this.dataservice.changeMessage(searchResult)
   }
 
+  cartLength(badgeValue:any){
+    let cartvalue={
+      type:'number',
+      dataResult:[badgeValue]
+    }
+    return this.dataservice.changeMessage(cartvalue);
+  }
+
+ 
+ 
 }

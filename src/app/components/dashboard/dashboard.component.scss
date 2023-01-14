@@ -33,6 +33,7 @@
     top:3px;
     align-Items: center;
     height: 80%;
+    cursor: pointer;
 
 }
 .booktxt {
@@ -40,6 +41,8 @@
     left: 2px;
     color: white;
     font-Size: 20px;
+    cursor: pointer;
+
 }
 .field {
     display: flex;
@@ -102,7 +105,7 @@
 .footer{
     display: flex;
     position: relative;
-    top: 84.8vh;
+    top: 50vh;
     width: 100vw;
     background-color: #2E1D1E;
 }

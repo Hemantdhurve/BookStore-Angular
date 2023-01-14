@@ -2,8 +2,8 @@
     <mat-toolbar class="toolBarHead" >
         <div class="outHeadBox">
             <div class="inHeadBox">
-                <div class="bookimg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" viewBox="0 0 31.039 23.713">
+                <div class="bookimg" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" viewBox="0 0 31.039 23.713" (click)="navGetallBooksPage()">
                         <defs>
                             <style>
                                 .a {
@@ -30,7 +30,7 @@
                             </g>
                         </g>
                     </svg>
-                    <div class="booktxt">
+                    <div class="booktxt" (click)="navGetallBooksPage()">
                         BookStore
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="Iconlogo">
                     <button mat-button (click)="navToMycart()">
-                        <mat-icon matBadge='1' style="color: white;">shopping_cart</mat-icon>                        
+                        <mat-icon [matBadge]='badgeValue' [matBadgeHidden]="badgeValue==0" style="color: white;">shopping_cart</mat-icon>                        
                     </button>
                     <div class="icontxt">Cart</div>
                 </div>

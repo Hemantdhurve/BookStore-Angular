@@ -21,4 +21,14 @@ export class OrderserviceService {
     }
     return this.httpservice.GetService('/Order/Retrive',true,header)
   }
+
+  addOrder(reqdata:any){
+    let header={
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpservice.PostService('/Order/Add',reqdata,true,header)
+  }
 }

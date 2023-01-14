@@ -183,4 +183,20 @@
 .bothImg{
     cursor: pointer;
 }
-
+.pagination{
+    width: 70vw;
+    left: 15vw;    
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+::ng-deep .ngx-pagination .current{
+    background-color: #8F2B2F !important;
+    height: 20px;
+}
+::ng-deep .mypage{
+    display: flex;
+    position: relative;
+    right: 5vw !important;
+}

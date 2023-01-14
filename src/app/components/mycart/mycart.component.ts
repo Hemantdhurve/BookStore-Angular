@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { AddressserviceService } from '../Services/addressservice/addressservice.service';
 import { CartserviceService } from '../Services/cartService/cartservice.service';
 import { HttpService } from '../Services/httpService/http.service';
+import { OrderserviceService } from '../Services/orderservice/orderservice.service';
 
 @Component({
   selector: 'app-mycart',
@@ -33,17 +34,18 @@ export class MycartComponent implements OnInit {
   state: any;
   addressType: any;
   userId:any;
-  addressId:any;
+  addressId=0;
   noofAddress:any;
   details:any;
   addval:any;
   typeId:any;
-
+  subscription:any;
+  cartId:any;
 
   //last file
   //lang support by browser, typescript and
 
-  constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService, private _snackbar: MatSnackBar,private router:Router) {
+  constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService, private _snackbar: MatSnackBar,private router:Router,private orderservice:OrderserviceService) {
 
   }
 
@@ -54,11 +56,17 @@ export class MycartComponent implements OnInit {
     // this.userId=localStorage.getItem('userId');
 
     this.getCartDetails();
+    // this.subscription=this.dataservice.currentMessage.subscribe(message=>{
+    //   this.message=message;
+    //now storing the data in the variable
+    // this.searchBook=message.dataResult[0];
+    // console.log(this.searchBook);
+
     // Directly initialize
     this.getCustomerDetails();
     this.getAddresses();
 
-    console.log('UserId is :', this.userId);
+    
   }
   // Get Cart Items
   getCartDetails() {
@@ -68,6 +76,12 @@ export class MycartComponent implements OnInit {
       this.noofCart = response.data.length;
       console.log('Cart Array: ', this.cartArray);
       console.log("Total number of Cart:", this.noofCart);
+
+      // this.cartArray=this.cartArray.filter((response:any)=>{
+      //   localStorage.setItem('cartId',response.cartId)
+      // })
+      this.cartId=response.data.cartId;
+      console.log('cartId is ',this.cartId);
     });
   }
 
@@ -114,6 +128,7 @@ export class MycartComponent implements OnInit {
 
       console.log(this.mobileNumber)
 
+      //Add address API 
       let data = {
         fullName:this.fullName,
         mobilileNumber:this.mobileNumber,
@@ -131,26 +146,19 @@ export class MycartComponent implements OnInit {
   }
 
   orderConfirmed(){
-    this.router.navigate(['/dashboard/orderplaced'])
+    //order API
+    console.log(this.bookId)
+    let data={
+      
+      bookId:localStorage.getItem('BookId')
+    }
+    this.orderservice.addOrder(data).subscribe((response:any)=>{
+      console.log(response.data)
+
+      this.router.navigate(['/dashboard/orderplaced'])
+    })
   }
 
-  //AddressAPI
-
-  addAddress(){
-    // let data = {
-    //   fullName:this.fullName,
-    //   mobilileNumber:Number(this.mobileNumber),
-    //   address: this.address,
-    //   city: this.city,
-    //   state: this.state,
-    //   typeId: Number(this.typeId)
-    // }
-
-    // this.addressservice.addAddress(data).subscribe((response:any) => {
-    //   console.log("Address Added Successfully",response)
-    //   this.getAddresses();
-    // })
-  }
 
   radioOptions(event:any){
     console.log( 'console value',event.target.value)
@@ -209,4 +217,15 @@ export class MycartComponent implements OnInit {
     this.state = '';
     this.typeId = '';
   }
+
+  // addOrder(){
+  //   let data={
+  //     addressId:this.addressId,
+  //     bookId:this.bookId
+  //   }
+  //   this.orderservice.addOrder(data).subscribe((response)=>{
+  //     console.log(response)
+
+  //   })
+  // }
 }
