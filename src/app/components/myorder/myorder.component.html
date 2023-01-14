@@ -5,26 +5,25 @@
             <div class="txtBook">
                 Home /
             </div>
-            <div class="subtxt">My Orders</div>
+            <div class="subtxt">My Orders ({{noofOrders}})</div>
         </div>
     </div>
-    <div class="outerOrderBox">
+    <div class="outerOrderBox" *ngFor="let order of orderArray">
         <div class="innerOrderBox">
             <div class="imgBox">
                 <img class="imgs" src="/assets/dont.png">
             </div>
             <div class="detailsBox">
-                <span class="bookttl">BookTitle</span>
-                <span class="authorttl">by Author</span>
+                <span class="bookttl">{{order.bookTitle}}</span>
+                <span class="authorttl">by {{order.author}}</span>
                 <div class="priceBox">
-                    <span class="discprice">Rs. 1000</span>
-                    <span class="actprice">Rs. 2000</span>
+                    <span class="discprice">Rs. {{order.totalPrice}}</span>
+                    <span class="actprice">Rs. {{order.totalDiscountedPrice}}</span>
                 </div>
             </div>
             <div class="dateBox">
                 <img src="/assets/greendot.png" class="dotImg">
                 <span class="dateTxt">Order Placed on May 21</span>
-
             </div>
         </div>
     </div>

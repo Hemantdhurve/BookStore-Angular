@@ -25,30 +25,40 @@ export class MycartComponent implements OnInit {
   hideContinue = true;
   hideShowOrder = true;
 
-  addressArray: any;
+  addressArray: any=[];
   fullName: any;
   mobileNumber: any;
   address: any;
   city: any;
   state: any;
-  type: any;
+  addressType: any;
   userId:any;
   addressId:any;
   noofAddress:any;
+  details:any;
+  addval:any;
+  typeId:any;
 
 
-  //last file 
-  //lang support by browser, typescript and 
+  //last file
+  //lang support by browser, typescript and
 
   constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService, private _snackbar: MatSnackBar,private router:Router) {
-    
+
   }
 
   ngOnInit(): void {
     this.bookId = localStorage.getItem('bookId');
+    // this.fullName=localStorage.getItem('fullName');
+    // this.mobileNumber=localStorage.getItem('mobileNumber');
+    // this.userId=localStorage.getItem('userId');
+
     this.getCartDetails();
+    // Directly initialize
+    this.getCustomerDetails();
     this.getAddresses();
-    // this.userId=localStorage.getItem('UserId');
+
+    console.log('UserId is :', this.userId);
   }
   // Get Cart Items
   getCartDetails() {
@@ -58,11 +68,6 @@ export class MycartComponent implements OnInit {
       this.noofCart = response.data.length;
       console.log('Cart Array: ', this.cartArray);
       console.log("Total number of Cart:", this.noofCart);
-
-      //1. setting UserId for the address API
-     
-      // console.log( localStorage.setItem('UserId',response.data.userId))
-      
     });
   }
 
@@ -100,12 +105,29 @@ export class MycartComponent implements OnInit {
 
   openAddress() {
       this.hideButton = false,
-      this.hideShowAddress = false      
+      this.hideShowAddress = false
   }
 
   openContinue() {
       this.hideContinue = false,
-      this.hideShowOrder = false      
+      this.hideShowOrder = false
+
+      console.log(this.mobileNumber)
+
+      let data = {
+        fullName:this.fullName,
+        mobilileNumber:this.mobileNumber,
+        address: this.address,
+        city: this.city,
+        state: this.state,
+        typeId: Number(this.typeId)
+      }
+
+      this.addressservice.addAddress(data).subscribe((response:any) => {
+        console.log("Address Added Successfully",response) 
+        this.getAddresses();     
+      })
+
   }
 
   orderConfirmed(){
@@ -115,16 +137,32 @@ export class MycartComponent implements OnInit {
   //AddressAPI
 
   addAddress(){
-    let data = {
-      address: this.address,
-      city: this.city,
-      state: this.state,
-      type: Number(this.type)
-    }
+    // let data = {
+    //   fullName:this.fullName,
+    //   mobilileNumber:Number(this.mobileNumber),
+    //   address: this.address,
+    //   city: this.city,
+    //   state: this.state,
+    //   typeId: Number(this.typeId)
+    // }
 
-    this.addressservice.addAddress(data).subscribe((response:any) => {
-      console.log("Address Added Successfully",response)      
-    })
+    // this.addressservice.addAddress(data).subscribe((response:any) => {
+    //   console.log("Address Added Successfully",response)
+    //   this.getAddresses();
+    // })
+  }
+
+  radioOptions(event:any){
+    console.log( 'console value',event.target.value)
+    if(event.value ==1){      
+     this.typeId=1;
+    }
+    else if(event.value ==2){
+      this.typeId=2;
+    }
+    else if(event.value==3){
+      this.typeId=3;    
+    }
   }
 
   getAddresses(){
@@ -134,6 +172,41 @@ export class MycartComponent implements OnInit {
       this.noofAddress=response.data.length;
       console.log('Array of the Address: ',this.addressArray);
       console.log('Total number of Addresses :',this.noofAddress);
+
+      // this.addressArray=this.addressArray.filter((response:any)=>{
+      //   localStorage.setItem('addressId',response.addressId)
+
+      // })
+
+      this.fullName=localStorage.getItem('fullName');
+      console.log('fullName is: ', this.fullName);
+      this.mobileNumber=localStorage.getItem('mobileNumber');
     })
-  } 
+  }
+
+    getCustomerDetails(){
+      this.addressservice.getCustomerDetails().subscribe((response:any)=>{
+      console.log( 'Customer Details :',response);
+      this.details=response.data;
+
+      this.details=this.details.filter((response:any)=>{
+        localStorage.setItem('userId',response.userId)
+        localStorage.setItem('fullName',response.fullName)
+        localStorage.setItem('mobileNumber',response.mobileNumber)
+
+        this.mobileNumber=response.mobileNumber;
+        this.fullName=response.fullName;
+        this.userId=response.userId;
+      })
+    })
+  }
+
+  addNewAddress() {
+    this.fullName='',
+    this.mobileNumber='',
+    this.address = '';
+    this.city = '';
+    this.state = '';
+    this.typeId = '';
+  }
 }

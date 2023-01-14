@@ -63,57 +63,56 @@
         </div>
 
         <!-- /Address2 -->
-        <div class="customerBox" *ngIf="!hideShowAddress">
-            <div class="innerCustleft" *ngFor="let addObj of addressArray">
+        <div class="customerBox" *ngIf="!hideShowAddress" >
+            <div class="innerCustleft" >
                 <div class="custtxt">Customer Details</div>
                 <div >
                 <div class="twoTxtfields" >
                     <div class="twoTxtfields1">
                         <label class="txtlabel">Full Name</label>
                         <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
-                            <input matInput placeholder="" [(ngModel)]="addObj.fullName">
-                            <!-- <input matInput placeholder="" [(ngModel)]="addObj.fullName"> -->
+                            <input matInput placeholder="" [(ngModel)]="fullName">
                         </mat-form-field>
                     </div>
                     <div class="twoTxtfields1">
                         <label class="txtlabel">Mobile Number</label>
                         <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
-                            <input matInput placeholder="" [(ngModel)]="addObj.mobileNumber">
+                            <input matInput placeholder="" [(ngModel)]="mobileNumber">
                         </mat-form-field>
                     </div>
                 </div>
                
-                  <div class="addTxt">Address</div>
+                  <div class="addTxt" >Address</div>
                   <div class="txtarea">
-                    <textarea class="area" [(ngModel)]="addObj.address"></textarea>
+                    <textarea class="area" [(ngModel)]="address"></textarea>
                   </div>
-                  <div class="nexttwoTxtfields">
+                  <div class="nexttwoTxtfields" >
                     <div class="twoTxtfields1">
                         <label class="txtlabel">City/Town</label>
                         <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
-                            <input matInput placeholder="" [(ngModel)]="addObj.city">
+                            <input matInput placeholder="" [(ngModel)]="city">
                         </mat-form-field>
                     </div>
                     <div class="twoTxtfields1">
                         <label class="txtlabel">State</label>
                         <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
-                            <input matInput placeholder="" [(ngModel)]="addObj.state">
+                            <input matInput placeholder="" [(ngModel)]="state">
                         </mat-form-field>
                     </div>
                   </div>
-                  <div class="radioBtn">
+                  <div class="radioBtn" #id (change)="radioOptions($event.target)">
                     <label class="typeBox">Type :</label>
                     <mat-radio-group class="inradio3">
-                      <mat-radio-button value="Home" >Home</mat-radio-button>
-                      <mat-radio-button value="Office" >Office</mat-radio-button>
-                      <mat-radio-button value="Other" >Other</mat-radio-button>
+                      <mat-radio-button name="radio" value="1" type="radio" id="1" ngDefaultControl [(ngModel)]="typeId">Home</mat-radio-button>
+                      <mat-radio-button name="radio" value="2" type="radio" id="2" ngDefaultControl [(ngModel)]="typeId">Work</mat-radio-button>
+                      <mat-radio-button name="radio" value="3" type="radio" id="3" ngDefaultControl [(ngModel)]="typeId">Other</mat-radio-button>
                     </mat-radio-group>
                   </div>
                 </div>
             </div>
             <div class="innerCustright">
                 <div class="addressBtn">
-                    <button class="addbtninner" mat-button style=" width: 100%;border-radius: 0px;" >Add New Address</button>
+                    <button class="addbtninner" mat-button style=" width: 100%;border-radius: 0px;" (click)="addNewAddress()">Add New Address</button>
                 </div>
                 <div class="continueBtn">
                     <button mat-flat-button class="inContbtn" style="width: 100%; border-radius: 0px;" *ngIf="hideContinue" (click)="openContinue()">Continue</button>

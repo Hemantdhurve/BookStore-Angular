@@ -34,4 +34,15 @@ export class AddressserviceService {
     }
     return this.httpservice.GetService('/Address/Retrive',true,header)
   }
+
+  //This API is only to get the fullname and mobile number of the user then call in cart.ts
+  getCustomerDetails(){
+    let header={
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+ this.token
+      })
+    }
+    return this.httpservice.GetService('/CustomerDetails/Retrive',true,header)
+  }
 }
