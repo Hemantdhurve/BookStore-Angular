@@ -24,4 +24,8 @@ export class MyorderComponent implements OnInit {
       console.log("Total No of orders :",this.noofOrders)
     })
   }
+
+  getDate(date:any){
+    return date.split('T')[0]
+  }
 }

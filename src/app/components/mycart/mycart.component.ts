@@ -5,6 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AddressserviceService } from '../Services/addressservice/addressservice.service';
 import { CartserviceService } from '../Services/cartService/cartservice.service';
+import { DataserviceService } from '../Services/dataService/dataservice.service';
 import { HttpService } from '../Services/httpService/http.service';
 import { OrderserviceService } from '../Services/orderservice/orderservice.service';
 
@@ -34,39 +35,35 @@ export class MycartComponent implements OnInit {
   state: any;
   addressType: any;
   userId:any;
-  addressId=0;
+  addressId:any;
   noofAddress:any;
   details:any;
   addval:any;
   typeId:any;
   subscription:any;
   cartId:any;
+  takeCartId:any;
 
   //last file
   //lang support by browser, typescript and
 
-  constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService, private _snackbar: MatSnackBar,private router:Router,private orderservice:OrderserviceService) {
+  constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService, 
+    private _snackbar: MatSnackBar,private router:Router,private orderservice:OrderserviceService,private dataservice:DataserviceService) {
 
   }
 
   ngOnInit(): void {
-    this.bookId = localStorage.getItem('bookId');
-    // this.fullName=localStorage.getItem('fullName');
-    // this.mobileNumber=localStorage.getItem('mobileNumber');
-    // this.userId=localStorage.getItem('userId');
+    this.bookId = localStorage.getItem('BookId');
 
     this.getCartDetails();
-    // this.subscription=this.dataservice.currentMessage.subscribe(message=>{
-    //   this.message=message;
-    //now storing the data in the variable
-    // this.searchBook=message.dataResult[0];
-    // console.log(this.searchBook);
 
     // Directly initialize
     this.getCustomerDetails();
     this.getAddresses();
+    this.addressId = localStorage.getItem('addressId');
+    this.cartId = localStorage.getItem('cartId');
 
-    
+
   }
   // Get Cart Items
   getCartDetails() {
@@ -77,11 +74,8 @@ export class MycartComponent implements OnInit {
       console.log('Cart Array: ', this.cartArray);
       console.log("Total number of Cart:", this.noofCart);
 
-      // this.cartArray=this.cartArray.filter((response:any)=>{
-      //   localStorage.setItem('cartId',response.cartId)
-      // })
-      this.cartId=response.data.cartId;
-      console.log('cartId is ',this.cartId);
+      // step 5 calling dataservice to get the count in the badge (step 4 in dash.ts)
+      this.dataservice.cartCount.next(this.noofCart)
     });
   }
 
@@ -146,11 +140,13 @@ export class MycartComponent implements OnInit {
   }
 
   orderConfirmed(){
-    //order API
-    console.log(this.bookId)
+    // Add order API
+    console.log(this.addressId)
+    console.log(this.cartId)
+
     let data={
-      
-      bookId:localStorage.getItem('BookId')
+      addressId:this.addressId,
+      bookId:Number(this.bookId),
     }
     this.orderservice.addOrder(data).subscribe((response:any)=>{
       console.log(response.data)
@@ -181,10 +177,11 @@ export class MycartComponent implements OnInit {
       console.log('Array of the Address: ',this.addressArray);
       console.log('Total number of Addresses :',this.noofAddress);
 
-      // this.addressArray=this.addressArray.filter((response:any)=>{
-      //   localStorage.setItem('addressId',response.addressId)
+      this.addressArray=this.addressArray.filter((response:any)=>{
+        // localStorage.setItem('addressId',response.addressId)
+        this.addressId=response.addressId
 
-      // })
+      })
 
       this.fullName=localStorage.getItem('fullName');
       console.log('fullName is: ', this.fullName);
@@ -217,15 +214,4 @@ export class MycartComponent implements OnInit {
     this.state = '';
     this.typeId = '';
   }
-
-  // addOrder(){
-  //   let data={
-  //     addressId:this.addressId,
-  //     bookId:this.bookId
-  //   }
-  //   this.orderservice.addOrder(data).subscribe((response)=>{
-  //     console.log(response)
-
-  //   })
-  // }
 }

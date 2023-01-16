@@ -52,7 +52,7 @@
     border: 1px solid #D1D1D1;
     display: flex;
     flex-Direction: column;
-    width: 15%;
+    width: 60px;
     row-Gap: 1vh;
     justify-Content: center;
     align-Items: center;
@@ -62,7 +62,8 @@
   .imgs {
     display: flex;
     height: 45%;
-    width: 85%;
+    width: 40px;
+    // width: 85%;
 
   }
   .box2 {
@@ -87,11 +88,12 @@
     position: relative;
     top: 20px;
     height: 40px;
+    gap: 10px;
     justify-Content: space-between;
 
   }
   ::ng-deep .btnbag{
-    width: 46%;
+    width: 150px;
     font-size: 15px;
     background-color: #A03037 !important;
     border-radius: 0px !important;
@@ -99,7 +101,7 @@
 
   }
   ::ng-deep .btnwish{
-    width: 46%;
+    width: 150px;
     font-size: 15px;
     background-color: #333333 !important;
     border-radius: 0px !important;

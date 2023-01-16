@@ -61,7 +61,7 @@
                     <mat-menu #menu="matMenu" >
                         <div class="menuBox">
                             <div class="innerMenuBox">
-                                <span class="hellotxt"><b>Hello Hemant,</b></span>  
+                                <span class="hellotxt"><b>Hello Hemant, 7798051897</b></span>  
                                 <div class="popbtns">                           
                                     <button mat-flat-button class="smallIcon" style="padding-left: 0px;">
                                         <img src="/assets/profile.svg" width="16px" height="16px">
@@ -89,7 +89,8 @@
                 </div>
                 <div class="Iconlogo">
                     <button mat-button (click)="navToMycart()">
-                        <mat-icon [matBadge]='badgeValue' [matBadgeHidden]="badgeValue==0" style="color: white;">shopping_cart</mat-icon>                        
+                        <!-- step 1 binding property also define in .ts file (step 2 in dataservice.ts)-->
+                        <mat-icon [matBadge]="cartCount" matBadgeOverlap="false" style="color: white;">shopping_cart</mat-icon>                        
                     </button>
                     <div class="icontxt">Cart</div>
                 </div>

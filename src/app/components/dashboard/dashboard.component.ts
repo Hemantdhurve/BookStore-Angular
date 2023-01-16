@@ -9,11 +9,17 @@ import { DataserviceService } from '../Services/dataService/dataservice.service'
 })
 export class DashboardComponent {
 
-  badgeValue=0;
   search: any;
 
+  cartCount:any;
 
-  constructor(private router: Router, private dataservice: DataserviceService) { }
+
+  constructor(private router: Router, private dataservice: DataserviceService) {
+    //step 3 subscribe datasrvice for the count  (step 4 in mycart.ts )
+    this.dataservice.cartCount.subscribe((response:any)=>{
+      this.cartCount=response;
+    })
+   }
 
   navToMycart() {
     this.router.navigate(["/dashboard/mycart"])
@@ -42,15 +48,5 @@ export class DashboardComponent {
     }
     return this.dataservice.changeMessage(searchResult)
   }
-
-  cartLength(badgeValue:any){
-    let cartvalue={
-      type:'number',
-      dataResult:[badgeValue]
-    }
-    return this.dataservice.changeMessage(cartvalue);
-  }
-
- 
  
 }

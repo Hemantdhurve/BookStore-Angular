@@ -16,5 +16,8 @@ export class DataserviceService {
     this.messageSource.next(message);
   }
 
+  // step 2. For badge Count (step 1 in dashboard.html step 3 in dash.ts)
+  cartCount=new BehaviorSubject<number>(0);
+
   
 }

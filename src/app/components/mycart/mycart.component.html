@@ -24,7 +24,10 @@
                     </select>
                 </div>
             </div>
+            <div *ngIf="cartArray.length==0" class="emptyCart"> Cart Is Empty</div>
+
             <div class="mainData" *ngFor="let cart of cartArray">
+                
                 <div class="imgBox">
                     <img class="immg" src='/assets/dont.png'>
                     <!-- <img class="immg" [src]="cart.image"> -->
@@ -52,7 +55,7 @@
             </div>
             <div class="placeBtn">
                 <!-- ngIf takes boolean value so  -->
-                <button mat-flat-button class="inPlacebtn" (click)="openAddress()" *ngIf="hideButton">Place Order</button>
+                <button mat-flat-button class="inPlacebtn" (click)="openAddress()" *ngIf="hideButton && !(cartArray?.length<1)" >Place Order</button>
             </div>
         </div>
 
