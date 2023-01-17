@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
       //.subscribe method is used to get the response from backend (observable) like promises
         this.user.login(payload).subscribe((response: any) => {
         console.log(response)
+        //set the token here and get in authguard
         localStorage.setItem('token', response.data)
         this.router.navigate(['dashboard/getallbooks']);
         this._snackbar.open("Login Successful", "Close", { duration: 3000 })

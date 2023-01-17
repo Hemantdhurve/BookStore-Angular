@@ -10,7 +10,7 @@
 
     <div>
         <div class="cartBox">
-            <div class="cartTxt">
+            <div class="cartTxt" *ngIf="hideButton && !(cartArray?.length<1)">
                 <div>
                     <span>My Cart ({{noofCart}})</span>
                 </div>

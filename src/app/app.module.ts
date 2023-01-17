@@ -28,6 +28,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
 import { FilterpipePipe } from './searchPipe/filterpipe.pipe';
+import { AuthenticationserviceService } from './components/Services/authenticationservice/authenticationservice.service';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,7 @@ import { FilterpipePipe } from './searchPipe/filterpipe.pipe';
     NgxPaginationModule
 
   ],
-  providers: [],
+  providers: [AuthenticationserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
