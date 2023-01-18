@@ -43,11 +43,13 @@ export class MycartComponent implements OnInit {
   subscription:any;
   cartId:any;
   takeCartId:any;
+  cartCount:any;
+
 
   //last file
   //lang support by browser, typescript and
 
-  constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService, 
+  constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService,
     private _snackbar: MatSnackBar,private router:Router,private orderservice:OrderserviceService,private dataservice:DataserviceService) {
 
   }
@@ -55,7 +57,7 @@ export class MycartComponent implements OnInit {
   ngOnInit(): void {
     this.bookId = localStorage.getItem('BookId');
 
-    this.getCartDetails();
+    // this.getCartDetails();
 
     // Directly initialize
     this.getCustomerDetails();
@@ -63,22 +65,25 @@ export class MycartComponent implements OnInit {
     this.addressId = localStorage.getItem('addressId');
     this.cartId = localStorage.getItem('cartId');
 
-    // subscribe here 
-
+    // subscribe here
+    this.dataservice.cartCount.subscribe((response:any)=>{
+      this.cartArray=response;
+      this.noofCart=this.cartArray.length;
+    })
   }
-  // Get Cart Items
-  getCartDetails() {
-    this.cart.getCartDetails().subscribe((response: any) => {
-      console.log("Retrived All Cart Items", response.data);
-      this.cartArray = response.data;
-      this.noofCart = response.data.length;
-      console.log('Cart Array: ', this.cartArray);
-      console.log("Total number of Cart:", this.noofCart);
+  //Get Cart Items
+  // getCartDetails() {
+  //   this.cart.getCartDetails().subscribe((response: any) => {
+  //     console.log("Retrived All Cart Items", response.data);
+  //     this.cartArray = response.data;
+  //     this.noofCart = response.data.length;
+  //     console.log('Cart Array: ', this.cartArray);
+  //     console.log("Total number of Cart:", this.noofCart);
 
-      // step 5 calling dataservice to get the count in the badge (step 4 in dash.ts)
-      this.dataservice.cartCount.next(this.noofCart)
-    });
-  }
+  //     // step 5 calling dataservice to get the count in the badge (step 4 in dash.ts)
+  //     this.dataservice.cartCount.next(this.noofCart)
+  //   });
+  // }
 
   increment(cartId: any, bookQuantity: any) {
     // this.counter++;
@@ -86,7 +91,7 @@ export class MycartComponent implements OnInit {
     this.cart.updateCartQty(cartId, (bookQuantity + 1)).subscribe((response: any) => {
       console.log("Quantity updated", response);
       console.log('Cart ID:', cartId, 'BookQuantity:', response.data)
-      this.getCartDetails();
+      // this.getCartDetails();
 
     })
   }
@@ -97,7 +102,7 @@ export class MycartComponent implements OnInit {
     this.cart.updateCartQty(cartId, (bookQuantity - 1)).subscribe((response: any) => {
       console.log("Quantity updated", response);
       console.log('Cart ID:', cartId, 'BookQuantity:', response.data)
-      this.getCartDetails();
+      // this.getCartDetails();
     })
   }
 
@@ -106,7 +111,7 @@ export class MycartComponent implements OnInit {
     this.cart.deleteFromCart(cartId).subscribe((response: any) => {
       console.log("Removed from cart", response);
       //i have called getcartdetails() to get all cart array
-      this.getCartDetails();
+      // this.getCartDetails();
       this._snackbar.open("Item Removed From Cart", "Close", { duration: 3000 })
 
     })
@@ -123,7 +128,7 @@ export class MycartComponent implements OnInit {
 
       console.log(this.mobileNumber)
 
-      //Add address API 
+      //Add address API
       let data = {
         fullName:this.fullName,
         mobilileNumber:this.mobileNumber,
@@ -134,8 +139,8 @@ export class MycartComponent implements OnInit {
       }
 
       this.addressservice.addAddress(data).subscribe((response:any) => {
-        console.log("Address Added Successfully",response) 
-        this.getAddresses();     
+        console.log("Address Added Successfully",response)
+        this.getAddresses();
       })
 
   }
@@ -159,14 +164,14 @@ export class MycartComponent implements OnInit {
 
   radioOptions(event:any){
     console.log( 'console value',event.target.value)
-    if(event.value ==1){      
+    if(event.value ==1){
      this.typeId=1;
     }
     else if(event.value ==2){
       this.typeId=2;
     }
     else if(event.value==3){
-      this.typeId=3;    
+      this.typeId=3;
     }
   }
 

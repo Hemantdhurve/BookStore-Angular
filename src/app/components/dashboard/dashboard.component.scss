@@ -12,8 +12,8 @@
     flex-Direction: row;
     position: relative;
     height: 100%;
-    width: 70%;
-    left:15vw;
+    width: 72%;
+    left:14vw;
     justify-Content:space-between;
 
 }
@@ -29,7 +29,7 @@
     display: flex;
     position: relative;
     justify-Content: space-between;
-    width: 22%;
+    width:140px;
     top:3px;
     align-Items: center;
     height: 80%;
@@ -61,7 +61,7 @@
     align-content: center;
     justify-content:center;
     align-items: center;
-    width: 9%;
+    width: 50px;
     left: 2px;
 
 }
@@ -182,4 +182,128 @@
     margin: 10px 10px;
     border: 1px solid #A03037 !important;
     color: #A03037;
+}
+
+//Media Queries
+@media (min-width: 320px) and (max-width: 480px){
+    .outHeadBox {
+        position: relative;
+        width: 90%;
+        left:5%;    
+    }
+    .inHeadBox {
+        display: flex;
+        flex-Direction:row;
+        position: relative;
+        top: 15%;
+        height: 70%;
+    }
+    .bookimg {
+        width: 60px;    
+    }
+    .booktxt {
+        display: none;    
+    }   
+    .search {
+        position:relative;
+        left:5px;
+        width:60%;     
+    } 
+    .searchicon{
+        width: 30px;    
+    }
+    .icons {
+        position: relative;
+        width: 100px;
+        left: 5px;
+    
+    }
+    .innerFooter{
+        left: 1vw;
+        height: 45px;
+        color: #FCFCFC;
+    }   
+    
+}
+
+@media (min-width: 481px) and (max-width: 720px){
+    .outHeadBox {
+        position: relative;
+        width: 85%;
+        left:5%;    
+    }
+    .inHeadBox {
+        display: flex;
+        flex-Direction:row;
+        position: relative;
+        top: 15%;
+        height: 70%;
+    }
+    .bookimg {
+        width: 130px;    
+    }
+    .booktxt {
+        // display: none; 
+        font-size: 18px;   
+    }   
+    .search {
+        position:relative;
+        left:15px;
+        width:50%;     
+    } 
+    .searchicon{
+        width: 50px;    
+    }
+    .icons {
+        position: relative;
+        width: 100px;   
+    }
+    .innerFooter{
+        left: 15vw;
+        height: 45px;
+        color: #FCFCFC;
+    }   
+    
+}
+
+@media (min-width: 721px) and (max-width: 1280px){
+    .outHeadBox {
+        position: relative;
+        width: 87%;
+        left:5%;   
+    }
+    .inHeadBox {
+        display: flex;
+        flex-Direction:row;
+        position: relative;
+        top: 15%; 
+        height: 70%;
+    }
+    .bookimg {
+        width: 130px;    
+    }
+    .booktxt {
+        position: relative;
+        left: 5px;
+        font-size: 18px;   
+    }   
+    .search {
+        position:relative;
+        left:25px;
+        width:80%;     
+    } 
+    .searchicon{
+        width: 50px;    
+    }
+    .icons {
+        position: relative;
+        width: 120px; 
+        // right: 20px;  
+    }
+    .innerFooter{
+        left: 15vw;
+        height: 45px;
+        color: #FCFCFC;
+    }   
+    
 }

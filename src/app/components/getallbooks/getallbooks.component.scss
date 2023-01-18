@@ -200,3 +200,244 @@
     position: relative;
     right: 5vw !important;
 }
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .head{
+        width: 86%;
+        position: relative;
+        display: flex;
+        left:8%;
+    }
+    .dropselect {
+        width:40%;
+    }
+    .display{
+        position: relative;
+        width:100%;
+        left:0;
+      }
+      
+      mat-card{
+        padding: 0px !important;
+      }
+    .bookBox {
+        left: 7%;
+        top: 20px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;   
+    }    
+    .inimageBox {
+        width: 80%;
+        height: 85%;    
+    }     
+    .dataBox {
+        display: flex;
+        width: 100%;
+        height: 21vh;
+    }   
+    .titletxt {
+        font-weight: 500;
+        height: 35px;
+        font-size: 18px;
+    } 
+    .authortxt {
+        font-size: 14px;
+        height: 18px;
+    }
+    .ratingBox{
+        width: 45%; 
+        position: relative; 
+    }
+    .starBox{
+        width: 50%;
+        height: 20px;
+    }    
+    .ratingCount {
+        font-size: 13px;
+    }
+    .priceBox{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 20px;
+        bottom: 5px;
+        align-items: flex-start;
+    }    
+    .discountPrice {
+        font-size: 18px;
+        font-weight: 600;
+    }    
+    .originalPrice {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .pagination{
+        width: 90%;
+        border: 1px solid black;
+        left: 7%;    
+        position: relative;
+    }
+
+}
+@media (min-width: 481px) and (max-width: 720px) {
+    .head{
+        width: 84%;
+        position: relative;
+        display: flex;
+        left:7%;
+    }
+    .dropselect {
+        width:40%;
+    }
+    .display{
+        position: relative;
+        width:100%;
+        top: 20px;
+        left:0;
+      }
+      
+      mat-card{
+        padding: 0px !important;
+      }
+    .bookBox {
+        left: 7%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;   
+    }  
+    .titletxt {
+        font-weight: 500;
+        height: 23px;
+        font-size: 18px;
+    }
+    .imageBox{
+        position: relative;
+        height: 70%;
+    }  
+    .inimageBox {
+        width: 80%;   
+    }     
+    .dataBox {
+        display: flex;
+        width: 100%;
+        height: 20vh;
+    }    
+    .authortxt {
+        font-size: 18px;
+        height: 18px;
+    }
+    .ratingBox{
+        width: 36%; 
+        position: relative; 
+    }
+    .starBox{
+        width: 50%;
+        height: 23px;
+    }    
+    .ratingCount {
+        font-size: 15px;
+    }
+    .priceBox{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 20px;
+        bottom: 5px;
+        align-items: flex-start;
+    }    
+    .discountPrice {
+        font-size: 20px;
+        font-weight: 600;
+    }    
+    .originalPrice {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+}
+@media (min-width: 721px) and (max-width: 1280px) {
+    .head{
+        width: 84%;
+        position: relative;
+        display: flex;
+        left:7%;
+    }
+    .dropselect {
+        width:30%;
+        font-size: 20px;
+    }
+    .display{
+        position: relative;
+        width:100%;
+        left:0;
+        top: 20px;
+      }
+      
+      mat-card{
+        padding: 0px !important;
+      }
+    .bookBox {
+        left: 7%;
+        position: relative;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26%;   
+    }  
+    .titletxt {
+        font-weight: 500;
+        height: 25px;
+        font-size: 18px;
+    }
+    .imageBox{
+        position: relative;
+        height: 70%;
+    }  
+    .inimageBox {
+        width: 80%;   
+    }     
+    .dataBox {
+        display: flex;
+        width: 100%;
+        height: 20vh;
+    }    
+    .authortxt {
+        font-size: 18px;
+        height: 17px;
+    }
+    .ratingBox{
+        width: 36%; 
+        position: relative; 
+        top: 3px;
+    }
+    .starBox{
+        width: 50%;
+        height: 21px;
+    }    
+    .ratingCount {
+        font-size: 15px;
+    }
+    .priceBox{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 18px;
+        align-items: flex-start;
+    }    
+    .discountPrice {
+        font-size: 20px;
+        font-weight: 600;
+    }    
+    .originalPrice {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+}

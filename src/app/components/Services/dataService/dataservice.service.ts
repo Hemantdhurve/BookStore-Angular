@@ -18,6 +18,7 @@ export class DataserviceService {
 
   // step 2. For badge Count (step 1 in dashboard.html step 3 in dash.ts)
   cartCount=new BehaviorSubject<number>(0);
+  // cartArray=new BehaviorSubject<number>(0);
 
   
 }
