@@ -29,6 +29,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { OrderplacedComponent } from './components/orderplaced/orderplaced.component';
 import { FilterpipePipe } from './searchPipe/filterpipe.pipe';
 import { AuthenticationserviceService } from './components/Services/authenticationservice/authenticationservice.service';
+import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
+import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
+import { AdminaddbookComponent } from './components/adminaddbook/adminaddbook.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { AuthenticationserviceService } from './components/Services/authenticati
     MyorderComponent,
     OrderplacedComponent,
     FilterpipePipe,
+    AdminloginComponent,
+    AdmindashboardComponent,
+    AdminaddbookComponent,
   ],
   
   imports: [

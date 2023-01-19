@@ -11,7 +11,7 @@
     <div class="outerOrderBox" *ngFor="let order of orderArray">
         <div class="innerOrderBox">
             <div class="imgBox">
-                <img class="imgs" src="/assets/dont.png">
+                <img class="imgs" [src]="order.image">
             </div>
             <div class="detailsBox">
                 <span class="bookttl">{{order.bookTitle}}</span>

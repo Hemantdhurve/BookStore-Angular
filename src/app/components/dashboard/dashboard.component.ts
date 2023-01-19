@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartserviceService } from '../Services/cartService/cartservice.service';
 import { DataserviceService } from '../Services/dataService/dataservice.service';
+import { SharedserviceService } from '../Services/shareddataservice/sharedservice.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,13 +16,18 @@ export class DashboardComponent implements OnInit {
   cartCount:any;
   cartArray:any=[];
   noofCart:any;
+  clickEventsubscription: any;
 
 
-  constructor(private router: Router, private dataservice: DataserviceService,private cart:CartserviceService) {
+  constructor(private router: Router, private dataservice: DataserviceService,private cart:CartserviceService,private sharedService:SharedserviceService) {
     //step 3 subscribe datasrvice for the count  (step 4 in mycart.ts )
     this.dataservice.cartCount.subscribe((response:any)=>{
       this.cartCount=response;
     })
+    //for the changing of badge quantity automatically
+    this.clickEventsubscription=this.sharedService.getClickEvent().subscribe(()=>{
+      this.getCartDetails();
+      })
    }
   ngOnInit(): void {
    this.getCartDetails();

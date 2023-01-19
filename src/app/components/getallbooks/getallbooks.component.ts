@@ -41,10 +41,6 @@ export class GetallbooksComponent implements OnInit {
       this.noofBooks=response.response.length;
       console.log("Array of Book: ", this.bookArray);
       console.log("Total Books Count: ", this.noofBooks);
-
-
-
-
     })
   }
 

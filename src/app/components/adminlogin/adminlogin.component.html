@@ -8,12 +8,11 @@
             </div>   
         <div class="reg-container">
             <div class="subContainer">
-                <div class="twoBtn">
-                    <button mat-flat-button class="twoBtn1">LOGIN</button>
-                    <button mat-flat-button class="twoBtn2" (click)="navigate()">SIGNUP</button>                    
+                <div class="adminTxt">
+                    Admin Login
                 </div>
                 
-                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="formbox">                    
+                <form [formGroup]="adminloginForm" (ngSubmit)="onSubmit()" class="formbox">                    
                     <div class="txtbox">
                         <label class="txtboxlbl" >Email Id</label> 
                         <mat-form-field appearance="outline" class="txtfield" >
@@ -32,15 +31,15 @@
                         <button mat-flat-button type="button" class="fgtbtn" >Forgot Password?</button> 
                     </div>
                     <div class="loginBox">
-                        <button mat-raised-button type="submit" class="login" (click)=onSubmit()>Login</button>
+                        <button mat-raised-button type="submit" class="login" >Login</button>
                     </div>    
             </form>            
                 <div class="orTxt">
                     ---------- OR ----------
                 </div>                
                 <div class="btns" >
-                    <button mat-raised-button class="fbBtn" color="primary" type="button" (click)="navAdmin()">Admin</button>
-                    <button mat-raised-button class="btn-google" type="button">Google</button>
+                    <button mat-raised-button class="logBtn" color="primary" type="button" (click)="navLogin()">Login</button>
+                    <button mat-raised-button class="btn-sgnUp" type="button" (click)="navRegistration()">SignUp</button>
                 </div>            
             </div>
         </div> 

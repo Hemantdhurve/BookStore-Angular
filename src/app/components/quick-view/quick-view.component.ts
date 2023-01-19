@@ -3,7 +3,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { BookServiceService } from '../Services/bookService/book-service.service';
 import { CartserviceService } from '../Services/cartService/cartservice.service';
+import { DataserviceService } from '../Services/dataService/dataservice.service';
 import { FeedbackServiceService } from '../Services/feedbackService/feedback-service.service';
+import { SharedserviceService } from '../Services/shareddataservice/sharedservice.service';
 import { WishlistserviceService } from '../Services/wishlistService/wishlistservice.service';
 
 @Component({
@@ -19,12 +21,21 @@ export class QuickViewComponent implements OnInit {
   cartlist: any;
   comment:any;
   userId:any;
+  cartArray: any;
+  noofCart: any;
 
-  constructor(private bookservice: BookServiceService, private feedback: FeedbackServiceService, private router: Router, private cart: CartserviceService,private wishlist:WishlistserviceService,private _snackbar:MatSnackBar) { }
+  constructor(private bookservice: BookServiceService, private feedback: FeedbackServiceService, private router: Router, 
+    private cart: CartserviceService,private wishlist:WishlistserviceService,private _snackbar:MatSnackBar,
+    private dataservice:DataserviceService,private sharedService:SharedserviceService) { }
 
   ngOnInit() {
     this.getbookById(this.bookId)
     this.getAllFeedbacks(this.bookId)
+
+    this.cart.getCartDetails().subscribe((response:any)=>{
+      this.cartArray=response;
+      this.noofCart=this.cartArray.length;
+    })
   }
 
   getbookById(bookId: any) {
@@ -55,6 +66,7 @@ export class QuickViewComponent implements OnInit {
       this.getAllFeedbacks(this.bookId);
       this._snackbar.open("Feedback Added Successful", "Close", { duration: 3000 })
     })
+    
   }
 
   //1.Add to cart API 
@@ -71,9 +83,22 @@ export class QuickViewComponent implements OnInit {
       console.log(this.cartlist);
       //smackbar is like a pop that displayed at the bottom of the screen
       //which takes 2 parameters message: string and action: string and to dismiss after some time use duration(optional)
-      this._snackbar.open("Book Added to the Cart","Add",{duration:3000})
+      this._snackbar.open("Book Added to the Cart","Add",{duration:3000})  
+      
+      //for changing badge quantity
+      this.sharedService.sendClickEvent();
+        
+
+      // this.dataservice.cartCount.subscribe((response:any)=>{
+      //   this.noofCart=response.length;
+      //   console.log(this.noofCart)
+      // })   
     });
 
+    // this.dataservice.cartCount.subscribe((response:any)=>{
+    //   this.noofCart=response.length;
+    //   console.log(this.noofCart)
+    // })
   }
 
   addToWishlist(){

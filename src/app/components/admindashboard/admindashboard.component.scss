@@ -1,0 +1,514 @@
+.headBox {
+    display: flex;
+    flex-Direction: column;
+    position: relative;
+    height: 9vh;
+    width: 100vw;
+    background-Color: #A03037 !important;
+}
+
+.outHeadBox {
+    display: flex;
+    flex-Direction: row;
+    position: relative;
+    height: 100%;
+    width: 72%;
+    left: 14vw;
+    justify-Content: space-between;
+
+}
+
+.inHeadBox {
+    display: flex;
+    flex-Direction: row;
+    position: relative;
+    top: 15%;
+    height: 70%;
+    width: 70%;
+}
+
+.bookimg {
+    display: flex;
+    position: relative;
+    justify-Content: space-between;
+    width: 140px;
+    top: 3px;
+    align-Items: center;
+    height: 80%;
+    cursor: pointer;
+
+}
+
+.booktxt {
+    position: relative;
+    left: 2px;
+    color: white;
+    font-Size: 20px;
+    cursor: pointer;
+
+}
+
+.field {
+    display: flex;
+    width: 100% !important;
+}
+
+.innerfield {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+
+}
+
+.searchicon {
+    display: flex;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    left: 2px;
+
+}
+
+.search {
+    display: flex;
+    flex-Direction: row;
+    position: relative;
+    left: 50px;
+    width: 68%;
+    justify-content: center;
+    background-Color: #FCFCFC;
+    border-Radius: 5px;
+
+}
+
+.icons {
+    display: flex;
+    flex-Direction: row;
+    align-Items: center;
+
+}
+
+.Iconlogo {
+    display: flex;
+    flex-Direction: column;
+    justify-Content: space-between;
+    align-Items: center;
+    color: #FCFCFC;
+    width: 50%;
+    border-Left: 1px solid #8F2B28;
+    border-Right: 1px solid #8F2B28;
+}
+
+.icontxt {
+    display: flex;
+    position: relative;
+    justify-Content: center;
+    align-items: center;
+    width: 80px;
+    font-size: 14px;
+    height: 16px;
+}
+
+.footer {
+    display: flex;
+    position: relative;
+    top: 84.4vh;
+    width: 100vw;
+    background-color: #2E1D1E;
+}
+
+.innerFooter {
+    display: flex;
+    position: relative;
+    align-items: center;
+    left: 15vw;
+    height: 45px;
+    color: #FCFCFC;
+}
+
+::ng-deep .mat-badge-content {
+    background: #A03037 !important;
+    position: relative;
+    font-size: 12px !important;
+    color: #f3ebeb;
+    // border:1px solid #FCFCFC;
+    width: 15px !important;
+    height: 16px !important;
+    right: 12px !important;
+}
+
+
+///profile pop-up CSS
+
+.toolBarHead {
+    background-Color: #A03037 !important;
+}
+
+.smallIcon {
+    display: flex;
+    flex-direction: row;
+    color: #878787;
+    margin: 10px 10px;
+    align-items: center !important;
+    background-color: transparent;
+    border: transparent;
+}
+
+.menuBox {
+    position: relative;
+    width: 35vh;
+    height: 36vh;
+}
+
+.innerMenuBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 28vh;
+    left: 1vw;
+    height: 30vh;
+}
+
+.hellotxt {
+    position: relative;
+    left: 1vw;
+}
+
+.popbtns {
+    height: 6vh;
+    display: flex;
+    position: relative;
+    top: 2vh;
+}
+
+.smallIcon img {
+    position: relative;
+    left: 3px;
+}
+
+.powtxt {
+    position: relative;
+    left: 15px;
+
+}
+
+.logoutBtn {
+    padding: 0px 36px;
+    margin: 10px 10px;
+    border: 1px solid #A03037 !important;
+    color: #A03037;
+}
+
+// Books Table 
+
+// .welcome{
+//     border: 1px solid black;
+//     display: flex;
+//     align-items: center;
+//     position: relative;
+//     width: 90vw;
+//     height: 10vh;
+//     left: 5vw;
+//     top: 3vh;
+//     font-size: 30px;
+//     font-weight: bolder;
+//     color: #FCFCFC;
+//     background-color: #A03037;
+// }
+
+.topbtntxt{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    position: relative;
+    left:10vw;
+    align-items: center;
+    height: 10vh;
+    top: 8vh;
+}
+.txtbook{
+    font-size: 25px;
+    font-weight: 600;
+    color: #878787;
+}
+.adbtntop{
+    width: 12vw;
+    background-color: #A03037 !important;
+    color: #FCFCFC !important;
+    box-shadow: 1px 2px 5px grey;
+
+}
+.tableBox {
+    border: 2px solid #dddddd;
+    width: 90vw;
+    position: relative;
+    top: 8vh;
+    left: 5vw;
+}
+
+tr {
+    width: 100%;
+    border: 2px solid #dddddd;
+}
+
+th {
+    width: 8.5vw;
+    border: 2px solid #dddddd;
+    height: 6vh;
+    background-color: #A03037;
+    color: #FCFCFC;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.rowdata {
+    display: flex;
+    justify-content: center;
+}
+
+td {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 2px solid #dddddd;
+    width: 8.3vw;
+    height: 5vh;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.imgs {
+    height: 12vh;
+    width: 5vw;
+    box-sizing: border-box;
+    position: relative;
+    top: 2px;
+    border: 1px solid #7C1E1E;
+}
+
+.total {
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 20px;
+    background-color: #A03037;
+    color: #FCFCFC;
+    font-weight: 500;
+}
+
+//book adding box
+.addbookBox{
+    position: relative;
+    width: 45vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    box-shadow: 1px 2px 5px grey;
+    left: 27vw;
+    top: 8vh;
+    row-gap: 3vh;
+    align-items: center;
+}
+.detailtxt{
+    height: 8vh;
+    position: relative;
+    top: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #f5f5f5;
+    background-color: #A03037;
+    box-shadow: 1px 2px 5px grey;
+    
+}
+
+.fields{
+    display: flex;
+    height: 9vh;
+    align-items: center;
+    width: 80%;
+}
+.lbl{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+}
+.txtarea{
+    height: 7vh;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    resize: none;
+
+}
+.fullnameTxt {
+    height: 60px;
+}
+.twobtn{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+
+}
+.btn{
+    background-color: #A03037 !important;
+    box-shadow: 1px 2px 5px grey;
+    height: 5vh;
+    width: 12vw;
+    color: #f5f5f5 !important;
+    border-radius: 0px ;
+}
+
+//Media Queries
+@media (min-width: 320px) and (max-width: 480px) {
+    .outHeadBox {
+        position: relative;
+        width: 90%;
+        left: 5%;
+    }
+
+    .inHeadBox {
+        display: flex;
+        flex-Direction: row;
+        position: relative;
+        top: 15%;
+        height: 70%;
+    }
+
+    .bookimg {
+        width: 60px;
+    }
+
+    .booktxt {
+        display: none;
+    }
+
+    .search {
+        position: relative;
+        left: 5px;
+        width: 60%;
+    }
+
+    .searchicon {
+        width: 30px;
+    }
+
+    .icons {
+        position: relative;
+        width: 100px;
+        left: 5px;
+
+    }
+
+    .innerFooter {
+        left: 1vw;
+        height: 45px;
+        color: #FCFCFC;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+    .outHeadBox {
+        position: relative;
+        width: 85%;
+        left: 5%;
+    }
+
+    .inHeadBox {
+        display: flex;
+        flex-Direction: row;
+        position: relative;
+        top: 15%;
+        height: 70%;
+    }
+
+    .bookimg {
+        width: 130px;
+    }
+
+    .booktxt {
+        // display: none; 
+        font-size: 18px;
+    }
+
+    .search {
+        position: relative;
+        left: 15px;
+        width: 50%;
+    }
+
+    .searchicon {
+        width: 50px;
+    }
+
+    .icons {
+        position: relative;
+        width: 100px;
+    }
+
+    .innerFooter {
+        left: 15vw;
+        height: 45px;
+        color: #FCFCFC;
+    }
+
+}
+
+@media (min-width: 721px) and (max-width: 1280px) {
+    .outHeadBox {
+        position: relative;
+        width: 87%;
+        left: 5%;
+    }
+
+    .inHeadBox {
+        display: flex;
+        flex-Direction: row;
+        position: relative;
+        top: 15%;
+        height: 70%;
+    }
+
+    .bookimg {
+        width: 130px;
+    }
+
+    .booktxt {
+        position: relative;
+        left: 5px;
+        font-size: 18px;
+    }
+
+    .search {
+        position: relative;
+        left: 25px;
+        width: 80%;
+    }
+
+    .searchicon {
+        width: 50px;
+    }
+
+    .icons {
+        position: relative;
+        width: 120px;
+        // right: 20px;  
+    }
+
+    .innerFooter {
+        left: 15vw;
+        height: 45px;
+        color: #FCFCFC;
+    }
+
+}

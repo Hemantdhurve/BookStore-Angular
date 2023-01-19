@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
+import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
 import { AuthguardGuard } from './components/authGuard/authguard.guard';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetallbooksComponent } from './components/getallbooks/getallbooks.component';
@@ -15,6 +17,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },  
   {path:'register',component:RegistrationComponent},
   {path:'login',component:LoginComponent},
+  {path:'adminlogin',component:AdminloginComponent},
   {path:'dashboard',component:DashboardComponent,canActivate:[AuthguardGuard],
   children:[
     {path:'getallbooks',component:GetallbooksComponent},
@@ -25,6 +28,11 @@ const routes: Routes = [
     {path:'orderplaced',component:OrderplacedComponent},
   ]
 },
+{path:'admindashboard',component:AdmindashboardComponent,
+children:[
+  {path:'getallbooks',component:GetallbooksComponent},
+]}
+
 
 ];
 

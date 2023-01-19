@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/register']);
   }
 
+
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       emailId: ['', [Validators.required, Validators.email]],
@@ -50,5 +51,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  navAdmin(){
+    this.router.navigate(['/adminlogin'])
+  }
 }
 

@@ -8,6 +8,7 @@ import { CartserviceService } from '../Services/cartService/cartservice.service'
 import { DataserviceService } from '../Services/dataService/dataservice.service';
 import { HttpService } from '../Services/httpService/http.service';
 import { OrderserviceService } from '../Services/orderservice/orderservice.service';
+import { SharedserviceService } from '../Services/shareddataservice/sharedservice.service';
 
 @Component({
   selector: 'app-mycart',
@@ -50,7 +51,8 @@ export class MycartComponent implements OnInit {
   //lang support by browser, typescript and
 
   constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService,
-    private _snackbar: MatSnackBar,private router:Router,private orderservice:OrderserviceService,private dataservice:DataserviceService) {
+    private _snackbar: MatSnackBar,private router:Router,private orderservice:OrderserviceService,
+    private dataservice:DataserviceService,private sharedService:SharedserviceService) {
 
   }
 
@@ -92,7 +94,8 @@ export class MycartComponent implements OnInit {
       console.log("Quantity updated", response);
       console.log('Cart ID:', cartId, 'BookQuantity:', response.data)
       // this.getCartDetails();
-
+      //called this to get automatically update the values on page
+      this.sharedService.sendClickEvent();
     })
   }
 
@@ -103,6 +106,7 @@ export class MycartComponent implements OnInit {
       console.log("Quantity updated", response);
       console.log('Cart ID:', cartId, 'BookQuantity:', response.data)
       // this.getCartDetails();
+      this.sharedService.sendClickEvent();
     })
   }
 
@@ -113,7 +117,7 @@ export class MycartComponent implements OnInit {
       //i have called getcartdetails() to get all cart array
       // this.getCartDetails();
       this._snackbar.open("Item Removed From Cart", "Close", { duration: 3000 })
-
+      this.sharedService.sendClickEvent();
     })
   }
 

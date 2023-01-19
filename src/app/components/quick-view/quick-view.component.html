@@ -10,12 +10,12 @@
     <div class="fullDatabox">
         <div class="onlyImagesbox">
             <div class="box1">
-                <img class="imgs" src="/assets/react.png" />
+                <img class="imgs" [src]="book?.image" />
                 <img class="imgs" src="/assets/dont.png" />
             </div>
             <div class="box2">
                 <div class="bigImg">
-                    <img class="mainImg" src="/assets/react.png" />
+                    <img class="mainImg" [src]="book?.image" />
                 </div>
                 <div class="add2Tag">
                     <button mat-flat-button class="btnbag" (click)="addToCart()">Add to Bag</button>

@@ -29,8 +29,7 @@
             <div class="mainData" *ngFor="let cart of cartArray">
                 
                 <div class="imgBox">
-                    <img class="immg" src='/assets/dont.png'>
-                    <!-- <img class="immg" [src]="cart.image"> -->
+                    <img class="immg" [src]="cart.image">
                 </div>
                 <div class="dataBox">
                     <div class="title">
@@ -138,7 +137,7 @@
             </div>
             <div class="orderData" *ngFor="let cart of cartArray">
                 <div class="orderimgBox">
-                    <img class="immgorder" src='/assets/dont.png'>
+                    <img class="immgorder" [src]="cart?.image">
                 </div>
                 <div class="orderdataBox">
                     <div>

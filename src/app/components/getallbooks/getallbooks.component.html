@@ -18,7 +18,7 @@
         <mat-card class="bookBox" *ngFor="let book of bookArray | filterpipe: searchBook | paginate: { itemsPerPage: 4, currentPage: p }" (click)="quickVeiwPage(book)">
             <div class="imageBox">
                 <div class="inimageBox">
-                    <img class="image" src="/assets/dont.png" >
+                    <img class="image" [src]="book.image" >
                 </div>
             </div>
             <div class="dataBox">
