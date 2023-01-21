@@ -28,31 +28,33 @@ export class MycartComponent implements OnInit {
   hideContinue = true;
   hideShowOrder = true;
 
-  addressArray: any=[];
+  addressArray: any = [];
   fullName: any;
   mobileNumber: any;
   address: any;
   city: any;
   state: any;
   addressType: any;
-  userId:any;
-  addressId:any;
-  noofAddress:any;
-  details:any;
-  addval:any;
-  typeId:any;
-  subscription:any;
-  cartId:any;
-  takeCartId:any;
-  cartCount:any;
+  userId: any;
+  addressId: any;
+  noofAddress: any;
+  details: any;
+  addval: any;
+  typeId: any;
+  subscription: any;
+  cartId: any;
+  takeCartId: any;
+  cartCount: any;
+
+  hideBox = false;
 
 
   //last file
   //lang support by browser, typescript and
 
   constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService,
-    private _snackbar: MatSnackBar,private router:Router,private orderservice:OrderserviceService,
-    private dataservice:DataserviceService,private sharedService:SharedserviceService) {
+    private _snackbar: MatSnackBar, private router: Router, private orderservice: OrderserviceService,
+    private dataservice: DataserviceService, private sharedService: SharedserviceService) {
 
   }
 
@@ -68,9 +70,9 @@ export class MycartComponent implements OnInit {
     this.cartId = localStorage.getItem('cartId');
 
     // subscribe here
-    this.dataservice.cartCount.subscribe((response:any)=>{
-      this.cartArray=response;
-      this.noofCart=this.cartArray.length;
+    this.dataservice.cartCount.subscribe((response: any) => {
+      this.cartArray = response;
+      this.noofCart = this.cartArray.length;
     })
   }
   //Get Cart Items
@@ -122,43 +124,43 @@ export class MycartComponent implements OnInit {
   }
 
   openAddress() {
-      this.hideButton = false,
+    this.hideButton = false,
       this.hideShowAddress = false
   }
 
   openContinue() {
-      this.hideContinue = false,
+    this.hideContinue = false,
       this.hideShowOrder = false
 
-      console.log(this.mobileNumber)
+    console.log(this.mobileNumber)
 
-      //Add address API
-      let data = {
-        fullName:this.fullName,
-        mobilileNumber:this.mobileNumber,
-        address: this.address,
-        city: this.city,
-        state: this.state,
-        typeId: Number(this.typeId)
-      }
+    //Add address API
+    let data = {
+      fullName: this.fullName,
+      mobilileNumber: this.mobileNumber,
+      address: this.address,
+      city: this.city,
+      state: this.state,
+      typeId: Number(this.typeId)
+    }
 
-      this.addressservice.addAddress(data).subscribe((response:any) => {
-        console.log("Address Added Successfully",response)
-        this.getAddresses();
-      })
+    this.addressservice.addAddress(data).subscribe((response: any) => {
+      console.log("Address Added Successfully", response)
+      this.getAddresses();
+    })
 
   }
 
-  orderConfirmed(){
+  orderConfirmed() {
     // Add order API
     console.log(this.addressId)
     console.log(this.cartId)
 
-    let data={
-      addressId:this.addressId,
-      bookId:Number(this.bookId),
+    let data = {
+      addressId: this.addressId,
+      bookId: Number(this.bookId),
     }
-    this.orderservice.addOrder(data).subscribe((response:any)=>{
+    this.orderservice.addOrder(data).subscribe((response: any) => {
       console.log(response.data)
 
       this.router.navigate(['/dashboard/orderplaced'])
@@ -166,60 +168,60 @@ export class MycartComponent implements OnInit {
   }
 
 
-  radioOptions(event:any){
-    console.log( 'console value',event.target.value)
-    if(event.value ==1){
-     this.typeId=1;
+  radioOptions(event: any) {
+    console.log('console value', event.target.value)
+    if (event.value == 1) {
+      this.typeId = 1;
     }
-    else if(event.value ==2){
-      this.typeId=2;
+    else if (event.value == 2) {
+      this.typeId = 2;
     }
-    else if(event.value==3){
-      this.typeId=3;
+    else if (event.value == 3) {
+      this.typeId = 3;
     }
   }
 
-  getAddresses(){
-    this.addressservice.getAddresses().subscribe((response:any)=>{
-      console.log("Retrived all the Addresses",response);
-      this.addressArray=response.data;
-      this.noofAddress=response.data.length;
-      console.log('Array of the Address: ',this.addressArray);
-      console.log('Total number of Addresses :',this.noofAddress);
+  getAddresses() {
+    this.addressservice.getAddresses().subscribe((response: any) => {
+      console.log("Retrived all the Addresses", response);
+      this.addressArray = response.data;
+      this.noofAddress = response.data.length;
+      console.log('Array of the Address: ', this.addressArray);
+      console.log('Total number of Addresses :', this.noofAddress);
 
-      this.addressArray=this.addressArray.filter((response:any)=>{
+      this.addressArray = this.addressArray.filter((response: any) => {
         // localStorage.setItem('addressId',response.addressId)
-        this.addressId=response.addressId
+        this.addressId = response.addressId
 
       })
 
-      this.fullName=localStorage.getItem('fullName');
+      this.fullName = localStorage.getItem('fullName');
       console.log('fullName is: ', this.fullName);
-      this.mobileNumber=localStorage.getItem('mobileNumber');
+      this.mobileNumber = localStorage.getItem('mobileNumber');
     })
   }
 
-    getCustomerDetails(){
-      this.addressservice.getCustomerDetails().subscribe((response:any)=>{
-      console.log( 'Customer Details :',response);
-      this.details=response.data;
+  getCustomerDetails() {
+    this.addressservice.getCustomerDetails().subscribe((response: any) => {
+      console.log('Customer Details :', response);
+      this.details = response.data;
 
-      this.details=this.details.filter((response:any)=>{
-        localStorage.setItem('userId',response.userId)
-        localStorage.setItem('fullName',response.fullName)
-        localStorage.setItem('mobileNumber',response.mobileNumber)
+      this.details = this.details.filter((response: any) => {
+        localStorage.setItem('userId', response.userId)
+        localStorage.setItem('fullName', response.fullName)
+        localStorage.setItem('mobileNumber', response.mobileNumber)
 
-        this.mobileNumber=response.mobileNumber;
-        this.fullName=response.fullName;
-        this.userId=response.userId;
+        this.mobileNumber = response.mobileNumber;
+        this.fullName = response.fullName;
+        this.userId = response.userId;
       })
     })
   }
 
   addNewAddress() {
-    this.fullName='',
-    this.mobileNumber='',
-    this.address = '';
+    this.fullName = '',
+      this.mobileNumber = '',
+      this.address = '';
     this.city = '';
     this.state = '';
     this.typeId = '';

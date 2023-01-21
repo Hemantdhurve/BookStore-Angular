@@ -81,7 +81,7 @@
                                     </button>
                                 </div>
                                 <div class="popbtns">
-                                    <button class="logoutBtn" mat-stroked-button color="warn" >Logout </button>
+                                    <button class="logoutBtn" mat-stroked-button color="warn" (click)="logOut()">Logout </button>
                                 </div>                                
                             </div>
                         </div>
@@ -104,7 +104,7 @@
 </div> -->
 <div class="topbtntxt">
     <span class="txtbook">Book Details</span>
-    <button mat-raised-button class="adbtntop" *ngIf="!hidetable" (click)="openAddBlock()">Add Book</button>
+    <button mat-raised-button class="adbtntop" *ngIf="!hidetable" id="add" (click)="openDialog('')">Add Book</button>
 </div>
 <div class="tableBox" *ngIf="!hidetable">
     <table style="text-align: center;">
@@ -119,6 +119,7 @@
             <th>ActualPrice</th>
             <th>Description</th>
             <th>BookQuantity</th>
+            <th>Edit/Delete</th>
         </tr>
         <tr *ngFor="let admin of bookArray">
             <td><img [src]="admin.image" class="imgs"></td>            
@@ -130,72 +131,18 @@
             <td>Rs.{{admin.discountedPrice}}</td>
             <td>Rs.{{admin.actualPrice}}</td>
             <td>{{admin.description}}</td>
-            <td>{{admin.bookQuantity}}</td>
+            <td>{{admin.bookQuantity}}</td>            
+            <td>
+                <div class="twoicon">
+                    <img src="/assets/edit.png" class="point" id="update" (click)="openDialog(admin)">
+                    <img src="/assets/trash.png" class="point" (click)="deleteBook(admin?.bookId)">
+                </div>
+            </td>
         </tr>
     </table>
     <div class="total">
-        <span>Book Count:=> ( {{noofBooks}} )</span>
+        <span>Book Count: ( {{noofBooks}} )</span>
     </div>
-</div>
-<div class="addbookBox" *ngIf="showtable">
-    <div class="detailtxt">
-        <span>Enter Book Details in the Text Fields</span>
-    </div>
-   <div class="fields">
-        <label class="lbl">Book Title :=></label>
-        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
-            <input matInput placeholder="Enter Book Title" [(ngModel)]="bookTitle">
-        </mat-form-field>       
-    </div>
-    <div class="fields">
-        <label class="lbl">Book Author :=></label>
-        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
-            <input matInput placeholder="Enter Author Name" [(ngModel)]="author" >
-        </mat-form-field>       
-    </div>
-    <div class="fields">
-        <label class="lbl">Book Rating :=></label>
-        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
-            <input matInput placeholder="Enter Rating" [(ngModel)]="rating">
-        </mat-form-field>       
-    </div>
-    <div class="fields">
-        <label class="lbl">Book Rated Count :=></label>
-        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
-            <input matInput placeholder="Enter Rated Count" [(ngModel)]="ratedCount">
-        </mat-form-field>       
-    </div>
-    <div class="fields">
-        <label class="lbl">Discounted Price :=></label>
-        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
-            <input matInput placeholder="Enter Discounted Price" [(ngModel)]="discountedPrice">
-        </mat-form-field>       
-    </div>
-    <div class="fields">
-        <label class="lbl">Actual Price :=></label>
-        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
-            <input matInput placeholder="Enter Actual Price" [(ngModel)]="actualPrice">
-        </mat-form-field>       
-    </div>
-    <div class="fields">
-        <label class="lbl">Book Quantity :=></label>
-        <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt" >
-            <input matInput placeholder="Enter Book Quantity" [(ngModel)]="bookQuantity">
-        </mat-form-field>       
-    </div>
-    <div class="fields">
-        <label class="lbl">Book Description :=></label>
-        <textarea matInput placeholder="Enter Book Description" class="txtarea" [(ngModel)]="description"></textarea>       
-    </div>
-    <div class="fields">
-        <label class="lbl">Book Image Link :=></label>
-        <textarea matInput placeholder="Enter Image Link" class="txtarea" [(ngModel)]="image"></textarea>       
-    </div>
-    <div class="twobtn">
-        <button mat-raised-button class="btn" (click)="addBook()">Add Book</button>
-        <button mat-raised-button class="btn" *ngIf="hidetable" (click)="backToTable()">Back</button>
-    </div>>
-
 </div>
 
     

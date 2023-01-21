@@ -31,7 +31,8 @@ import { FilterpipePipe } from './searchPipe/filterpipe.pipe';
 import { AuthenticationserviceService } from './components/Services/authenticationservice/authenticationservice.service';
 import { AdminloginComponent } from './components/adminlogin/adminlogin.component';
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
-import { AdminaddbookComponent } from './components/adminaddbook/adminaddbook.component';
+import { DialogbookboxComponent } from './components/dialogbookbox/dialogbookbox.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { AdminaddbookComponent } from './components/adminaddbook/adminaddbook.co
     FilterpipePipe,
     AdminloginComponent,
     AdmindashboardComponent,
-    AdminaddbookComponent,
+    DialogbookboxComponent,
   ],
   
   imports: [
@@ -68,7 +69,8 @@ import { AdminaddbookComponent } from './components/adminaddbook/adminaddbook.co
     FormsModule,
     MatMenuModule,
     MatToolbarModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatDialogModule
 
   ],
   providers: [AuthenticationserviceService],

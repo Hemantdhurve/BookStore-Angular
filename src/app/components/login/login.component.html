@@ -6,44 +6,43 @@
                 <img class="shop-img" src="../../../assets/shopping.png">
                 <p class="text">ONLINE BOOK SHOPPING</p>
             </div>   
-        <div class="reg-container">
-            <div class="subContainer">
-                <div class="twoBtn">
-                    <button mat-flat-button class="twoBtn1">LOGIN</button>
-                    <button mat-flat-button class="twoBtn2" (click)="navigate()">SIGNUP</button>                    
+            <div class="reg-container">
+                <div class="subContainer">
+                    <div class="twoBtn">
+                        <button mat-flat-button class="twoBtn1">LOGIN</button>
+                        <button mat-flat-button class="twoBtn2" (click)="navigate()">SIGNUP</button>                    
+                    </div>                    
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="formbox">                    
+                        <div class="txtbox">
+                            <label class="txtboxlbl" >Email Id</label> 
+                            <mat-form-field appearance="outline" class="txtfield" >
+                                <input matInput placeholder="" formControlName="emailId" />
+                                <mat-error>Email required</mat-error>
+                            </mat-form-field>
+                        </div>                
+                        <div class="txtbox1">
+                            <label class="txtboxlbl">Password</label>
+                            <mat-form-field appearance="outline" class="txtfield">
+                                <input matInput placeholder="" formControlName="password"/>
+                                <mat-error>Password required</mat-error>
+                            </mat-form-field>
+                        </div>                
+                        <div class="forgotbtn">
+                            <button mat-flat-button type="button" class="fgtbtn" >Forgot Password?</button> 
+                        </div>
+                        <div class="loginBox">
+                            <button mat-raised-button type="submit" class="login" (click)=onSubmit()>Login</button>
+                        </div>    
+                    </form>            
+                    <div class="orTxt">
+                        ---------- OR ----------
+                    </div>                
+                    <div class="btns" >
+                        <button mat-raised-button class="fbBtn" color="primary" type="button" (click)="navAdmin()">Admin</button>
+                        <button mat-raised-button class="btn-google" type="button">Google</button>
+                    </div>            
                 </div>
-                
-                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="formbox">                    
-                    <div class="txtbox">
-                        <label class="txtboxlbl" >Email Id</label> 
-                        <mat-form-field appearance="outline" class="txtfield" >
-                            <input matInput placeholder="" formControlName="emailId" />
-                            <mat-error>Email required</mat-error>
-                        </mat-form-field>
-                    </div>                
-                    <div class="txtbox1">
-                        <label class="txtboxlbl">Password</label>
-                        <mat-form-field appearance="outline" class="txtfield">
-                            <input matInput placeholder="" formControlName="password"/>
-                            <mat-error>Password required</mat-error>
-                        </mat-form-field>
-                    </div>                
-                    <div class="forgotbtn">
-                        <button mat-flat-button type="button" class="fgtbtn" >Forgot Password?</button> 
-                    </div>
-                    <div class="loginBox">
-                        <button mat-raised-button type="submit" class="login" (click)=onSubmit()>Login</button>
-                    </div>    
-            </form>            
-                <div class="orTxt">
-                    ---------- OR ----------
-                </div>                
-                <div class="btns" >
-                    <button mat-raised-button class="fbBtn" color="primary" type="button" (click)="navAdmin()">Admin</button>
-                    <button mat-raised-button class="btn-google" type="button">Google</button>
-                </div>            
-            </div>
-        </div> 
+            </div> 
         </div>
     </div>   
 </div>

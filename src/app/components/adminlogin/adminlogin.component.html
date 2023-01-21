@@ -1,48 +1,49 @@
-
 <div class="logbox">
     <div class="both">
-        <div class="container" >
+        <div class="container">
             <div class="imgbox">
                 <img class="shop-img" src="../../../assets/shopping.png">
                 <p class="text">ONLINE BOOK SHOPPING</p>
-            </div>   
-        <div class="reg-container">
-            <div class="subContainer">
-                <div class="adminTxt">
-                    Admin Login
-                </div>
-                
-                <form [formGroup]="adminloginForm" (ngSubmit)="onSubmit()" class="formbox">                    
-                    <div class="txtbox">
-                        <label class="txtboxlbl" >Email Id</label> 
-                        <mat-form-field appearance="outline" class="txtfield" >
-                            <input matInput placeholder="" formControlName="emailId" />
-                            <mat-error>Email required</mat-error>
-                        </mat-form-field>
-                    </div>                
-                    <div class="txtbox1">
-                        <label class="txtboxlbl">Password</label>
-                        <mat-form-field appearance="outline" class="txtfield">
-                            <input matInput placeholder="" formControlName="password"/>
-                            <mat-error>Password required</mat-error>
-                        </mat-form-field>
-                    </div>                
-                    <div class="forgotbtn">
-                        <button mat-flat-button type="button" class="fgtbtn" >Forgot Password?</button> 
-                    </div>
-                    <div class="loginBox">
-                        <button mat-raised-button type="submit" class="login" >Login</button>
-                    </div>    
-            </form>            
-                <div class="orTxt">
-                    ---------- OR ----------
-                </div>                
-                <div class="btns" >
-                    <button mat-raised-button class="logBtn" color="primary" type="button" (click)="navLogin()">Login</button>
-                    <button mat-raised-button class="btn-sgnUp" type="button" (click)="navRegistration()">SignUp</button>
-                </div>            
             </div>
-        </div> 
+            <div class="reg-container">
+                <div class="subContainer">
+                    <div class="adminTxt">
+                        Admin Login
+                    </div>
+
+                    <form [formGroup]="adminloginForm" (ngSubmit)="onSubmit()" class="formbox">
+                        <div class="txtbox">
+                            <label class="txtboxlbl">Email Id</label>
+                            <mat-form-field appearance="outline" class="txtfield">
+                                <input matInput placeholder="" formControlName="emailId" />
+                                <mat-error>Email required</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="txtbox1">
+                            <label class="txtboxlbl">Password</label>
+                            <mat-form-field appearance="outline" class="txtfield">
+                                <input matInput placeholder="" formControlName="password" />
+                                <mat-error>Password required</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="forgotbtn">
+                            <button mat-flat-button type="button" class="fgtbtn">Forgot Password?</button>
+                        </div>
+                        <div class="loginBox">
+                            <button mat-raised-button type="submit" class="login">Login</button>
+                        </div>
+                    </form>
+                    <div class="orTxt">
+                        ---------- OR ----------
+                    </div>
+                    <div class="btns">
+                        <button mat-raised-button class="logBtn" color="primary" type="button"
+                            (click)="navLogin()">Login</button>
+                        <button mat-raised-button class="btn-sgnUp" type="button"
+                            (click)="navRegistration()">SignUp</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>   
+    </div>
 </div>

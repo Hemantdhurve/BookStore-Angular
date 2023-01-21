@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
         console.log(error);
       })
     }
+    this.loginForm.reset();
   }
 
   navAdmin(){

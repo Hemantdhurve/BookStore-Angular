@@ -1,0 +1,63 @@
+<h2 mat-dialog-title>Add Book</h2>
+<mat-dialog-content class="formbox">
+    <form [formGroup]="dialogForm" (ngSubmit)="onSubmit()">
+        <div class="addbookBox">
+            <div class="fields">
+                <label class="lbl">Book Title :</label>
+                <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                    <input matInput placeholder="Enter Book Title" formControlName="bookTitle">
+                </mat-form-field>
+            </div>
+            <div class="fields">
+                <label class="lbl">Book Author :</label>
+                <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                    <input matInput placeholder="Enter Author Name" formControlName="author">
+                </mat-form-field>
+            </div>
+            <div class="fields">
+                <label class="lbl">Book Rating :</label>
+                <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                    <input matInput placeholder="Enter Rating" formControlName="rating">
+                </mat-form-field>
+            </div>
+            <div class="fields">
+                <label class="lbl">Book Rated Count :</label>
+                <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                    <input matInput placeholder="Enter Rated Count" formControlName="ratedCount">
+                </mat-form-field>
+            </div>
+            <div class="fields">
+                <label class="lbl">Discounted Price :</label>
+                <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                    <input matInput placeholder="Enter Discounted Price" formControlName="discountedPrice">
+                </mat-form-field>
+            </div>
+            <div class="fields">
+                <label class="lbl">Actual Price :</label>
+                <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                    <input matInput placeholder="Enter Actual Price" formControlName="actualPrice">
+                </mat-form-field>
+            </div>
+            <div class="fields">
+                <label class="lbl">Book Quantity :</label>
+                <mat-form-field appearance="outline" style="width: 100%;" class="fullnameTxt">
+                    <input matInput placeholder="Enter Book Quantity" formControlName="bookQuantity">
+                </mat-form-field>
+            </div>
+            <div class="fields">
+                <label class="lbl">Book Description :</label>
+                <textarea matInput placeholder="Enter Book Description" class="txtarea"
+                    formControlName="description"></textarea>
+            </div>
+            <div class="fields">
+                <label class="lbl">Book Image Link :</label>
+                <textarea matInput placeholder="Enter Image Link" class="txtarea" formControlName="image"></textarea>
+            </div>
+        </div>
+        <mat-dialog-actions class="btnx">
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button mat-button [mat-dialog-close]="true" type="submit" cdkFocusInitial class="bookAdd">{{this.data ?
+                'Update':'Add'}}</button>
+        </mat-dialog-actions>
+    </form>
+</mat-dialog-content>

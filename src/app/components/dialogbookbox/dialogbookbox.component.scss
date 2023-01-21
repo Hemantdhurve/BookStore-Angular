@@ -1,0 +1,74 @@
+.formbox{
+    // display: flex;
+    justify-content: center;
+    position: inherit;
+    width: 50vw;
+    // height: 90vh;
+}
+.formbox::-webkit-scrollbar {
+    display: none;
+}
+
+// ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+// ::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+// ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+//     transform: translateY(-1.1em) scale(.75);
+//     width: 133.33333%;
+// }
+// ::ng-deep mat-dialog-content{
+//     border: 1px solid black !important;
+//     height: 90vw !important;
+// }
+// .aa{
+//     border: 1px solid black !important;
+//     height: 100vh;
+// }
+
+
+.addbookBox{
+    position: relative;
+    width: 45vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    box-shadow: 1px 2px 5px grey;
+    row-gap: 2vh;
+    align-items: center;
+    padding: 10px;
+}
+.fields{
+    display: flex;
+    height: 9vh;
+    align-items: center;
+    width: 80%;
+}
+.lbl{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    width: 100%;
+}
+.txtarea{
+    height: 7vh;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    resize: none;
+
+}
+.fullnameTxt {
+    height: 60px;
+}
+.bookAdd{
+    background-color: #A03037;
+    color: bisque;
+    width: 10vw;
+}
+.btnx{
+    display: flex;
+    justify-content: space-between;
+    width: 45vw;
+}

@@ -10,18 +10,18 @@ export class AdminloginserviceService {
   token: any;
   bookId: any;
 
-  constructor(private httpservice:HttpService) {
+  constructor(private httpservice: HttpService) {
     this.token = localStorage.getItem('token')
-   }
+  }
 
-  adminlogin(data:any){
-    let header={
-      headers:new HttpHeaders({
+  adminlogin(data: any) {
+    let header = {
+      headers: new HttpHeaders({
         'Content-type': 'application/json',
         // 'Authorization': 'Bearer ' + this.token
       })
     }
-    return this.httpservice.PostService('/Admin/AdminLogin',data,false,header)
+    return this.httpservice.PostService('/Admin/AdminLogin', data, false, header)
   }
 
   getallbooks() {
@@ -34,23 +34,33 @@ export class AdminloginserviceService {
     return this.httpservice.GetService('/Book/RetriveAll', true, header)
   }
 
-  // deleteBook(bookId:any){
-  //   let header = {
-  //     headers: new HttpHeaders({
-  //       'Content-type': 'application/json',
-  //       'Authorization': 'Bearer ' + this.token
-  //     })
-  //   }
-  //   return this.httpservice.DeleteService('/Book/DeleteBook?bookId='+bookId,true,header)
-  // }
-
-  addBook(reqdata:any){
+  deleteBook(bookId: any) {
     let header = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
         'Authorization': 'Bearer ' + this.token
       })
     }
-    return this.httpservice.PostService('/Book/AddBook',reqdata,true,header)
+    return this.httpservice.DeleteService('/Book/DeleteBook?bookId=' + bookId, true, header)
+  }
+
+  addBook(reqdata: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.httpservice.PostService('/Book/AddBook', reqdata, true, header)
+  }
+
+  updateBook(bookId: any, reqdata: any) {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.httpservice.PutService('/Book/UpdateBook?bookId=' + bookId, reqdata, true, header)
   }
 }
