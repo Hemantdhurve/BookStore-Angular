@@ -12,7 +12,7 @@
     flex-Direction: row;
     position: relative;
     height: 100%;
-    width: 72%;
+    width: 72vw;
     left:14vw;
     justify-Content:space-between;
 
@@ -23,7 +23,7 @@
     position: relative;
     top: 15%;
     height: 70%;
-    width: 70%;
+    width: 50vw;
 }
 .bookimg {
     display: flex;
@@ -126,7 +126,7 @@
     // border:1px solid #FCFCFC;
     width: 15px !important;
     height: 16px !important;
-    right: 12px !important;
+    right: 10px !important;
 }
 
 
@@ -185,92 +185,12 @@
 }
 
 //Media Queries
-@media (min-width: 320px) and (max-width: 480px){
-    .outHeadBox {
-        position: relative;
-        width: 90%;
-        left:5%;    
-    }
-    .inHeadBox {
-        display: flex;
-        flex-Direction:row;
-        position: relative;
-        top: 15%;
-        height: 70%;
-    }
-    .bookimg {
-        width: 60px;    
-    }
-    .booktxt {
-        display: none;    
-    }   
-    .search {
-        position:relative;
-        left:5px;
-        width:60%;     
-    } 
-    .searchicon{
-        width: 30px;    
-    }
-    .icons {
-        position: relative;
-        width: 100px;
-        left: 5px;
-    
-    }
-    .innerFooter{
-        left: 1vw;
-        height: 45px;
-        color: #FCFCFC;
-    }   
-    
-}
-
-@media (min-width: 481px) and (max-width: 720px){
-    .outHeadBox {
-        position: relative;
-        width: 85%;
-        left:5%;    
-    }
-    .inHeadBox {
-        display: flex;
-        flex-Direction:row;
-        position: relative;
-        top: 15%;
-        height: 70%;
-    }
-    .bookimg {
-        width: 130px;    
-    }
-    .booktxt {
-        // display: none; 
-        font-size: 18px;   
-    }   
-    .search {
-        position:relative;
-        left:15px;
-        width:50%;     
-    } 
-    .searchicon{
-        width: 50px;    
-    }
-    .icons {
-        position: relative;
-        width: 100px;   
-    }
-    .innerFooter{
-        left: 15vw;
-        height: 45px;
-        color: #FCFCFC;
-    }   
-    
-}
 
 @media (min-width: 721px) and (max-width: 1280px){
     .outHeadBox {
         position: relative;
-        width: 87%;
-        left:5%;   
+        width: 85vw;
+        left:7vw;   
     }
     .inHeadBox {
         display: flex;
@@ -290,7 +210,7 @@
     .search {
         position:relative;
         left:25px;
-        width:80%;     
+        width:40vw;     
     } 
     .searchicon{
         width: 50px;    
@@ -307,3 +227,93 @@
     }   
     
 }
+
+@media (min-width: 481px) and (max-width: 720px){
+    .outHeadBox {
+        position: relative;
+        width: 90vw;
+        left:1vw;    
+    }
+    .inHeadBox {
+        display: flex;
+        flex-Direction:row;
+        position: relative;
+        top: 15%;
+        height: 70%;
+    }
+    .bookimg {
+        width: 130px;    
+    }
+    .booktxt {
+        // display: none; 
+        font-size: 18px;   
+    }   
+    .search {
+        position:relative;
+        left:15px;
+        width:30vw;     
+    } 
+    .searchicon{
+        width: 50px;    
+    }
+    .icons {
+        position: relative;
+        width: 100px;   
+    }
+    .innerFooter{
+        left: 15vw;
+        height: 45px;
+        color: #FCFCFC;
+    }   
+    
+}
+@media (min-width: 320px) and (max-width: 480px){
+    .outHeadBox {
+        position: relative;
+        width:85vw;
+        left:3vw;    
+    }
+    .inHeadBox {
+        display: flex;
+        position: relative;
+        width: 70vw;
+        top: 15%;
+        height: 70%;
+    }
+    .bookimg {
+        width: 60px;    
+    }
+    .booktxt {
+        display: none;    
+    } 
+    .innerfield{
+       display: none;
+    }
+    .search {
+        position:relative;
+        display: flex;
+        width:30px;  
+        background: transparent;      
+    } 
+    .searchicon{  
+        display: flex;
+        justify-content: flex-end;
+        width: 80px;  
+        background-color: #FCFCFC;
+        border-radius: 24%;  
+    }
+    .icons {
+        position: relative;
+        width: 100px; 
+        // left: 5px;
+    
+    }
+    .innerFooter{
+        left: 1vw;
+        height: 45px;
+        color: #FCFCFC;
+    }   
+    
+}
+
+

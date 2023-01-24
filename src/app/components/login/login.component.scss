@@ -102,16 +102,6 @@ display: flex;
     border-color: transparent;
     color: #0A0102;
 }
-// .Btns{
-//     display: flex;
-//     position: relative;
-//     font-size: 25px;
-//     font-weight: 550;
-//     width: 43%;
-//     background-color: transparent;
-//     border-color: transparent;
-//     color: #0A0102;
-// }
 .formbox{
     width: 100%;
 }
@@ -242,4 +232,181 @@ display: flex;
     margin-left: 5px;
     background-color: #E4E4E4;
     border: transparent;
+}
+
+//Media Query
+@media (min-width: 721px) and (max-width: 1280px) {
+   
+    .container{
+        width: 65vw;
+        height: 58vh;
+        left: 17vw;
+        
+    }
+    .text{
+        width: 50%px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    //login Box css
+    .reg-container{
+        width: 36vw; 
+        display: flex;
+        justify-content: center;
+    }
+    
+    .subContainer {
+        left: 0vw;
+        height: 70%;
+        width: 28vw;
+        display: flex;
+        justify-content: center;
+    }
+    .twoBtn{
+        height: 10vh;
+        top: 2vh;
+    
+    }
+
+    .loginBox{
+        top: 19vh;
+    }
+    ::ng-deep .login{
+        height: 40px !important; 
+    }
+    
+    .orTxt{
+        top:8vh;
+    }
+    .btns{
+        top:12vh;
+    }
+   
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+   
+    .container{
+        width: 80vw;
+        height: 58vh;
+        left: 10vw;
+        
+    }
+    .imgbox{
+        display: flex;
+        flex-direction: column;
+    }
+    .text{
+        width: 100%;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    //login Box css
+    .reg-container{
+        width: 45vw; 
+        display: flex;
+        justify-content: center;
+    }
+    
+    .subContainer {
+        left: 0vw;
+        height: 70%;
+        width: 35vw;
+        display: flex;
+        justify-content: center;
+    }
+    .twoBtn{
+        height: 10vh;
+        top: 2vh;
+    
+    }
+    ::ng-deep .twoBtn1{
+        font-size: 22px;
+        width: 45%;
+    }
+    ::ng-deep .twoBtn2{
+        font-size: 22px;
+        width: 47%;
+    } 
+    .fgtbtn{
+        font-size: 12px;
+    }
+
+    .loginBox{
+        top: 19vh;
+    }
+    ::ng-deep .login{
+        height: 40px !important; 
+    }
+    
+    .orTxt{
+        top:8vh;
+    }
+    .btns{
+        top:12vh;
+    }
+   
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+   
+    .container{
+        width: 70vw;
+        height: 58vh;
+        left: 15vw;
+        
+    }
+    .imgbox{
+        display: none;
+    }
+    
+    //login Box css
+    .reg-container{
+        width: 70vw; 
+        display: flex;
+        justify-content: center;
+    }
+    
+    .subContainer {
+        left: 0vw;
+        height: 70%;
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+    }
+    .twoBtn{
+        height: 10vh;
+        top: 2vh;
+    
+    }
+    ::ng-deep .twoBtn1{
+        font-size: 25px;
+        width: 43%;
+    }
+    ::ng-deep .twoBtn2{
+        font-size: 24px;
+        width: 45%;
+    } 
+    .fgtbtn{
+        font-size: 12px;
+    }
+
+    .loginBox{
+        top: 19vh;
+    }
+    ::ng-deep .login{
+        height: 40px !important; 
+    }
+    
+    .orTxt{
+        top:8vh;
+    }
+    .btns{
+        top:12vh;
+    }
+   
 }

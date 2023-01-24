@@ -1,364 +1,1074 @@
 .topbox {
-    display: flex;
-    position: relative;
-    left: 15.3vw;
-    width: 69.5vw;
-    top: 3vh;
-    height: 5vh;
-    align-Items: center;
+  display: flex;
+  position: relative;
+  left: 15.3vw;
+  width: 69.5vw;
+  top: 3vh;
+  height: 5vh;
+  align-Items: center;
 }
-  .topinbox {
+
+.topinbox {
+  display: flex;
+  position: relative;
+  align-Items: center;
+  width: 13%;
+  color: #9D9D9D;
+
+}
+
+.txtBook {
+  font-Size: 13px;
+  font-Weight: 500;
+
+}
+
+.subtxt {
+  position: relative;
+  left: 5px;
+  font-Size: 12px;
+  font-Weight: 500;
+  color: black;
+
+}
+
+//2nd box whole
+.fullDatabox {
+  display: flex;
+  position: relative;
+  top: 9vh;
+  width: 70vw;
+  height: 100vh;
+  left: 15vw;
+
+}
+
+//inner box of image
+.onlyImagesbox {
+  display: flex;
+  width: 30vw;
+  height: 70vh;
+
+}
+
+.box1 {
+  border: 1px solid #D1D1D1;
+  display: flex;
+  flex-Direction: column;
+  width: 60px;
+  row-Gap: 1vh;
+  justify-Content: center;
+  align-Items: center;
+  height: 120px;
+
+}
+
+.imgs {
+  display: flex;
+  height: 50px;
+  width: 40px;
+  // width: 85%;
+
+}
+
+.box2 {
+  display: flex;
+  flex-Direction: column;
+  width: 36vw;
+}
+
+.bigImg {
+  border: 1px solid #D1D1D1;
+  display: flex;
+  flex-Direction: column;
+  justify-Content: center;
+  align-Items: center;
+  height: 60vh;
+}
+
+.mainImg {
+  height: 90%;
+  width: 80%;
+}
+
+.add2Tag {
+  display: flex;
+  position: relative;
+  top: 20px;
+  height: 40px;
+  gap: 10px;
+  justify-Content: space-between;
+
+}
+
+::ng-deep .btnbag {
+  width: 165px;
+  font-size: 15px;
+  background-color: #A03037 !important;
+  border-radius: 0px !important;
+  color: #F5F5F5 !important;
+
+}
+
+::ng-deep .btnwish {
+  width: 165px;
+  font-size: 15px;
+  background-color: #333333 !important;
+  border-radius: 0px !important;
+  color: #F5F5F5 !important;
+
+}
+
+.favicon {
+  position: relative;
+  width: 15px;
+  top: 3px;
+  right: 12px;
+  height: 15px;
+}
+
+// 2nd half box of text
+.textAreaBox {
+  width: 40vw;
+  position: relative;
+  left: 3vw;
+  display: flex;
+  flex-Direction: column;
+}
+
+.dataBox {
+  display: flex;
+  height: 23%;
+  border-Bottom: 2px solid grey;
+
+}
+
+.booktextBox {
+  display: flex;
+  flex-Direction: column;
+  position: relative;
+  width: 40vw;
+  text-Align: left;
+
+}
+
+.titletxt {
+  display: flex;
+  align-Items: center;
+  font-Weight: 500;
+  font-Size: 25px;
+  height: 30px;
+
+}
+
+.authortxt {
+  display: flex;
+  font-Size: 18px;
+  height: 35px;
+  align-items: center;
+  color: #878787;
+
+}
+
+.ratingBox {
+  display: flex;
+  flex-Direction: row;
+  position: relative;
+  align-Items: center;
+  width: 80px;
+  height: 28px;
+  justify-Content: space-between;
+
+}
+
+.star {
+  display: flex;
+  flex-Direction: row;
+  width: 40px;
+  font-size: 16px;
+  height: 28px;
+  background-Color: #388E3C;
+  justify-Content: space-evenly;
+  align-Items: center;
+  color: white;
+}
+
+.starimg {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  bottom: 1px;
+}
+
+.priceBox {
+  display: flex;
+  flex-Direction: row;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  font-size: 33px;
+  font-weight: 550;
+  justify-Content: space-between;
+  align-Items: center;
+
+}
+
+.actPrice {
+  color: #878787;
+  text-decoration-line: line-through;
+  font-size: 18px;
+  font-weight: 550;
+
+}
+
+//feedback
+.detailBox {
+  display: flex;
+  flex-Direction: column;
+  height: 24%;
+  border-Bottom: 2px solid grey;
+
+}
+
+.dtltxt {
+  display: flex;
+  position: relative;
+  top: 12px;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  font-Weight: 450;
+  font-Size: 18px;
+  color: #878787;
+}
+
+.para {
+  display: flex;
+  position: relative;
+  top: 9px;
+  left: 12px;
+  width: 97%;
+  height: 100px;
+  font-Size: 16px;
+  font-Weight: 400;
+  color: #878787;
+}
+
+//customer rating box
+.custRate {
+  display: flex;
+  position: relative;
+  flex-Direction: column;
+  height: 32%;
+}
+
+.custTxt {
+  display: flex;
+  position: relative;
+  height: 18%;
+  top: 10px;
+  align-items: center;
+  font-Size: 20px;
+  font-Weight: 480;
+
+}
+
+.overallRatingBox {
+  display: flex;
+  flex-Direction: column;
+  position: relative;
+  background-Color: #F5F5F5;
+  top: 10px;
+  height: 180px;
+  font-Weight: 500;
+  font-Size: 12px;
+
+}
+
+.inOverall {
+  display: flex;
+  flex-Direction: column;
+  position: relative;
+  width: 95%;
+  font-size: 18px;
+  left: 15px;
+}
+
+.star5Box {
+  display: flex;
+  position: relative;
+  justify-Content: space-between;
+  width: 120px;
+
+}
+
+.star5in {
+  height: 17px;
+  width: 16px;
+}
+
+.txtBox {
+  display: flex;
+  position: relative;
+  top: 5px;
+  height: 70px;
+  width: 100%;
+
+}
+
+.txtarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.submit {
+  display: flex;
+  justify-Content: flex-end;
+  position: relative;
+  top: 16px;
+  height: 30px;
+}
+
+::ng-deep .subbtn {
+  height: 30px !important;
+  background-color: #3371B5 !important;
+  color: #FFFFFF !important;
+
+}
+
+//User review box
+.reviewbox {
+  position: relative;
+  top: 15px;
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+.tagName {
+  display: flex;
+}
+
+.roundtxt {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-Color: #F5F5F5;
+  border-Radius: 50%;
+  justify-Content: center;
+  align-Items: center;
+  color: #707070;
+  border: 1px solid #E4E4E4;
+
+}
+
+.nametxt {
+  display: flex;
+  position: relative;
+  top: 5px;
+  margin-left: 8px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.yellow5star {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width: 130px;
+  left: 36px;
+  bottom: 2px;
+}
+
+.yellowStar {
+  height: 20px;
+  width: 20px;
+}
+
+.whiteStar {
+  position: relative;
+  top: 3px;
+  height: 16px;
+  width: 16px;
+}
+
+.reviewTxt {
+  display: flex;
+  position: relative;
+  top: 5px;
+  left: 38px;
+  font-Size: 12px;
+  color: #707070;
+}
+
+
+@media (min-width: 721px) and (max-width: 1280px) {
+  .topbox {
     display: flex;
     position: relative;
-    align-Items: center;
-    width: 13%;
-    color: #9D9D9D;
+    left: 7vw;
+    width: 80vw;
+    top: 1vh;
+  }
+
+  .topinbox {
+    width: 53%;
 
   }
-  
-  .txtBook {
-    font-Size: 13px;
-    font-Weight: 500;
 
-  }
-  
-  .subtxt {
-    position: relative;
-    left: 5px;
-    font-Size: 12px;
-    font-Weight: 500;
-    color: black;
-
-  }
-  
-  //2nd box whole
+  //
   .fullDatabox {
     display: flex;
-    position: relative;
-    top: 9vh;
-    width: 70vw;
-    height: 100vh;
-    left: 15vw;
+    width:80vw;
+    top: 2vh;
+    left: 7vw;
+    height: auto;
 
   }
+
   //inner box of image
   .onlyImagesbox {
-    display: flex;
-    width: 40%;
-    height: 70vh;
-
+    width: 45vw;
+    height: 68vh;
   }
+
   .box1 {
-    border: 1px solid #D1D1D1;
-    display: flex;
-    flex-Direction: column;
+    height: 120px;
     width: 60px;
-    row-Gap: 1vh;
-    justify-Content: center;
-    align-Items: center;
-    height: 25%;
+  }
+
+  .imgs {
+    width: 40px;
 
   }
-  .imgs {
+
+  .box2 {
+    width: 430px;
+    // height: 350px;
+  }
+
+  // .bigImg {
+  //   border: 1px solid black;
+  //   // height: 95%;
+  // }
+
+  .mainImg {
+    height: 55vh;
+    width: 230px;
+  }
+
+  .add2Tag {
     display: flex;
-    height: 45%;
-    width: 40px;
-    // width: 85%;
+    top: 5px;
+    height: 35px;
+
+  }
+
+  ::ng-deep .btnbag {
+    height: 30px !important;
+    width: 100%;
+
+  }
+
+  ::ng-deep .btnwish {
+    width: 100%;
+    height: 30px !important;
+
+  }
+
+  .dataBox {
+    display: flex;
+    height: 130px;
+    border-Bottom: 2px solid grey;
+
+  }
+
+  .booktextBox {
+    width: 100%;
+
+  }
+
+  .titletxt {
+    display: flex;
+    align-Items: center;
+    font-Size: 25px;
+    font-Weight: 500;
+
+  }
+
+  .authortxt {
+    font-Size: 18px;
+    height: 35px;
+
+  }
+
+  .ratingBox {
+    width: 70px;
+  }
+
+  .priceBox {
+    width: 160px;
+    height: 40px;
+    font-size: 25px;
+    font-weight: 500;
+
+  }
+
+  .actPrice {
+    font-size: 15px;
+    font-weight: 500;
+
+  }
+
+  //bookdetails
+  .detailBox {
+    height: 130px;
+    border-Bottom: 2px solid grey;
+
+  }
+
+  .dtltxt {
+    position: relative;
+    top: 1px;
+    height: 30px;
+  }
+
+  .para {
+    position: relative;
+    top: 2px;
+    font-size: 13px;
+    left: 11px;
+    width: 95%;
+    height: 60%;
+  }
+
+  //overall
+  .custRate {
+    height: 160px;
+  }
+
+  .custTxt {
+    display: flex;
+    position: relative;
+    font-size: 15px;
+    top: 1px;
+  }
+
+  .overallRatingBox {
+    top: 1px;
+    // left: 5px;
+    height: 130px;
+
+  }
+
+  .star5Box {
+    width: 100px;
+    left: 5px;
+
+  }
+
+  .star5in {
+    height: 14px;
+    width: 17px;
+    left: 5px;
+  }
+
+  .txtBox {
+    height: 45px;
+    left: 5px;
+    width: 96%;
+  }
+
+  .submit {
+    top: 12px;
+    height: 10%;
+    width: 97%;
+  }
+
+  ::ng-deep .subbtn {
+    height: 24px !important;
+    width: 20px;
+    font-size: 13px;
+  }
+
+  //
+  .reviewbox {
+    position: relative;
+    top: 6px;
+  }
+
+  .yellow5star {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 27%;
+    left: 36px;
+    bottom: 4px;
+  }
+
+  .yellowStar {
+    height: 15px;
+    width: 20px;
+  }
+
+  .whiteStar {
+    height: 11px;
+    width: 14px;
+    margin-left: 3px;
+  }
+
+  .reviewTxt {
+    position: relative;
+    top: 1px;
+  }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 720px) {
+  .topbox {
+    display: flex;
+    position: relative;
+    left: 7vh;
+    width: 80vw;
+    top: 1vh;
+  }
+
+  .topinbox {
+    width: 53%;
+
+  }
+
+  //
+  .fullDatabox {
+    display: flex;
+    width: 80vw;
+    top: 2vh;
+    left: 7vw;
+    height: auto;
+
+  }
+
+  //inner box of image
+  .onlyImagesbox {
+    width: 300px;
+    height: 350px;
+  }
+
+  .box1 {
+    height: 90px;
+    width: 50px;
+  }
+
+  .imgs {
+    width: 30px;
+    height: 40px;
 
   }
   .box2 {
-    display: flex;
-    flex-Direction: column;
-    width: 100%;
+    width: 300px;
+    height: 350px;
   }
+
   .bigImg {
-    border: 1px solid #D1D1D1;
-    display: flex;
-    flex-Direction: column;
-    justify-Content: center;
-    align-Items: center;
-    height: 86%;
+    // height: 60vh;
+    width: 250px;
   }
   .mainImg {
-    height: 90%;
-    width: 80%;
+    height: 45vh;
+    // width: 220px;
   }
+
   .add2Tag {
     display: flex;
-    position: relative;
-    top: 20px;
+    // flex-direction: column;
+    top: 5px;
     height: 40px;
-    gap: 10px;
-    justify-Content: space-between;
 
   }
-  ::ng-deep .btnbag{
-    width: 145px;
-    font-size: 15px;
-    background-color: #A03037 !important;
-    border-radius: 0px !important;
-    color: #F5F5F5 !important;
+
+  ::ng-deep .btnbag {
+    height: 30px !important;
+    width: 80%;
 
   }
-  ::ng-deep .btnwish{
-    width: 145px;
-    font-size: 15px;
-    background-color: #333333 !important;
-    border-radius: 0px !important;
-    color: #F5F5F5 !important;
+
+  ::ng-deep .btnwish {
+    width: 80%;
+    height: 30px !important;
 
   }
-  .favicon{
-    position: relative;
-    width:15px ;
-    top: 3px;
-    right: 12px;
-    height:15px ;
-  }
-  // 2nd half box of text
-  .textAreaBox {
-    width: 55%;
-    position: relative;
-    left: 3vw;
-    display: flex;
-    flex-Direction: column;
-  }
+
+  //data
+
+  // .textAreaBox {
+  //   width: 93%;
+  //   position: relative;
+  //   display: flex;
+  //   flex-Direction: column;
+  // }
   .dataBox {
     display: flex;
     height: 23%;
     border-Bottom: 2px solid grey;
 
   }
+
   .booktextBox {
-    display: flex;
-    flex-Direction: column;
-    position: relative;
-    width: 80%;
-    text-Align: left;
+    width: 100%;
 
   }
+
   .titletxt {
     display: flex;
     align-Items: center;
-    font-Weight: 500;
     font-Size: 25px;
-    height: 30px;
+    font-Weight: 500;
 
   }
+
   .authortxt {
-    display: flex;
     font-Size: 18px;
     height: 35px;
-    align-items: center;
-    color: #878787;
 
   }
+
   .ratingBox {
-    display: flex;
-    flex-Direction: row;
-    position: relative;
-    align-Items: center;
-    width: 20%;
-    height: 28px;
-    justify-Content: space-between;
-
-  }
-  .star {
-    display: flex;
-    flex-Direction: row;
-    width: 55%;
-    font-size: 16px;
-    height: 28px;
-    background-Color: #388E3C;
-    justify-Content: space-evenly;
-    align-Items: center;
-    color: white;
+    width: 70px;
   }
 
-  .starimg{
-    width: 14px;
-    height: 14px;
-    position: relative;
-    bottom: 1px;
-  }
   .priceBox {
-    display: flex;
-    flex-Direction: row;
-    position: relative;
-    width: 50%;
-    height: 50px;
-    font-size: 33px;
-    font-weight: 550;
-    justify-Content: space-between;
-    align-Items: center;
+    width: 160px;
+    height: 40px;
+    font-size: 25px;
+    font-weight: 500;
 
   }
+
   .actPrice {
-    color: #878787;
-    text-decoration-line: line-through;
-    font-size: 18px;
-    font-weight: 550;
+    font-size: 15px;
+    font-weight: 500;
 
   }
 
-  //feedback
+  //bookdetails
   .detailBox {
-    display: flex;
-    flex-Direction: column;
-    height: 24%;
+    height: 130px;
     border-Bottom: 2px solid grey;
 
   }
+
   .dtltxt {
-    display: flex;
     position: relative;
-    top: 12px;
-    width: 100%;
-    height: 40px;
-    align-items: center;
-    font-Weight: 450;
-    font-Size: 18px;
-    color: #878787;
-  }
-  .para {
-    display: flex;
-    position: relative;
-    top: 8px;
-    left: 12px;
-    width: 97%;
-    height: 67%;
-    font-Size: 16px;
-    font-Weight: 400;
-    color: #878787;
+    top: 1px;
+    height: 30px;
   }
 
-  //customer rating box
-  .custRate {
-    display: flex;
+  .para {
     position: relative;
-    flex-Direction: column;
-    height: 32%;
+    top: 2px;
+    font-size: 13px;
+    left: 11px;
+    width: 95%;
+    height: 60%;
   }
+
+  //overall
+  .custRate {
+    height: 160px;
+  }
+
   .custTxt {
     display: flex;
     position: relative;
-    height: 18%;
-    top: 10px;
-    align-items: center;
-    font-Size: 20px;
-    font-Weight: 480;
-
-  }
-  .overallRatingBox {
-    display: flex;
-    flex-Direction: column;
-    position: relative;
-    background-Color: #F5F5F5;
-    top: 10px;
-    height: 76%;
-    font-Weight: 500;
-    font-Size: 13px;
-
-  }
-  .inOverall {
-    display: flex;
-    flex-Direction: column;
-    position: relative;
-    width: 95%;
-    left: 15px;
-
-  }
-  .star5Box {
-    display: flex;
-    position: relative;
-    justify-Content: space-between;
-    width: 27%;
-
-  }
-  .star5in{
-    height: 17px;
-    width: 17px;
-  }
-  .txtBox {
-    display: flex;
-    position: relative;
-    top: 5px;
-    height: 65px;
-    width: 100%;
-
-  }
-  .txtarea{
-    width: 100%;
-    outline: none;
-    border: none;
-    resize: none;
-  }
-  .submit {
-    display: flex;
-    justify-Content: flex-end;
-    position: relative;
-    top: 16px;
-    height: 20%;
-  }
-  ::ng-deep .subbtn{
-    height: 30px !important;
-    background-color: #3371B5 !important;
-    color: #FFFFFF !important;
-    
-  }
-
-  //User review box
-.reviewbox{
-    position: relative;
-    top: 5px;
-    height: 13%;
-}
-  .tagName{
-    display: flex;
-  }
-  .roundtxt {
-    display: flex;
-    width: 30px;
-    height: 30px;
-    background-Color: #F5F5F5;
-    border-Radius: 50%;
-    justify-Content: center;
-    align-Items: center;
-    color: #707070;
-    border: 1px solid #E4E4E4;
-    
-  }
-  .nametxt{
-    display: flex;
-    position: relative;
-    top: 5px;
-    margin-left: 8px;
     font-size: 15px;
-    font-weight: 500;
+    top: 1px;
   }
-  .yellow5star{
+
+  .overallRatingBox {
+    top: 1px;
+    // left: 5px;
+    height: 130px;
+
+  }
+
+  .star5Box {
+    width: 37%;
+    left: 5px;
+
+  }
+
+  .star5in {
+    height: 14px;
+    width: 17px;
+    left: 5px;
+  }
+
+  .txtBox {
+    height: 45px;
+    left: 5px;
+    width: 96%;
+  }
+
+  .submit {
+    top: 12px;
+    height: 10%;
+    width: 97%;
+  }
+
+  ::ng-deep .subbtn {
+    height: 24px !important;
+    width: 20px;
+    font-size: 13px;
+  }
+
+  //
+  .reviewbox {
+    position: relative;
+    top: 6px;
+  }
+
+  .yellow5star {
     display: flex;
     position: relative;
     justify-content: space-between;
     width: 27%;
     left: 36px;
-    bottom: 2px;
+    bottom: 4px;
   }
-  .yellowStar {    
-    height: 20px;
+
+  .yellowStar {
+    height: 15px;
     width: 20px;
   }
-  .whiteStar {  
-    position: relative;
-    top: 3px;  
-    height: 16px;
-    width: 16px;
+
+  .whiteStar {
+    height: 11px;
+    width: 14px;
+    margin-left: 3px;
   }
+
   .reviewTxt {
+    position: relative;
+    top: 1px;
+  }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .topbox {
     display: flex;
     position: relative;
-    top: 5px;
-    left: 38px;
-    font-Size: 12px;
-    color: #707070;
+    left: 10vw;
+    width: 80vw;
+    top: 1vh;
   }
+
+  .topinbox {
+    width: 53%;
+
+  }
+
+  //
+  .fullDatabox {
+    display: flex;
+    flex-direction: column;
+    width:80vw;
+    top: 2vh;
+    left: 10vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  //inner box of image
+  .onlyImagesbox {
+    width: 60vw;
+    height: 60vh;
+  }
+
+  .box1 {
+    // height: 110px;
+    display: none;
+
+  }
+
+  .box2 {
+    display: flex;
+    flex-Direction: column;
+    width: 60vw;
+  }
+
+  .bigImg {
+    border: 1px solid #D1D1D1;
+    display: flex;
+    flex-Direction: column;
+    justify-Content: center;
+    align-Items: center;
+    height:45vh;
+  }
+
+  .mainImg {
+    height: 40vh;
+    width: 50vw;
+  }
+
+  .add2Tag {
+    display: flex;
+    flex-direction: column;
+    top: 5px;
+    height: 80px;
+
+  }
+
+  ::ng-deep .btnbag {
+    height: 35px !important;
+    width: 100%;
+
+  }
+
+  ::ng-deep .btnwish {
+    width: 100%;
+    height: 35px !important;
+
+  }
+
+  //data
+
+  .textAreaBox {
+    width: 93%;
+    position: relative;
+    display: flex;
+    top: 10px;
+    flex-Direction: column;
+  }
+
+  .dataBox {
+    display: flex;
+    height: 23%;
+    border-Bottom: 2px solid grey;
+
+  }
+
+  .booktextBox {
+    width: 100%;
+
+  }
+
+  // .titletxt {
+  //   display: flex;
+  //   align-Items: center;
+  //   font-Weight: 500;
+  //   border: 1px solid black;
+
+  // }
+  // .authortxt {
+  //   display: flex;
+  //   font-Size: 18px;
+  //   height: 35px;
+  //   align-items: center;
+  //   border: 1px solid black;
+  //   color: #878787;
+
+  // }
+  .ratingBox {
+    width: 25%;
+  }
+
+  //bookdetails
+  .detailBox {
+    height: 100px;
+    border-Bottom: 2px solid grey;
+
+  }
+
+  .dtltxt {
+    position: relative;
+    top: 1px;
+  }
+
+  .para {
+    position: relative;
+    top: 2px;
+    left: 12px;
+    width: 95%;
+    height: 60%;
+  }
+
+  //overall
+  .custRate {
+    height: 150px;
+  }
+
+  .custTxt {
+    display: flex;
+    position: relative;
+    top: 1px;
+
+  }
+
+  .overallRatingBox {
+    top: 1px;
+    height: 84%;
+
+  }
+
+  .star5Box {
+    width: 37%;
+
+  }
+
+  .star5in {
+    height: 14px;
+    width: 17px;
+  }
+
+  .txtBox {
+    height: 45px;
+    width: 99%;
+  }
+
+  .submit {
+    top: 12px;
+    height: 10%;
+  }
+
+  ::ng-deep .subbtn {
+    height: 24px !important;
+
+  }
+
+  //
+  .reviewbox {
+    position: relative;
+    top: 6px;
+  }
+
+  .yellow5star {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 27%;
+    left: 36px;
+    bottom: 4px;
+  }
+
+  .yellowStar {
+    height: 15px;
+    width: 20px;
+  }
+
+  .whiteStar {
+    height: 11px;
+    width: 14px;
+    margin-left: 3px;
+  }
+
+  .reviewTxt {
+    position: relative;
+    top: 1px;
+  }
+
+}

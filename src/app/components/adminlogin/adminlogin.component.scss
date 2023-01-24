@@ -74,8 +74,6 @@ display: flex;
     font-weight: 450;
     justify-content: center;
     align-items: center;
-    // background-color: #A03037;
-    // color: #E4E4E4;
     border-radius: 5px;
     font-size: 25px;
     width: 100%;
@@ -212,4 +210,149 @@ display: flex;
     margin-left: 5px;
     background-color: #E4E4E4;
     border: transparent;
+}
+
+@media (min-width: 721px) and (max-width: 1280px) {
+   
+    .container{
+        width: 65vw;
+        height: 58vh;
+        left: 17vw;
+        
+    }
+    .text{
+        width: 50%px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    //login Box css
+    .reg-container{
+        width: 36vw; 
+        display: flex;
+        justify-content: center;
+    }
+    
+    .subContainer {
+        left: 0vw;
+        height: 70%;
+        width: 28vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .loginBox{
+        top: 19vh;
+    }
+    ::ng-deep .login{
+        height: 40px !important; 
+    }
+    
+    .orTxt{
+        top:8vh;
+    }
+    .btns{
+        top:12vh;
+    }
+   
+}
+
+@media (min-width: 481px) and (max-width: 720px) {
+   
+    .container{
+        width: 80vw;
+        height: 58vh;
+        left: 10vw;
+        
+    }
+    .imgbox{
+        display: flex;
+        flex-direction: column;
+    }
+    .text{
+        width: 100%;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    //login Box css
+    .reg-container{
+        width: 45vw; 
+        display: flex;
+        justify-content: center;
+    }
+    
+    .subContainer {
+        left: 0vw;
+        height: 70%;
+        width: 35vw;
+        display: flex;
+        justify-content: center;
+    }
+    .fgtbtn{
+        font-size: 12px;
+    }
+
+    .loginBox{
+        top: 19vh;
+    }
+    ::ng-deep .login{
+        height: 40px !important; 
+    }
+    
+    .orTxt{
+        top:8vh;
+    }
+    .btns{
+        top:12vh;
+    }
+   
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+   
+    .container{
+        width: 70vw;
+        height: 58vh;
+        left: 15vw;
+        
+    }
+    .imgbox{
+        display: none;
+    }
+    
+    //login Box css
+    .reg-container{
+        width: 70vw; 
+        display: flex;
+        justify-content: center;
+    }
+    
+    .subContainer {
+        left: 0vw;
+        height: 70%;
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+    }
+    .fgtbtn{
+        font-size: 12px;
+    }
+
+    .loginBox{
+        top: 19vh;
+    }
+    ::ng-deep .login{
+        height: 40px !important; 
+    }
+    
+    .orTxt{
+        top:8vh;
+    }
+    .btns{
+        top:12vh;
+    }
+   
 }

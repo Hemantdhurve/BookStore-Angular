@@ -7,7 +7,7 @@
             <div class="subtxt">My Cart</div>
         </div>
     </div>
-    <div *ngIf="(cartArray.length==0)" class="emptyCart"> Cart Is Empty</div>
+    <!-- <div *ngIf="(cartArray.length==0)" class="emptyCart"> Cart Is Empty</div> -->
 
     <div>
         <div class="cartBox">
@@ -25,6 +25,7 @@
                     </select>
                 </div>
             </div>
+            <div *ngIf="(cartArray.length==0)" class="emptyCart1"> Cart Is Empty</div>
 
             <div class="mainData" *ngFor="let cart of cartArray">
                 

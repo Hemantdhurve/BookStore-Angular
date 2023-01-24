@@ -1,3 +1,5 @@
+//normal
+
 .headBox {
     display: flex;
     flex-Direction: column;
@@ -380,101 +382,13 @@ td {
 //     border-radius: 0px ;
 // }
 
+
 //Media Queries
-@media (min-width: 320px) and (max-width: 480px) {
-    .outHeadBox {
-        position: relative;
-        width: 90%;
-        left: 5%;
-    }
-
-    .inHeadBox {
-        display: flex;
-        flex-Direction: row;
-        position: relative;
-        top: 15%;
-        height: 70%;
-    }
-
-    .bookimg {
-        width: 60px;
-    }
-
-    .booktxt {
-        display: none;
-    }
-
-    .search {
-        position: relative;
-        left: 5px;
-        width: 60%;
-    }
-
-    .searchicon {
-        width: 30px;
-    }
-
-    .icons {
-        position: relative;
-        width: 100px;
-        left: 5px;
-
-    }
-
-    .innerFooter {
-        left: 1vw;
-        height: 45px;
-        color: #FCFCFC;
-    }
-
-}
-
-@media (min-width: 481px) and (max-width: 720px) {
-    .outHeadBox {
-        position: relative;
-        width: 85%;
-        left: 5%;
-    }
-
-    .inHeadBox {
-        display: flex;
-        flex-Direction: row;
-        position: relative;
-        top: 15%;
-        height: 70%;
-    }
-
-    .bookimg {
-        width: 130px;
-    }
-
-    .booktxt {
-        // display: none; 
-        font-size: 18px;
-    }
-
-    .search {
-        position: relative;
-        left: 15px;
-        width: 50%;
-    }
-
-    .searchicon {
-        width: 50px;
-    }
-
-    .icons {
-        position: relative;
-        width: 100px;
-    }
-
-    .innerFooter {
-        left: 15vw;
-        height: 45px;
-        color: #FCFCFC;
-    }
-
-}
+//top media query 1260px
+//960px 2nd
+//600px
+//450px
+//320px
 
 @media (min-width: 721px) and (max-width: 1280px) {
     .outHeadBox {
@@ -524,3 +438,101 @@ td {
     }
 
 }
+
+
+@media (min-width: 481px) and (max-width: 720px) {
+    .outHeadBox {
+        position: relative;
+        width: 85%;
+        left: 5%;
+    }
+
+    .inHeadBox {
+        display: flex;
+        flex-Direction: row;
+        position: relative;
+        top: 15%;
+        height: 70%;
+    }
+
+    .bookimg {
+        width: 130px;
+    }
+
+    .booktxt {
+        // display: none; 
+        font-size: 18px;
+    }
+
+    .search {
+        position: relative;
+        left: 15px;
+        width: 50%;
+    }
+
+    .searchicon {
+        width: 50px;
+    }
+
+    .icons {
+        position: relative;
+        width: 100px;
+    }
+
+    .innerFooter {
+        left: 15vw;
+        height: 45px;
+        color: #FCFCFC;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .outHeadBox {
+        position: relative;
+        width: 90%;
+        left: 5%;
+    }
+
+    .inHeadBox {
+        display: flex;
+        flex-Direction: row;
+        position: relative;
+        top: 15%;
+        height: 70%;
+    }
+
+    .bookimg {
+        width: 60px;
+    }
+
+    .booktxt {
+        display: none;
+    }
+
+    .search {
+        position: relative;
+        left: 5px;
+        width: 60%;
+    }
+
+    .searchicon {
+        width: 30px;
+    }
+
+    .icons {
+        position: relative;
+        width: 100px;
+        left: 5px;
+
+    }
+
+    .innerFooter {
+        left: 1vw;
+        height: 45px;
+        color: #FCFCFC;
+    }
+
+}
+
+
