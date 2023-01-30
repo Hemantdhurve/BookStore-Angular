@@ -72,6 +72,5 @@ export class DashboardComponent implements OnInit {
       dataResult: [event.target.value]
     }
     return this.dataservice.changeMessage(searchResult)
-  }
- 
+  } 
 }

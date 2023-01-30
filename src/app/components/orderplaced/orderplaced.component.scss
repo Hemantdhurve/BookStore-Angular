@@ -55,3 +55,88 @@
     background-color: #3371B5;
     border-radius: 0px;
   }
+
+  @media (min-width: 721px) and (max-width: 1280px) {
+   
+    .image{
+      width: 40vw;
+      height: 45vh;
+    }
+    
+    .hurrayTxt{
+      position: relative;
+      width: 35vw;
+      height: 9vh;
+      text-align: center;
+      font-size: 15px;
+    }
+    
+    .mainData{
+      position: relative;
+      top:6vh;
+      width: 85vw;
+      height: 22vh;
+      color: #333232;
+      border-collapse: collapse;
+    }
+    .shopBtn{
+      width: 22vw;
+      height: 50px;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 720px) {
+   
+    .image{
+      width: 60vw;
+      height: 40vh;
+    }
+    
+    .hurrayTxt{
+      position: relative;
+      width: 55vw;
+      height: 9vh;
+      text-align: center;
+      font-size: 15px;
+    }
+    
+    .mainData{
+      position: relative;
+      top:6vh;
+      width: 90vw;
+      height: 22vh;
+      color: #333232;
+      border-collapse: collapse;
+    }
+    .shopBtn{
+      width: 32vw;
+      height: 50px;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+   
+    .image{
+      width: 60vw;
+      height: 30vh;
+    }
+    
+    .hurrayTxt{
+      position: relative;
+      width: 90vw;
+      height: 9vh;
+      text-align: center;
+      font-size: 15px;
+    }
+    
+    .mainData{
+      position: relative;
+      top:6vh;
+      width: 90vw;
+      height: 22vh;
+      color: #333232;
+      border-collapse: collapse;
+    }
+    .shopBtn{
+      width: 32vw;
+      height: 50px;
+    }
+  }

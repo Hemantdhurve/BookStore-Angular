@@ -272,10 +272,10 @@ display: flex;
 @media (min-width: 320px) and (max-width: 480px) {
     
     .container{
-        width: 70vw;
+        width: 100vw;
         height: 58vh;
-        left: 15vw;
-        
+        left: 0vw;
+        top: 0px;
     }
     .imgbox{
         display: none;
@@ -285,14 +285,16 @@ display: flex;
     .reg-container{
         display: flex;
         justify-content: center;
-        width: 70vw;
+        width: 100vw;
+        height: 100vh; 
     }
     
     .subContainer {
         display: flex;
         align-items: center;
         left: 0vw;
-        width: 60vw;
+        top: 18vh;
+        width: 80vw;
         height: 70%;
 
     }

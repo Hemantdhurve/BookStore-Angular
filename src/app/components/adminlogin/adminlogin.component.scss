@@ -250,7 +250,7 @@ display: flex;
     }
     
     .orTxt{
-        top:8vh;
+        top:9vh;
     }
     .btns{
         top:12vh;
@@ -261,9 +261,9 @@ display: flex;
 @media (min-width: 481px) and (max-width: 720px) {
    
     .container{
-        width: 80vw;
+        width: 90vw;
         height: 58vh;
-        left: 10vw;
+        left: 5vw;
         
     }
     .imgbox{
@@ -279,7 +279,7 @@ display: flex;
     
     //login Box css
     .reg-container{
-        width: 45vw; 
+        width: 49vw; 
         display: flex;
         justify-content: center;
     }
@@ -287,7 +287,7 @@ display: flex;
     .subContainer {
         left: 0vw;
         height: 70%;
-        width: 35vw;
+        width: 40vw;
         display: flex;
         justify-content: center;
     }
@@ -302,8 +302,9 @@ display: flex;
         height: 40px !important; 
     }
     
+   
     .orTxt{
-        top:8vh;
+        top:9vh;
     }
     .btns{
         top:12vh;
@@ -314,10 +315,10 @@ display: flex;
 @media (min-width: 320px) and (max-width: 480px) {
    
     .container{
-        width: 70vw;
+        width: 100vw;
         height: 58vh;
-        left: 15vw;
-        
+        left: 0vw;
+        top:0px;
     }
     .imgbox{
         display: none;
@@ -325,7 +326,8 @@ display: flex;
     
     //login Box css
     .reg-container{
-        width: 70vw; 
+        width: 100vw; 
+        height: 100vh;
         display: flex;
         justify-content: center;
     }
@@ -333,7 +335,7 @@ display: flex;
     .subContainer {
         left: 0vw;
         height: 70%;
-        width: 60vw;
+        width: 80vw;
         display: flex;
         justify-content: center;
     }
@@ -349,10 +351,10 @@ display: flex;
     }
     
     .orTxt{
-        top:8vh;
+        top:12vh;
     }
     .btns{
-        top:12vh;
+        top:16vh;
     }
    
 }

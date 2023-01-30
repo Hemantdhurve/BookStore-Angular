@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
 
   get f() { return this.loginForm.controls; }
 
-  onSubmit() {
-    this.submitted = true;
+    onSubmit() {
+      this.submitted = true;
 
     if (this.loginForm.valid) {
       let payload = {

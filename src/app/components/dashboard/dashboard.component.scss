@@ -286,26 +286,19 @@
     .booktxt {
         display: none;    
     } 
-    .innerfield{
-       display: none;
-    }
     .search {
-        position:relative;
-        display: flex;
-        width:30px;  
-        background: transparent;      
+        width:30px;     
+        left:15px;
+        width:30vw;    
     } 
     .searchicon{  
         display: flex;
-        justify-content: flex-end;
-        width: 80px;  
         background-color: #FCFCFC;
         border-radius: 24%;  
     }
     .icons {
         position: relative;
         width: 100px; 
-        // left: 5px;
     
     }
     .innerFooter{

@@ -446,6 +446,7 @@
   .box2 {
     width: 430px;
     // height: 350px;
+    border: 1;
   }
 
   // .bigImg {
@@ -455,7 +456,7 @@
 
   .mainImg {
     height: 55vh;
-    width: 230px;
+    width: 80%;
   }
 
   .add2Tag {
@@ -643,16 +644,16 @@
   //
   .fullDatabox {
     display: flex;
-    width: 80vw;
+    width: 90vw;
     top: 2vh;
-    left: 7vw;
+    left: 5vw;
     height: auto;
 
   }
 
   //inner box of image
   .onlyImagesbox {
-    width: 300px;
+    width: 275px;
     height: 350px;
   }
 
@@ -667,13 +668,13 @@
 
   }
   .box2 {
-    width: 300px;
+    width: 240px;
     height: 350px;
   }
 
   .bigImg {
     // height: 60vh;
-    width: 250px;
+    width: 240px;
   }
   .mainImg {
     height: 45vh;
@@ -685,18 +686,20 @@
     // flex-direction: column;
     top: 5px;
     height: 40px;
-
+    width: 240px;
   }
 
   ::ng-deep .btnbag {
     height: 30px !important;
-    width: 80%;
+    width: 55%;
+    font-size: 12px;
 
   }
 
   ::ng-deep .btnwish {
-    width: 80%;
+    width: 55%;
     height: 30px !important;
+    font-size: 13px;
 
   }
 
@@ -885,7 +888,7 @@
 
   //inner box of image
   .onlyImagesbox {
-    width: 60vw;
+    width: 80vw;
     height: 60vh;
   }
 
@@ -898,7 +901,7 @@
   .box2 {
     display: flex;
     flex-Direction: column;
-    width: 60vw;
+    width: 80vw;
   }
 
   .bigImg {
@@ -912,7 +915,7 @@
 
   .mainImg {
     height: 40vh;
-    width: 50vw;
+    width: 80%;
   }
 
   .add2Tag {

@@ -314,225 +314,217 @@ td {
   .point{
     cursor: pointer;
   }
-//book adding box
-// .addbookBox{
-//     position: relative;
-//     width: 45vw;
-//     height: auto;
-//     display: flex;
-//     flex-direction: column;
-//     border: 1px solid grey;
-//     box-shadow: 1px 2px 5px grey;
-//     left: 27vw;
-//     top: 8vh;
-//     row-gap: 3vh;
-//     align-items: center;
-// }
-// .detailtxt{
-//     height: 8vh;
-//     position: relative;
-//     bottom: 4vh;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     width: 80%;
-//     font-size: 20px;
-//     font-weight: 500;
-//     color: #f5f5f5;
-//     background-color: #A03037;
-//     box-shadow: 1px 2px 5px grey;
+
+// @media (min-width: 721px) and (max-width: 1280px) {
+//     .outHeadBox {
+//         position: relative;
+//         width: 87%;
+//         left: 5%;
+//     }
+
+//     .inHeadBox {
+//         display: flex;
+//         flex-Direction: row;
+//         position: relative;
+//         top: 15%;
+//         height: 70%;
+//     }
+
+//     .bookimg {
+//         width: 130px;
+//     }
+
+//     .booktxt {
+//         position: relative;
+//         left: 5px;
+//         font-size: 18px;
+//     }
+
+//     .search {
+//         position: relative;
+//         left: 25px;
+//         width: 80%;
+//     }
+
+//     .searchicon {
+//         width: 50px;
+//     }
+
+//     .icons {
+//         position: relative;
+//         width: 120px;
+//         // right: 20px;  
+//     }
+
+//     .innerFooter {
+//         left: 15vw;
+//         height: 45px;
+//         color: #FCFCFC;
+//     }
+
+//     //
+//     .topbtntxt{
+//         width: 90vw;
+//         left:5vw;
+//         height: 8vh;
+//         top: 5vh;
+//     }
+//     .tableBox {
+//         border: 2px solid #dddddd;
+//         width: 100vw;
+//         position: relative;
+//         top: 8vh;
+//         left: 0vw;
+//     }
     
+//     tr {
+//         width: 100%;
+//         border: 2px solid #dddddd;
+//     }
+    
+//     th {
+//         width: 2.5vw;
+//         height: 6vh;
+//         border: 1px solid black;
+//     }
+    
+//     .rowdata {
+//         display: flex;
+//         justify-content: center;
+//     }
+    
+//     td {
+//         width: 5.3vw;
+//         height: 5vh;
+//         font-size: 18px;
+//         font-weight: 500;
+//     }
+    
+//     .imgs {
+//         height: 12vh;
+//         width: 5vw;
+//         box-sizing: border-box;
+//         position: relative;
+//         top: 2px;
+//         border: 1px solid #7C1E1E;
+//     }
+    
+//     .total {
+//         display: flex;
+//         height: 8vh;
+//         align-items: center;
+//         font-size: 20px;
+//         background-color: #A03037;
+//         color: #FCFCFC;
+//         font-weight: 500;
+//     }
+//     .twoicon{
+//         display: flex;
+//         height: 30%;
+//         position: relative;
+//         left: 20px;
+//         justify-content: center;
+//         gap: 10px;
+//         width: 60%;
+    
+//       }
 // }
 
-// .fields{
-//     display: flex;
-//     height: 9vh;
-//     align-items: center;
-//     width: 80%;
-// }
-// .lbl{
-//     font-size: 20px;
-//     font-weight: 500;
-//     position: relative;
-//     width: 100%;
-// }
-// .txtarea{
-//     height: 7vh;
-//     width: 98%;
-//     display: flex;
-//     align-items: center;
-//     resize: none;
+
+// @media (min-width: 481px) and (max-width: 720px) {
+//     .outHeadBox {
+//         position: relative;
+//         width: 85%;
+//         left: 5%;
+//     }
+
+//     .inHeadBox {
+//         display: flex;
+//         flex-Direction: row;
+//         position: relative;
+//         top: 15%;
+//         height: 70%;
+//     }
+
+//     .bookimg {
+//         width: 130px;
+//     }
+
+//     .booktxt {
+//         // display: none; 
+//         font-size: 18px;
+//     }
+
+//     .search {
+//         position: relative;
+//         left: 15px;
+//         width: 50%;
+//     }
+
+//     .searchicon {
+//         width: 50px;
+//     }
+
+//     .icons {
+//         position: relative;
+//         width: 100px;
+//     }
+
+//     .innerFooter {
+//         left: 15vw;
+//         height: 45px;
+//         color: #FCFCFC;
+//     }
 
 // }
-// .fullnameTxt {
-//     height: 60px;
-// }
-// .twobtn{
-//     display: flex;
-//     justify-content: space-between;
-//     width: 80%;
+
+
+// @media (min-width: 320px) and (max-width: 480px) {
+//     .outHeadBox {
+//         position: relative;
+//         width: 90%;
+//         left: 5%;
+//     }
+
+//     .inHeadBox {
+//         display: flex;
+//         flex-Direction: row;
+//         position: relative;
+//         top: 15%;
+//         height: 70%;
+//     }
+
+//     .bookimg {
+//         width: 60px;
+//     }
+
+//     .booktxt {
+//         display: none;
+//     }
+
+//     .search {
+//         position: relative;
+//         left: 5px;
+//         width: 60%;
+//     }
+
+//     .searchicon {
+//         width: 30px;
+//     }
+
+//     .icons {
+//         position: relative;
+//         width: 100px;
+//         left: 5px;
+
+//     }
+
+//     .innerFooter {
+//         left: 1vw;
+//         height: 45px;
+//         color: #FCFCFC;
+//     }
 
 // }
-// .btn{
-//     background-color: #A03037 !important;
-//     box-shadow: 1px 2px 5px grey;
-//     height: 5vh;
-//     width: 12vw;
-//     color: #f5f5f5 !important;
-//     border-radius: 0px ;
-// }
-
-
-//Media Queries
-//top media query 1260px
-//960px 2nd
-//600px
-//450px
-//320px
-
-@media (min-width: 721px) and (max-width: 1280px) {
-    .outHeadBox {
-        position: relative;
-        width: 87%;
-        left: 5%;
-    }
-
-    .inHeadBox {
-        display: flex;
-        flex-Direction: row;
-        position: relative;
-        top: 15%;
-        height: 70%;
-    }
-
-    .bookimg {
-        width: 130px;
-    }
-
-    .booktxt {
-        position: relative;
-        left: 5px;
-        font-size: 18px;
-    }
-
-    .search {
-        position: relative;
-        left: 25px;
-        width: 80%;
-    }
-
-    .searchicon {
-        width: 50px;
-    }
-
-    .icons {
-        position: relative;
-        width: 120px;
-        // right: 20px;  
-    }
-
-    .innerFooter {
-        left: 15vw;
-        height: 45px;
-        color: #FCFCFC;
-    }
-
-}
-
-
-@media (min-width: 481px) and (max-width: 720px) {
-    .outHeadBox {
-        position: relative;
-        width: 85%;
-        left: 5%;
-    }
-
-    .inHeadBox {
-        display: flex;
-        flex-Direction: row;
-        position: relative;
-        top: 15%;
-        height: 70%;
-    }
-
-    .bookimg {
-        width: 130px;
-    }
-
-    .booktxt {
-        // display: none; 
-        font-size: 18px;
-    }
-
-    .search {
-        position: relative;
-        left: 15px;
-        width: 50%;
-    }
-
-    .searchicon {
-        width: 50px;
-    }
-
-    .icons {
-        position: relative;
-        width: 100px;
-    }
-
-    .innerFooter {
-        left: 15vw;
-        height: 45px;
-        color: #FCFCFC;
-    }
-
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-    .outHeadBox {
-        position: relative;
-        width: 90%;
-        left: 5%;
-    }
-
-    .inHeadBox {
-        display: flex;
-        flex-Direction: row;
-        position: relative;
-        top: 15%;
-        height: 70%;
-    }
-
-    .bookimg {
-        width: 60px;
-    }
-
-    .booktxt {
-        display: none;
-    }
-
-    .search {
-        position: relative;
-        left: 5px;
-        width: 60%;
-    }
-
-    .searchicon {
-        width: 30px;
-    }
-
-    .icons {
-        position: relative;
-        width: 100px;
-        left: 5px;
-
-    }
-
-    .innerFooter {
-        left: 1vw;
-        height: 45px;
-        color: #FCFCFC;
-    }
-
-}
 
 

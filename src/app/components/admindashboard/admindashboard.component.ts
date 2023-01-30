@@ -78,6 +78,7 @@ export class AdmindashboardComponent implements OnInit {
       bookQuantity: Number(this.bookQuantity),
       image: this.image,
     }
+    
     this.admin.addBook(data).subscribe((response: any) => {
       console.log("Book Added Successfully", response)
       this.getallbooks();
