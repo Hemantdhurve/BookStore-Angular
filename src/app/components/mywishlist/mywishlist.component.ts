@@ -10,8 +10,8 @@ import { WishlistserviceService } from '../Services/wishlistService/wishlistserv
 export class MywishlistComponent implements OnInit {
 
 wishArray:any=[];
-noofWishlist:any;
-wishlistId:any;
+noofWishlist:Number=0;
+wishlistId:Number=0;
 
   constructor(private wish:WishlistserviceService,private _snackbar:MatSnackBar){}
 

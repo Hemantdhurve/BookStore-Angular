@@ -7,7 +7,7 @@ import { HttpService } from '../httpService/http.service';
 })
 export class BookServiceService {
   token: any;
-  bookId: any;
+  bookId: Number=0;
 
   constructor(private httpservice: HttpService) {
     this.token = localStorage.getItem('token')
@@ -22,7 +22,7 @@ export class BookServiceService {
     }
     return this.httpservice.GetService('/Book/RetriveAll', true, header)
   }
-  getbookById(bookId: any) {
+  getbookById(bookId: Number) {
     let headeroption = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',

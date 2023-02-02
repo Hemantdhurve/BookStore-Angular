@@ -19,7 +19,7 @@ export class QuickViewComponent implements OnInit {
   book: any;
   feedbackArray: any;
   cartlist: any;
-  comment:any;
+  comment:string='';
   userId:any;
   cartArray: any;
   noofCart: any;
@@ -86,19 +86,8 @@ export class QuickViewComponent implements OnInit {
       this._snackbar.open("Book Added to the Cart","Add",{duration:3000})  
       
       //for changing badge quantity
-      this.sharedService.sendClickEvent();
-        
-
-      // this.dataservice.cartCount.subscribe((response:any)=>{
-      //   this.noofCart=response.length;
-      //   console.log(this.noofCart)
-      // })   
+      this.sharedService.sendClickEvent();   
     });
-
-    // this.dataservice.cartCount.subscribe((response:any)=>{
-    //   this.noofCart=response.length;
-    //   console.log(this.noofCart)
-    // })
   }
 
   addToWishlist(){
@@ -106,7 +95,7 @@ export class QuickViewComponent implements OnInit {
     let data = {
       bookId: this.book.bookId,
     }
-    this.wishlist.addToWishlist(data,this.bookId).subscribe((response: any) => {
+    this.wishlist.addToWishlist(data).subscribe((response: any) => {
       console.log("Added to wishlist", response);
       console.log('Added bookId to Wishlist :',this.bookId)
       this._snackbar.open("Book Added to the Wishlist","Add",{duration:3000})

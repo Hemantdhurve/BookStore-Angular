@@ -33,6 +33,8 @@ import { AdminloginComponent } from './components/adminlogin/adminlogin.componen
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
 import { DialogbookboxComponent } from './components/dialogbookbox/dialogbookbox.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
+import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     AdminloginComponent,
     AdmindashboardComponent,
     DialogbookboxComponent,
+    ForgotpasswordComponent,
+    ResetpasswordComponent,
   ],
   
   imports: [

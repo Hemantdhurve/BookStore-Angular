@@ -1,6 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpService } from '../httpService/http.service';
+import { IaddAddress } from '../typeInterface';
 
 @Injectable({
   providedIn: 'root'
@@ -13,16 +14,16 @@ export class AddressserviceService {
     this.token = localStorage.getItem('token')
   }
 
-  addAddress(data: any) {
-    console.log(data)
-    let header = {
-      headers: new HttpHeaders({
-        'Content-type': 'application/json',
-        'Authorization': 'Bearer ' + this.token
-      })
-    }
-    return this.httpservice.PostService('/Address/Add', data, true, header)
-  }
+  // addAddress(data: any) {
+  //   console.log(data)
+  //   let header = {
+  //     headers: new HttpHeaders({
+  //       'Content-type': 'application/json',
+  //       'Authorization': 'Bearer ' + this.token
+  //     })
+  //   }
+  //   return this.httpservice.PostService('/Address/Add', data, true, header)
+  // }
 
   //1.
   getAddresses(){
@@ -44,5 +45,18 @@ export class AddressserviceService {
       })
     }
     return this.httpservice.GetService('/CustomerDetails/Retrive',true,header)
+  }
+
+  //With Types Interface
+
+  addAddress(data: IaddAddress) {
+    console.log(data)
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.httpservice.PostService('/Address/Add', data, true, header)
   }
 }

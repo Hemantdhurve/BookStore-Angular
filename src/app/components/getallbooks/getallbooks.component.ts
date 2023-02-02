@@ -11,10 +11,10 @@ import { DataserviceService } from '../Services/dataService/dataservice.service'
 export class GetallbooksComponent implements OnInit {
 
   bookArray: any=[];
-  noofBooks:any;
-  bookId:any;
+  noofBooks:Number=0;
+  bookId:Number=0;
   //for filter Part
-  searchBook:any;
+  searchBook:string='';
   message:any;
   subscription:any;
   p=1;

@@ -11,15 +11,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class DialogbookboxComponent implements OnInit {
 
   bookId: any;
-  bookTitle: any;
-  author: any;
-  rating: any;
-  ratedCount: any;
-  discountedPrice: any;
-  actualPrice: any;
-  description: any;
-  bookQuantity: any;
-  image: any;
+  bookTitle: string;
+  author: string;
+  rating: Number=0;
+  ratedCount: Number=0;
+  discountedPrice: Number=0;
+  actualPrice: Number=0;
+  description: string;
+  bookQuantity: Number=0;
+  image: string;
 
   dialogForm!: FormGroup;
   submitted = false;
@@ -32,14 +32,14 @@ export class DialogbookboxComponent implements OnInit {
 
     this.bookId = data?.bookId
     this.bookTitle = data?.bookTitle,
-      this.author = data?.author,
-      this.rating = data?.rating,
-      this.ratedCount = data?.ratedCount,
-      this.discountedPrice = data?.discountedPrice,
-      this.actualPrice = data?.actualPrice,
-      this.description = data?.description,
-      this.bookQuantity = data?.bookQuantity,
-      this.image = data?.image
+    this.author = data?.author,
+    this.rating = data?.rating,
+    this.ratedCount = data?.ratedCount,
+    this.discountedPrice = data?.discountedPrice,
+    this.actualPrice = data?.actualPrice,
+    this.description = data?.description,
+    this.bookQuantity = data?.bookQuantity,
+    this.image = data?.image
 
   }
   onNoClick(): void {

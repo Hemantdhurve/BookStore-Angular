@@ -14,15 +14,15 @@ export class AdmindashboardComponent implements OnInit {
   bookArray: any;
   noofBooks: any;
 
-  bookTitle: any;
-  author: any;
-  rating: any;
-  ratedCount: any;
-  discountedPrice: any;
-  actualPrice: any;
-  description: any;
-  bookQuantity: any;
-  image: any;
+  bookTitle: string='';
+  author: string='';
+  rating: Number=0;
+  ratedCount: Number=0;
+  discountedPrice: Number=0;
+  actualPrice: Number=0;
+  description: string='';
+  bookQuantity: Number=0;
+  image: string='';
 
   hidetable = false;
   showtable = false;

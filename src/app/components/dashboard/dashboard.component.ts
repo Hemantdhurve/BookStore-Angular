@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
 
   cartCount:any;
   cartArray:any=[];
-  noofCart:any;
+  noofCart:string='';
   clickEventsubscription: any;
 
 

@@ -39,7 +39,6 @@ export class RegistrationComponent implements OnInit {
         password: this.registerForm.value.password,
         mobileNumber: Number(this.registerForm.value.mobileNumber)
       }
-      console.log(payload)
       //.subscribe method is used to get the response from backend
       this.user.register(payload).subscribe((response: any) => {
         console.log(response)

@@ -9,6 +9,7 @@ import { DataserviceService } from '../Services/dataService/dataservice.service'
 import { HttpService } from '../Services/httpService/http.service';
 import { OrderserviceService } from '../Services/orderservice/orderservice.service';
 import { SharedserviceService } from '../Services/shareddataservice/sharedservice.service';
+import { IupdateCartQty } from '../Services/typeInterface';
 
 @Component({
   selector: 'app-mycart',
@@ -31,19 +32,19 @@ export class MycartComponent implements OnInit {
   addressArray: any = [];
   fullName: any;
   mobileNumber: any;
-  address: any;
-  city: any;
-  state: any;
+  address: string='';
+  city: string='';
+  state: string='';
   addressType: any;
-  userId: any;
+  userId: Number=0;
   addressId: any;
-  noofAddress: any;
+  noofAddress: Number=0;
   details: any;
   addval: any;
-  typeId: any;
+  typeId:  Number=0;
   subscription: any;
   cartId: any;
-  takeCartId: any;
+  takeCartId: Number=0;
   cartCount: any;
 
   hideBox = false;
@@ -75,19 +76,19 @@ export class MycartComponent implements OnInit {
       this.noofCart = this.cartArray.length;
     })
   }
-  //Get Cart Items
-  // getCartDetails() {
-  //   this.cart.getCartDetails().subscribe((response: any) => {
-  //     console.log("Retrived All Cart Items", response.data);
-  //     this.cartArray = response.data;
-  //     this.noofCart = response.data.length;
-  //     console.log('Cart Array: ', this.cartArray);
-  //     console.log("Total number of Cart:", this.noofCart);
+  // Get Cart Items
+  getCartDetails() {
+    this.cart.getCartDetails().subscribe((response: any) => {
+      console.log("Retrived All Cart Items", response.data);
+      this.cartArray = response.data;
+      this.noofCart = response.data.length;
+      console.log('Cart Array: ', this.cartArray);
+      console.log("Total number of Cart:", this.noofCart);
 
-  //     // step 5 calling dataservice to get the count in the badge (step 4 in dash.ts)
-  //     this.dataservice.cartCount.next(this.noofCart)
-  //   });
-  // }
+      // step 5 calling dataservice to get the count in the badge (step 4 in dash.ts)
+      this.dataservice.cartCount.next(this.noofCart)
+    });
+  }
 
   increment(cartId: any, bookQuantity: any) {
     // this.counter++;
@@ -95,7 +96,7 @@ export class MycartComponent implements OnInit {
     this.cart.updateCartQty(cartId, (bookQuantity + 1)).subscribe((response: any) => {
       console.log("Quantity updated", response);
       console.log('Cart ID:', cartId, 'BookQuantity:', response.data)
-      // this.getCartDetails();
+      this.getCartDetails();
       //called this to get automatically update the values on page
       this.sharedService.sendClickEvent();
     })
@@ -111,6 +112,31 @@ export class MycartComponent implements OnInit {
       this.sharedService.sendClickEvent();
     })
   }
+
+  //Type  Interface
+
+  // increment(data:IupdateCartQty) {
+  //   // this.counter++;
+  //   console.log('Cart ID:', data.cartId, 'BookQuantity:', data.bookQuantity)
+  //   this.cart.updateCartQty(data).subscribe((response: any) => {
+  //     console.log("Quantity updated", response);
+  //     console.log('Cart ID:', data.cartId, 'BookQuantity:', response.data)
+  //     // this.getCartDetails();
+  //     //called this to get automatically update the values on page
+  //     this.sharedService.sendClickEvent();
+  //   })
+  // }
+
+  // decrement(data:IupdateCartQty) {
+  //   // this.counter++;
+  //   console.log('Cart ID:', data.cartId, 'BookQuantity:', data.bookQuantity)
+  //   this.cart.updateCartQty(data).subscribe((response: any) => {
+  //     console.log("Quantity updated", response);
+  //     console.log('Cart ID:', data.cartId, 'BookQuantity:', response.data)
+  //     // this.getCartDetails();
+  //     this.sharedService.sendClickEvent();
+  //   })
+  // }
 
   removeFromCart(cartId: any) {
     console.log(cartId)
@@ -154,7 +180,7 @@ export class MycartComponent implements OnInit {
   orderConfirmed() {
     // Add order API
     console.log(this.addressId)
-    console.log(this.cartId)
+    console.log(this.bookId)
 
     let data = {
       addressId: this.addressId,
@@ -220,10 +246,10 @@ export class MycartComponent implements OnInit {
 
   addNewAddress() {
     this.fullName = '',
-      this.mobileNumber = '',
-      this.address = '';
+    this.mobileNumber = '',
+    this.address = '';
     this.city = '';
     this.state = '';
-    this.typeId = '';
+    this.typeId =new Number;
   }
 }
