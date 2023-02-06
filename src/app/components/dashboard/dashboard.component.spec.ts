@@ -1,4 +1,10 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterOutlet } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
 
@@ -8,6 +14,15 @@ describe('DashboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports:[
+        HttpClientTestingModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatIconModule,
+        RouterOutlet,
+        MatBadgeModule,
+        
+      ],
       declarations: [ DashboardComponent ]
     })
     .compileComponents();
