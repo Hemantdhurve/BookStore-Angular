@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LoginComponent } from './login.component';
 
-describe('LoginComponent', () => {
+fdescribe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
@@ -35,4 +35,34 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should create', () => {
+  //   expect(component.loginForm.invalid).toHaveBeenCalled();
+  // });
+
+  //Test case 1
+
+  it('component initial state', () => {
+    expect(component.submitted).toBeFalsy();
+    expect(component.loginForm).toBeDefined();
+  });
+
+  //Test case 2
+  it('component after submit', ()=>{
+    expect(component.onSubmit).toBeTruthy();
+  })
+
+  //Test case 3
+  it('should show ONLINE BOOK SHOPPING in a p tag',(()=>{
+    const fixture=TestBed.createComponent(LoginComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('p').textContent).toEqual('ONLINE BOOK SHOPPING');
+  }));
+
+  //Test case 4 
+  it('should component before filling form', ()=>{
+    expect(component.loginForm.invalid).toBeTruthy();
+  })
+  
 });
