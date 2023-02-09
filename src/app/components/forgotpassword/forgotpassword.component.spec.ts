@@ -35,4 +35,33 @@ describe('ForgotpasswordComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+   //Test case 1
+   it('should show Forgot Your Password in a span tag',(()=>{
+    const fixture=TestBed.createComponent(ForgotpasswordComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('span').textContent).toEqual('Forgot Your Password?');
+  }))
+
+   //Test case 2
+   it('should show button Reset',(()=>{
+    const fixture=TestBed.createComponent(ForgotpasswordComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('.reset button').textContent).toContain('Reset Password');
+  }));
+
+   //Test case 3
+   it('should show Email Id in a label tag',(()=>{
+    const fixture=TestBed.createComponent(ForgotpasswordComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('label').textContent).toContain('Email Id');
+  }));
+
+  //Test case 4
+  it('should component after submit', ()=>{
+    expect(component.onSubmit).toBeTruthy();
+  })
 });

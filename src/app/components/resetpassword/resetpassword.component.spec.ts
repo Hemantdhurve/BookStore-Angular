@@ -1,6 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -37,7 +37,7 @@ describe('ResetpasswordComponent', () => {
   });
 
   //Test case 1
-  it('should show Reset Your Password in a p tag',(()=>{
+  it('should show Reset Your Password in a span tag',(()=>{
     const fixture=TestBed.createComponent(ResetpasswordComponent);
     fixture.detectChanges();
     const app=fixture.debugElement.nativeElement;
@@ -52,11 +52,16 @@ describe('ResetpasswordComponent', () => {
     expect(app.querySelector('.reset button').textContent).toContain('Reset Password');
   }));
 
-   //Test case 2
+   //Test case 3
    it('should show button Reset',(()=>{
     const fixture=TestBed.createComponent(ResetpasswordComponent);
     fixture.detectChanges();
     const app=fixture.debugElement.nativeElement;
     expect(app.querySelector('label').textContent).toContain('New Password');
   }));
+ 
+   //Test case 4
+   it('should component after submit', ()=>{
+    expect(component.onSubmit).toBeTruthy();
+  })
 });
