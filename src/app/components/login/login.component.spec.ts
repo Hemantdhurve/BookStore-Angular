@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LoginComponent } from './login.component';
 
-fdescribe('LoginComponent', () => {
+describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
@@ -64,5 +64,13 @@ fdescribe('LoginComponent', () => {
   it('should component before filling form', ()=>{
     expect(component.loginForm.invalid).toBeTruthy();
   })
+
+   //Test case 5
+   it('should show ONLINE BOOK SHOPPING in a p tag',(()=>{
+    const fixture=TestBed.createComponent(LoginComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('p').textContent).toEqual('ONLINE BOOK SHOPPING');
+  }));
   
 });

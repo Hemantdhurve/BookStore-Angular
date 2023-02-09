@@ -63,3 +63,14 @@ export interface IresetPassword{
     newPassword:string,
     confirmPassword:string
 }
+// export class addBook ={
+//     bookTitle: string,
+//     author: string,
+//     rating: Number,
+//     ratedCount: Number,
+//     discountedPrice: Number,
+//     actualPrice: Number,
+//     description: string,
+//     bookQuantity: Number,
+//     image: string,
+// }

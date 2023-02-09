@@ -35,6 +35,7 @@ export class GetallbooksComponent implements OnInit {
   }
 
   getallbooks() {
+    debugger
      this.book.getallbooks().subscribe((response: any) => {
       console.log(response)
       this.bookArray = response.response;

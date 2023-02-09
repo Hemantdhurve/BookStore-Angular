@@ -49,10 +49,6 @@ export class MycartComponent implements OnInit {
 
   hideBox = false;
 
-
-  //last file
-  //lang support by browser, typescript and
-
   constructor(private cart: CartserviceService, private httpservice: HttpService, private addressservice: AddressserviceService,
     private _snackbar: MatSnackBar, private router: Router, private orderservice: OrderserviceService,
     private dataservice: DataserviceService, private sharedService: SharedserviceService) {
@@ -61,8 +57,6 @@ export class MycartComponent implements OnInit {
 
   ngOnInit(): void {
     this.bookId = localStorage.getItem('BookId');
-
-    // this.getCartDetails();
 
     // Directly initialize
     this.getCustomerDetails();
@@ -108,42 +102,16 @@ export class MycartComponent implements OnInit {
     this.cart.updateCartQty(cartId, (bookQuantity - 1)).subscribe((response: any) => {
       console.log("Quantity updated", response);
       console.log('Cart ID:', cartId, 'BookQuantity:', response.data)
-      // this.getCartDetails();
+      this.getCartDetails();
       this.sharedService.sendClickEvent();
     })
   }
 
-  //Type  Interface
-
-  // increment(data:IupdateCartQty) {
-  //   // this.counter++;
-  //   console.log('Cart ID:', data.cartId, 'BookQuantity:', data.bookQuantity)
-  //   this.cart.updateCartQty(data).subscribe((response: any) => {
-  //     console.log("Quantity updated", response);
-  //     console.log('Cart ID:', data.cartId, 'BookQuantity:', response.data)
-  //     // this.getCartDetails();
-  //     //called this to get automatically update the values on page
-  //     this.sharedService.sendClickEvent();
-  //   })
-  // }
-
-  // decrement(data:IupdateCartQty) {
-  //   // this.counter++;
-  //   console.log('Cart ID:', data.cartId, 'BookQuantity:', data.bookQuantity)
-  //   this.cart.updateCartQty(data).subscribe((response: any) => {
-  //     console.log("Quantity updated", response);
-  //     console.log('Cart ID:', data.cartId, 'BookQuantity:', response.data)
-  //     // this.getCartDetails();
-  //     this.sharedService.sendClickEvent();
-  //   })
-  // }
 
   removeFromCart(cartId: any) {
     console.log(cartId)
     this.cart.deleteFromCart(cartId).subscribe((response: any) => {
       console.log("Removed from cart", response);
-      //i have called getcartdetails() to get all cart array
-      // this.getCartDetails();
       this._snackbar.open("Item Removed From Cart", "Close", { duration: 3000 })
       this.sharedService.sendClickEvent();
     })
@@ -188,7 +156,7 @@ export class MycartComponent implements OnInit {
     }
     this.orderservice.addOrder(data).subscribe((response: any) => {
       console.log(response.data)
-
+      this.sharedService.sendClickEvent();
       this.router.navigate(['/dashboard/orderplaced'])
     })
   }
