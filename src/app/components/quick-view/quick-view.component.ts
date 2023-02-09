@@ -42,7 +42,6 @@ export class QuickViewComponent implements OnInit {
     console.log(this.bookId)
     this.bookservice.getbookById(bookId).subscribe((response: any) => {
       console.log(response);
-      //data present in response.response
       this.book = response.response;
       console.log(this.book)
     });
@@ -71,7 +70,6 @@ export class QuickViewComponent implements OnInit {
 
   //1.Add to cart API 
   addToCart() {
-    // this.router.navigate(["/dashboard/mycart/" + this.bookId])
     console.log(this.book)
     let data = {
       bookId: this.book.bookId,
@@ -81,8 +79,6 @@ export class QuickViewComponent implements OnInit {
       console.log(response);
       this.cartlist = response.data;
       console.log(this.cartlist);
-      //smackbar is like a pop that displayed at the bottom of the screen
-      //which takes 2 parameters message: string and action: string and to dismiss after some time use duration(optional)
       this._snackbar.open("Book Added to the Cart","Add",{duration:3000})  
       
       //for changing badge quantity
@@ -91,7 +87,6 @@ export class QuickViewComponent implements OnInit {
   }
 
   addToWishlist(){
-    // this.router.navigate(["/dashboard/mywishlist"])
     let data = {
       bookId: this.book.bookId,
     }

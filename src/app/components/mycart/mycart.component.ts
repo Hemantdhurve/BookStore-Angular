@@ -32,19 +32,19 @@ export class MycartComponent implements OnInit {
   addressArray: any = [];
   fullName: any;
   mobileNumber: any;
-  address: string='';
-  city: string='';
-  state: string='';
+  address: string = '';
+  city: string = '';
+  state: string = '';
   addressType: any;
-  userId: Number=0;
+  userId: Number = 0;
   addressId: any;
-  noofAddress: Number=0;
+  noofAddress: Number = 0;
   details: any;
   addval: any;
-  typeId:  Number=0;
+  typeId: Number = 0;
   subscription: any;
   cartId: any;
-  takeCartId: Number=0;
+  takeCartId: Number = 0;
   cartCount: any;
 
   hideBox = false;
@@ -85,7 +85,6 @@ export class MycartComponent implements OnInit {
   }
 
   increment(cartId: any, bookQuantity: any) {
-    // this.counter++;
     console.log('Cart ID:', cartId, 'BookQuantity:', bookQuantity)
     this.cart.updateCartQty(cartId, (bookQuantity + 1)).subscribe((response: any) => {
       console.log("Quantity updated", response);
@@ -97,7 +96,6 @@ export class MycartComponent implements OnInit {
   }
 
   decrement(cartId: any, bookQuantity: any) {
-    // this.counter++;
     console.log('Cart ID:', cartId, 'BookQuantity:', bookQuantity)
     this.cart.updateCartQty(cartId, (bookQuantity - 1)).subscribe((response: any) => {
       console.log("Quantity updated", response);
@@ -214,10 +212,10 @@ export class MycartComponent implements OnInit {
 
   addNewAddress() {
     this.fullName = '',
-    this.mobileNumber = '',
-    this.address = '';
+      this.mobileNumber = '',
+      this.address = '';
     this.city = '';
     this.state = '';
-    this.typeId =new Number;
+    this.typeId = new Number;
   }
 }

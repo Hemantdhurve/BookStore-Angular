@@ -96,21 +96,4 @@ export class AdmindashboardComponent implements OnInit {
     });
 
   }
-
-  // updateBook(bookId:any){
-  //   let data = {
-  //     bookTitle: this.bookTitle,
-  //     author: this.author,
-  //     rating: Number(this.rating),
-  //     ratedCount: Number(this.ratedCount),
-  //     discountedPrice: Number(this.discountedPrice),
-  //     actualPrice: Number(this.actualPrice),
-  //     description: this.description,
-  //     bookQuantity: Number(this.bookQuantity),
-  //     image: this.image,
-  //   }
-  //   this.admin.updateBook(bookId,data).subscribe((response:any)=>{
-  //     console.log('Book Details Updated successfully', response);
-  //   })
-  // }
 }

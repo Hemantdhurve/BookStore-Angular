@@ -12,7 +12,6 @@ import { SharedserviceService } from '../Services/shareddataservice/sharedservic
 export class DashboardComponent implements OnInit {
 
   search: any;
-
   cartCount:any;
   cartArray:any=[];
   noofCart:string='';
@@ -52,7 +51,6 @@ export class DashboardComponent implements OnInit {
 
   logOut() {
     this.router.navigate(['/login'])
-    //to remove the token from the local storage
     localStorage.removeItem('token')
   }
   navWishlistPage() {

@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/register']);
   }
 
-
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       emailId: ['', [Validators.required, Validators.email]],
@@ -45,8 +44,6 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['dashboard/getallbooks']);
         this._snackbar.open("Login Successful", "Close", { duration: 3000 })
 
-      }, (error) => {
-        console.log(error);
       })
     }
     this.loginForm.reset();
