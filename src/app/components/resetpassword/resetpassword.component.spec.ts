@@ -35,4 +35,28 @@ describe('ResetpasswordComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  //Test case 1
+  it('should show Reset Your Password in a p tag',(()=>{
+    const fixture=TestBed.createComponent(ResetpasswordComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('span').textContent).toEqual('Reset Your Password');
+  }))
+
+   //Test case 2
+   it('should show button Reset',(()=>{
+    const fixture=TestBed.createComponent(ResetpasswordComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('.reset button').textContent).toContain('Reset Password');
+  }));
+
+   //Test case 2
+   it('should show button Reset',(()=>{
+    const fixture=TestBed.createComponent(ResetpasswordComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('label').textContent).toContain('New Password');
+  }));
 });
