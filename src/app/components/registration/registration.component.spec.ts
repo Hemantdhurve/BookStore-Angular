@@ -35,4 +35,39 @@ describe('RegistrationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+   //Test case 1
+   it('should show ONLINE BOOK SHOPPING in a p tag',(()=>{
+    const fixture=TestBed.createComponent(RegistrationComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('p').textContent).toEqual('ONLINE BOOK SHOPPING');
+  }));
+
+   //Test case 2
+   it('should show button login',(()=>{
+    const fixture=TestBed.createComponent(RegistrationComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('.twoBtn button').textContent).toContain('LOGIN');
+  }));
+
+   //Test case 3
+   it('should show button signup',(()=>{
+    const fixture=TestBed.createComponent(RegistrationComponent);
+    fixture.detectChanges();
+    const app=fixture.debugElement.nativeElement;
+    expect(app.querySelector('.loginBox button').textContent).toEqual('SignUp');
+  }));
+
+   //Test case 4 
+   it('should component before filling form', ()=>{
+    expect(component.registerForm.invalid).toBeTruthy();
+  })
+
+   //Test case 5
+   it('component initial state', () => {
+    expect(component.submitted).toBeFalsy();
+    expect(component.registerForm).toBeDefined();
+  });
 });

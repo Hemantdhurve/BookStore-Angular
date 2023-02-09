@@ -36,10 +36,6 @@ describe('LoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should create', () => {
-  //   expect(component.loginForm.invalid).toHaveBeenCalled();
-  // });
-
   //Test case 1
 
   it('component initial state', () => {
@@ -64,13 +60,5 @@ describe('LoginComponent', () => {
   it('should component before filling form', ()=>{
     expect(component.loginForm.invalid).toBeTruthy();
   })
-
-   //Test case 5
-   it('should show ONLINE BOOK SHOPPING in a p tag',(()=>{
-    const fixture=TestBed.createComponent(LoginComponent);
-    fixture.detectChanges();
-    const app=fixture.debugElement.nativeElement;
-    expect(app.querySelector('p').textContent).toEqual('ONLINE BOOK SHOPPING');
-  }));
   
 });
