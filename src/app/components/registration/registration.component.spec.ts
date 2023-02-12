@@ -1,16 +1,18 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Router } from '@angular/router';
 
 import { RegistrationComponent } from './registration.component';
 
 describe('RegistrationComponent', () => {
   let component: RegistrationComponent;
   let fixture: ComponentFixture<RegistrationComponent>;
+  let router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -70,4 +72,13 @@ describe('RegistrationComponent', () => {
     expect(component.submitted).toBeFalsy();
     expect(component.registerForm).toBeDefined();
   });
+
+   //Test case 
+   it('should go login page', async(inject([Router], (router: { navigate: any; }) => {
+    spyOn(router, 'navigate'); //added a spy on router
+    let component = TestBed.createComponent(RegistrationComponent).componentInstance;
+    component.navigate();
+    expect(router.navigate).toHaveBeenCalled();
+    expect(router.navigate).toHaveBeenCalledWith(['login']);
+  })));
 });

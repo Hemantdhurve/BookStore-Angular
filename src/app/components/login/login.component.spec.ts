@@ -1,16 +1,18 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Router } from '@angular/router';
 
 import { LoginComponent } from './login.component';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
+  let router;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -60,5 +62,23 @@ describe('LoginComponent', () => {
   it('should component before filling form', ()=>{
     expect(component.loginForm.invalid).toBeTruthy();
   })
+
+  //Test case 5
+  it('should go register', async(inject([Router], (router: { navigate: any; }) => {
+    spyOn(router, 'navigate'); //added a spy on router
+    let component = TestBed.createComponent(LoginComponent).componentInstance;
+    component.navigate();
+    expect(router.navigate).toHaveBeenCalled();
+    expect(router.navigate).toHaveBeenCalledWith(['/register']);
+  })));
+
+  //Test case 6
+  it('should go adminlogin', async(inject([Router], (router: { navigate: any; }) => {
+    spyOn(router, 'navigate'); //added a spy on router
+    let component = TestBed.createComponent(LoginComponent).componentInstance;
+    component.navAdmin();
+    expect(router.navigate).toHaveBeenCalled();
+    expect(router.navigate).toHaveBeenCalledWith(['/adminlogin']);
+  })));
   
 });

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { BookServiceService } from '../Services/bookService/book-service.service';
 import { CartserviceService } from '../Services/cartService/cartservice.service';
 import { DataserviceService } from '../Services/dataService/dataservice.service';
@@ -24,9 +25,10 @@ export class QuickViewComponent implements OnInit {
   cartArray: any;
   noofCart: any;
 
+
   constructor(private bookservice: BookServiceService, private feedback: FeedbackServiceService, private router: Router, 
     private cart: CartserviceService,private wishlist:WishlistserviceService,private _snackbar:MatSnackBar,
-    private dataservice:DataserviceService,private sharedService:SharedserviceService) { }
+    private dataservice:DataserviceService,private sharedService:SharedserviceService) {}
 
   ngOnInit() {
     this.getbookById(this.bookId)
